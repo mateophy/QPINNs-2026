@@ -205,3 +205,14 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Virtual environments: Remember to add the name of your venv
+bin/
+lib/
+include/
+
+QCPINN/   # ALR virtual env name
+QCPINN/*
+
+# MacOS issues: Additional files
+.DS_Store

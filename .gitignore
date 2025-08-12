@@ -210,6 +210,7 @@ __marimo__/
 bin/
 lib/
 include/
+pyvenv.cfg
 
 QCPINN/   # ALR virtual env name
 QCPINN/*

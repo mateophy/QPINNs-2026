@@ -5,8 +5,18 @@ import torch.nn as nn
 import os
 import sys
 
-# Additional line used for compatibility
-sys.path.append(os.getcwd())
+# ALR: Lineas adicionales para compatibilidad de path
+# Global path
+global_path = os.getcwd()
+
+# Composición del path
+global_path = global_path.split('/')
+
+# Generación de path global al directorio padre 
+relative_path = '/'.join(global_path[:-2])
+
+# Linea adicional para ubicación de path en los scripts
+sys.path.append(relative_path)
 
 import matplotlib.pyplot as plt
 
@@ -88,6 +98,7 @@ class DVPDESolver(nn.Module):
 
     def _initialize_logging(self):
         self.log_path = self.logger.get_output_dir()
+
         # self.logger.print(f"checkpoint path: {self.log_path=}")
 
         # # total number of parameters

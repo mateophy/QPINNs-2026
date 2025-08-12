@@ -4,18 +4,21 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Additional line used to import from parent directory
-sys.path.append(os.getcwd())
+# Global path
+global_path = os.getcwd()
 
-from src.utils.logger import Logging
-from src.nn.pde import wave_operator
-from src.utils.plot_prediction import plt_prediction
-from src.data.wave_dataset import u, r
+# Linea adicional para ubicación de path en los scripts
+sys.path.append(global_path)
+
+from src.utils.logger               import Logging
+from src.nn.pde                     import wave_operator
+from src.utils.plot_prediction      import plt_prediction
+from data.synthetic.wave_dataset    import u, r, Sampler
+from src.nn.DVPDESolver             import DVPDESolver
+from src.nn.CVPDESolver             import CVPDESolver
+from src.nn.ClassicalSolver2        import ClassicalSolver2
+
 import src.trainer.wave_train as wave_train
-from src.nn.DVPDESolver import DVPDESolver
-from src.nn.CVPDESolver import CVPDESolver
-from src.nn.ClassicalSolver2 import ClassicalSolver2
-from src.data.wave_dataset import Sampler
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -34,7 +37,7 @@ args = {
     "lr": 0.01,
     "seed": 42,
     "print_every": 10,
-    "log_path": "./checkpoints/wave",
+    "log_path": "./results/models/checkpoints/wave",
     "input_dim": input_dim,
     "output_dim": output_dim,
     "num_qubits": num_qubits,

@@ -207,7 +207,7 @@ marimo/_lsp/
 __marimo__/
 
 # Virtual environments: Remember to add the name of your venv
-bin/
+bin/      # General venv directories
 lib/
 include/
 pyvenv.cfg

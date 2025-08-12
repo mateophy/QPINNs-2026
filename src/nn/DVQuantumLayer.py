@@ -156,7 +156,10 @@ class DVQuantumLayer(nn.Module):
             raise ValueError("Invalid q_ansatz value.", self.q_ansatz)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        return torch.stack([self.circuit(sample) for sample in x])
+        # return torch.stack([self.circuit(sample) for sample in x])
+
+        # ALR: Compatibility modification
+        return torch.stack([torch.hstack(self.circuit(sample)) for sample in x])
 
     def layered_circuit(self, params):
         """

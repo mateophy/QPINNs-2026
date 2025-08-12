@@ -4,8 +4,18 @@ import os
 
 import sys
 
-# Additional line used for compatibility
-sys.path.append(os.getcwd())
+# ALR: Lineas adicionales para compatibilidad de path
+# Global path
+global_path = os.getcwd()
+
+# Composición del path
+global_path = global_path.split('/')
+
+# Generación de path global al directorio padre 
+relative_path = '/'.join(global_path[:-2])
+
+# Linea adicional para ubicación de path en los scripts
+sys.path.append(relative_path)
 
 import numpy as np
 

@@ -26,8 +26,8 @@ from src.nn.pde import schrodinger_operator
 L = 1.0        # dominio espacial [0, L]
 T = 0.2        # tiempo final
 hbar = 1.0
-mass = 1.0
-n_level = 2    # nivel del pozo (usaremos n=1)
+mass = 110
+n_level = 1    # nivel del pozo (usaremos n=1)
 
 # Parametros de Muestreo
 N_f = 100     # collocation (interior)

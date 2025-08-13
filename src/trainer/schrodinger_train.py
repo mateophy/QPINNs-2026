@@ -29,22 +29,23 @@ hbar = 1.0
 mass = 110
 n_level = 1    # nivel del pozo (usaremos n=1)
 
-# Parametros de Muestreo
-N_f = 100     # collocation (interior)
-N_b = 100      # borde (x=0 y x=L)
-N_0 = 100      # inicial (t=0)
-
-LR = 1e-3
-PRINT_EVERY = 10
-
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
-torch.set_default_dtype(DTYPE)
-torch.manual_seed(0);
 
-def train(model):
+def train(model, N_f = 100, N_b = 100, N_0 = 100):
+
+    # Parameters definition by model
     opt = model.optimizer if model.optimizer is not None else Adam(model.parameters(), lr=1E-3)
     mse = model.loss_fn if model.loss_fn is not None else MSELoss()
+
+    # Constants parameters
+    LR = model.args['lr']; PRINT_EVERY = model.args['print_every']
+    
+    DEVICE = model.args['device']; DTYPE = torch.float32 
+
+    # Dtype definition 
+    torch.set_default_dtype(DTYPE)
+    torch.manual_seed(0);
 
     (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE)
     psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar)
@@ -74,5 +75,22 @@ def train(model):
 
         if epoch % PRINT_EVERY == 0 or epoch == 1:
             elapsed = time.time() - t0
-            print(f"Epoch {epoch:5d} | loss={loss.item():.3e} "
-                  f"(pde={loss_pde.item():.3e}, bc={loss_bc.item():.3e}, ic={loss_ic.item():.3e}) | {elapsed:.1f}s")
+            # print(f"Epoch {epoch:5d} | loss={loss.item():.3e} "
+            #       f"(pde={loss_pde.item():.3e}, bc={loss_bc.item():.3e}, ic={loss_ic.item():.3e}) | {elapsed:.1f}s")
+            model.logger.print(
+                    "It: %d, Loss: %.3e, Loss_res: %.3e,  Loss_bcs: %.3e, Loss_ut_ics: %.3e, lr: %.3e, Time: %.2e"
+                    % (
+                        epoch,
+                        loss.item(),
+                        loss_pde.item(),
+                        loss_bc.item(),
+                        loss_ic.item(),
+                        model.optimizer.param_groups[0]["lr"] if model.optimizer else 0.0,
+                        elapsed,
+                )
+            )
+
+            # Compute and Print adaptive weights during training
+            # Compute the adaptive constant
+            model.save_state()
+

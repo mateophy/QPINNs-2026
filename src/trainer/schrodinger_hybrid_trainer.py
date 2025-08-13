@@ -32,11 +32,11 @@ classic_network = [input_dim, hidden_dim, output_dim]
 
 args = {
     "batch_size": 64,
-    "epochs": 200,
+    "epochs": 1000,
     "lr": 0.001,
     "seed": 42,
     "print_every": 100,
-    "log_path": "./results/models/checkpoints/wave",
+    "log_path": "./results/models/checkpoints/schrodinger",
     "input_dim": input_dim,
     "output_dim": output_dim,
     "num_qubits": num_qubits,
@@ -48,7 +48,7 @@ args = {
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": None,  # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "DV",  # options : "CV", "Classical", "DV"
+    "solver": "Classical",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim

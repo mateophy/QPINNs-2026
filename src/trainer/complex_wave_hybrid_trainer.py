@@ -10,15 +10,15 @@ global_path = os.getcwd()
 # Linea adicional para ubicación de path en los scripts
 sys.path.append(global_path)
 
-from src.utils.logger               import Logging
-from src.nn.pde                     import wave_operator
-from src.utils.plot_prediction      import plt_prediction
-from data.synthetic.wave_dataset    import u, r, Sampler
-from src.nn.DVPDESolver             import DVPDESolver
-from src.nn.CVPDESolver             import CVPDESolver
-from src.nn.ClassicalSolver2        import ClassicalSolver2
+from src.utils.logger                       import Logging
+from src.nn.pde                             import complex_wave_operator
+from src.utils.plot_prediction              import plt_prediction
+from data.synthetic.complex_wave_dataset    import u, r, Sampler
+from src.nn.DVPDESolver                     import DVPDESolver
+from src.nn.CVPDESolver                     import CVPDESolver
+from src.nn.complex_ClassicalSolver2        import ClassicalSolver2
 
-import src.trainer.wave_train as wave_train
+import src.trainer.complex_wave_train as wave_train
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -33,11 +33,11 @@ classic_network = [input_dim, hidden_dim, output_dim]
 
 args = {
     "batch_size": 64,
-    "epochs": 10000,
-    "lr": 0.01,
+    "epochs": 20000,
+    "lr": 1E-3,
     "seed": 42,
-    "print_every": 1000,
-    "log_path": "./results/models/checkpoints/wave",
+    "print_every": 100,
+    "log_path": "./results/models/checkpoints/complex_wave",
     "input_dim": input_dim,
     "output_dim": output_dim,
     "num_qubits": num_qubits,
@@ -48,7 +48,7 @@ args = {
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": None,  # Analytical gradients enabled
-    "problem": "wave",
+    "problem": "complex_wave",
     "solver": "Classical",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
@@ -89,9 +89,7 @@ model.logger.print("Training completed successfuly!")
 # Testing
 
 # Define PINN model
-a = torch.tensor(0.7, dtype=torch.float32, device=DEVICE)
-c = torch.tensor(2.0, dtype=torch.float32, device=DEVICE)
-
+n = torch.tensor(1, dtype=torch.float32, device=DEVICE)
 
 # Domain boundaries - convert to float32
 ics_coords = np.array([[0.0, 0.0], [0.0, 1.0]], dtype=np.float32)
@@ -100,41 +98,41 @@ bc2_coords = np.array([[0.0, 1.0], [1.0, 1.0]], dtype=np.float32)
 dom_coords = np.array([[0.0, 0.0], [1.0, 1.0]], dtype=np.float32)
 
 # Create initial conditions samplers
-ics_sampler = Sampler(2, ics_coords, lambda x: u(x, a, c), device=DEVICE)
+ics_sampler = Sampler(2, ics_coords, lambda x: u(x, n), device=DEVICE)
 
 # Create boundary conditions samplers
-bc1 = Sampler(2, bc1_coords, lambda x: u(x, a, c), device=DEVICE)
-bc2 = Sampler(2, bc2_coords, lambda x: u(x, a, c), device=DEVICE)
+bc1 = Sampler(2, bc1_coords, lambda x: u(x, n), device=DEVICE)
+bc2 = Sampler(2, bc2_coords, lambda x: u(x, n), device=DEVICE)
 bcs_sampler = [bc1, bc2]
 
 # Create residual sampler
-res_sampler = Sampler(2, dom_coords, lambda x: r(x, a, c), device=DEVICE)
-coll_sampler = Sampler(2, dom_coords, lambda x: u(x, a, c), device=DEVICE)
+res_sampler = Sampler(2, dom_coords, lambda x: r(x, n), device=DEVICE)
+coll_sampler = Sampler(2, dom_coords, lambda x: u(x, n), device=DEVICE)
 
 # Create mesh grid with float32
-number_of_points = 200
-t = np.linspace(dom_coords[0, 0], dom_coords[1, 0], number_of_points, dtype=np.float32)[
+number_of_points = 100
+t = np.linspace(dom_coords[0, 0], dom_coords[1, 0], number_of_points, dtype=np.cfloat)[
     :, None
 ]
-x = np.linspace(dom_coords[0, 1], dom_coords[1, 1], number_of_points, dtype=np.float32)[
+x = np.linspace(dom_coords[0, 1], dom_coords[1, 1], number_of_points, dtype=np.cfloat)[
     :, None
 ]
 t, x = np.meshgrid(t, x)
 
-# Convert to PyTorch tensor with float32
+# Convert to PyTorch tensor with complex64
 X_star = (
     torch.hstack(
         (torch.from_numpy(t.flatten()[:, None]), torch.from_numpy(x.flatten()[:, None]))
     )
     .to(DEVICE)
-    .to(torch.float32)
+    .to(torch.cfloat)
 )
 
-u_star = u(X_star, a, c)
-f_star = r(X_star, a, c)
+u_star = u(X_star, n)
+f_star = r(X_star, n)
 
 
-plt.plot(range(len(model.loss_history)), model.loss_history)
+plt.semilogy(range(len(model.loss_history)), model.loss_history)
 plt.xlabel("Epochs")
 plt.ylabel("Loss")
 plt.title("Training Loss Over Epochs")
@@ -149,7 +147,7 @@ plt.close(
 )
 
 # Predictions
-u_pred_star, f_pred_star = wave_operator(model, X_star[:, 0:1], X_star[:, 1:2])
+u_pred_star, f_pred_star = complex_wave_operator(model, X_star[:, 0:1], X_star[:, 1:2])
 
 u_pred = u_pred_star.cpu().detach().numpy()
 f_pred = f_pred_star.cpu().detach().numpy()

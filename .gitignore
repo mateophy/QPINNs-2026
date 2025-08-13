@@ -212,8 +212,8 @@ lib/
 include/
 pyvenv.cfg
 
-QCPINN/   # ALR virtual env name
-QCPINN/*
+qpinns_env/   # ALR virtual env name
+qpinns_env/*
 
 # MacOS issues: Additional files
 .DS_Store

@@ -127,6 +127,7 @@ def plot_loss_history(all_loss_history, save_path=None, y_max=None, legend=False
             linestyle=linestyle,
             alpha=alpha,
             linewidth=linewidth,
+            log=True # Log axis
         )
 
         if show_avg:
@@ -136,6 +137,7 @@ def plot_loss_history(all_loss_history, save_path=None, y_max=None, legend=False
                 ax=ax,
                 color=color,
                 linewidth=0.5,
+                log=True # Log axis
             )
         if show_lower:
             smoothed_lower = smoothed_min(data)
@@ -145,6 +147,7 @@ def plot_loss_history(all_loss_history, save_path=None, y_max=None, legend=False
                 ax=ax,
                 color=color,
                 linewidth=1.5,
+                log=True # Log axis
             )
 
     print("-" * 40)

@@ -1,6 +1,5 @@
 import torch
 
-
 def navier_stokes_2D_operator(model, t, x, y, min_x=0, max_x=1):
     """
     Operator to compute residuals for the 2D Navier-Stokes equation
@@ -79,6 +78,22 @@ def wave_operator(model, t, x, sigma_t=1.0, sigma_x=1.0):
     u_tt = torch.autograd.grad(u_t, t, torch.ones_like(u_t), create_graph=True)[0]
     u_xx = torch.autograd.grad(u_x, x, torch.ones_like(u_x), create_graph=True)[0]
     residual = u_tt - c**2 * u_xx
+    return u, residual
+
+# ARL: Complex wave operator -> Schrödinger in atomic coordinates
+def complex_wave_operator(model, t, x, sigma_t=1.0, sigma_x=1.0):
+    """
+    Operator to compute residuals for the 1D wave equation
+    """
+    t.requires_grad = True
+    x.requires_grad = True
+
+    u = model(torch.concatenate((t, x), 1))
+
+    u_t = torch.autograd.grad(u, t, torch.ones_like(u), create_graph=True)[0]
+    u_x = torch.autograd.grad(u, x, torch.ones_like(u), create_graph=True)[0]
+    u_xx = torch.autograd.grad(u_x, x, torch.ones_like(u_x), create_graph=True)[0]
+    residual = u_t - (0 + 1.j) * u_xx
     return u, residual
 
 

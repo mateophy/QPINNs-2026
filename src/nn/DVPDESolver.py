@@ -23,6 +23,15 @@ import matplotlib.pyplot as plt
 from src.utils.logger import Logging
 from src.nn.DVQuantumLayer import DVQuantumLayer
 
+# ALR: Separate definition of complex mse loss
+def complex_mse_loss_magnitude(input_complex, target_complex):
+        # Calculate the complex difference
+        complex_diff = input_complex - target_complex
+
+        # Calculate the squared magnitude (real part of complex_diff * complex_diff.conj())
+        # Or, more simply, (complex_diff.real**2 + complex_diff.imag**2).mean()
+        loss = torch.mean(complex_diff.real**2 + complex_diff.imag**2)
+        return loss
 
 class DVPDESolver(nn.Module):
     def __init__(self, args, logger: Logging, data=None, device=None):
@@ -66,7 +75,6 @@ class DVPDESolver(nn.Module):
             ),
         ).to(self.device)
 
-        #
         self.activation = nn.Tanh()
 
         # Quantum parameters
@@ -81,7 +89,11 @@ class DVPDESolver(nn.Module):
             self.optimizer, mode="min", factor=0.9, patience=1000
         )
 
-        self.loss_fn = torch.nn.MSELoss()
+        # ALR: Loss function selection by args
+        if self.args['problem'] == 'complex_wave':
+            self.loss_fn = complex_mse_loss_magnitude
+        else:
+            self.loss_fn = torch.nn.MSELoss()
 
         self._initialize_logging()
         self._initialize_weights()

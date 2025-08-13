@@ -18,7 +18,7 @@ from src.nn.DVPDESolver             import DVPDESolver
 from src.nn.CVPDESolver             import CVPDESolver
 from src.nn.ClassicalSolver2        import ClassicalSolver2
 
-import src.trainer.schrodinger_train as wave_train
+import src.trainer.wave_train as wave_train
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

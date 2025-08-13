@@ -1,7 +1,6 @@
 import numpy as np
 import torch
 
-
 class Sampler:
     def __init__(self, dim, coords, func, device="cpu"):
         self.dim = dim
@@ -64,7 +63,7 @@ def u_xx(x, n):
 
 
 def r(x, n):
-    return u_t(x, n) - (0 + 1.j) * u_xx(x, n)
+    return u_xx(x, n) + (0 + 1.j) * u_t(x, n)
 
 
 def generate_training_dataset(device):

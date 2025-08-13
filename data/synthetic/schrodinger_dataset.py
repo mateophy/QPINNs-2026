@@ -1,91 +1,32 @@
-import numpy as np
+import os
+import sys
 import torch
 
+import numpy as np
 
-class Sampler:
-    def __init__(self, dim, coords, func, device="cpu"):
-        self.dim = dim
-        self.coords = torch.tensor(
-            coords, dtype=torch.float32, device=device
-        )  # Convert coords to float32 tensor
-        self.func = func
-        self.device = device
+# Sample collocation of points
+def sample_collocation(Nf, Nb, N0, L=1.0, T=0.2, device="cpu", dtype=torch.float64):
+    # Interior (PDE)
+    t_f = torch.rand(Nf, 1, device=device, dtype=dtype) * T
+    x_f = torch.rand(Nf, 1, device=device, dtype=dtype) * L
+    # Bordes (x=0 y x=L)
+    t_b = torch.rand(Nb, 1, device=device, dtype=dtype) * T
+    xb0 = torch.zeros(Nb//2, 1, device=device, dtype=dtype)
+    xbL = torch.full((Nb - Nb//2, 1), L, device=device, dtype=dtype)
+    x_b = torch.cat([xb0, xbL], dim=0)
+    t_b = torch.cat([t_b[:Nb//2], t_b[Nb//2:]], dim=0)
+    # Inicial (t=0)
+    t_0 = torch.zeros(N0, 1, device=device, dtype=dtype)
+    x_0 = torch.rand(N0, 1, device=device, dtype=dtype) * L
+    return (t_f, x_f), (t_b, x_b), (t_0, x_0)
 
-    def sample(self, N):
-        rand_vals = torch.rand(N, self.dim, dtype=torch.float32, device=self.device)
-        x = (
-            self.coords[0:1, :]
-            + (self.coords[1:2, :] - self.coords[0:1, :]) * rand_vals
-        )
-        y = self.func(x)
-        return x, y
-
-
-def u(x, a, c):
-    """
-    :param x: x = (t, x)
-    """
-    t = x[:, 0:1]
-    x = x[:, 1:2]
-    return torch.sin(
-        torch.tensor(np.pi, dtype=torch.float32, device=x.device) * x
-    ) * torch.cos(
-        c * torch.tensor(np.pi, dtype=torch.float32, device=x.device) * t
-    ) + a * torch.sin(
-        2 * c * torch.tensor(np.pi, dtype=torch.float32, device=x.device) * x
-    ) * torch.cos(4 * c * torch.tensor(np.pi, dtype=torch.float32, device=x.device) * t)
-
-
-def u_t(x, a, c):
-    t = x[:, 0:1]
-    x = x[:, 1:2]
-    pi = torch.tensor(np.pi, dtype=torch.float32, device=x.device)
-    u_t = -c * pi * torch.sin(pi * x) * torch.sin(
-        c * pi * t
-    ) - a * 4 * c * pi * torch.sin(2 * c * pi * x) * torch.sin(4 * c * pi * t)
-    return u_t
-
-
-def u_tt(x, a, c):
-    t = x[:, 0:1]
-    x = x[:, 1:2]
-    pi = torch.tensor(np.pi, dtype=torch.float32, device=x.device)
-    u_tt = -((c * pi) ** 2) * torch.sin(pi * x) * torch.cos(c * pi * t) - a * (
-        4 * c * pi
-    ) ** 2 * torch.sin(2 * c * pi * x) * torch.cos(4 * c * pi * t)
-    return u_tt
-
-
-def u_xx(x, a, c):
-    t = x[:, 0:1]
-    x = x[:, 1:2]
-    pi = torch.tensor(np.pi, dtype=torch.float32, device=x.device)
-    u_xx = -(pi**2) * torch.sin(pi * x) * torch.cos(c * pi * t) - a * (
-        2 * c * pi
-    ) ** 2 * torch.sin(2 * c * pi * x) * torch.cos(4 * c * pi * t)
-    return u_xx
-
-
-def r(x, a, c):
-    return u_tt(x, a, c) - c**2 * u_xx(x, a, c)
-
-
-def generate_training_dataset(device):
-    a = torch.tensor(0.5, dtype=torch.float32, device=device)
-    c = torch.tensor(2.0, dtype=torch.float32, device=device)
-
-    ics_coords = np.array([[0.0, 0.0], [0.0, 1.0]], dtype=np.float32)
-    bc1_coords = np.array([[0.0, 0.0], [1.0, 0.0]], dtype=np.float32)
-    bc2_coords = np.array([[0.0, 1.0], [1.0, 1.0]], dtype=np.float32)
-    dom_coords = np.array([[0.0, 0.0], [1.0, 1.0]], dtype=np.float32)
-
-    ics_sampler = Sampler(2, ics_coords, lambda x: u(x, a, c), device=device)
-
-    bc1 = Sampler(2, bc1_coords, lambda x: u(x, a, c), device=device)
-    bc2 = Sampler(2, bc2_coords, lambda x: u(x, a, c), device=device)
-    bcs_sampler = [bc1, bc2]
-
-    res_sampler = Sampler(2, dom_coords, lambda x: r(x, a, c), device=device)
-    coll_sampler = Sampler(2, dom_coords, lambda x: u(x, a, c), device=device)
-
-    return [ics_sampler, bcs_sampler, res_sampler]
+# Definition of exact eigen state of analysis
+def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0):
+    pi = torch.tensor(np.pi, device=t.device, dtype=t.dtype)
+    k = n * pi / L
+    En = (n**2) * (pi**2) * (hbar**2) / (2.0 * mass * (L**2))
+    phase = - (En / hbar) * t
+    spatial = torch.sqrt(2.0 / torch.tensor(L, device=t.device, dtype=t.dtype)) * torch.sin(k * x)
+    psi_r = spatial * torch.cos(phase)
+    psi_i = spatial * torch.sin(phase)
+    return psi_r, psi_i, En

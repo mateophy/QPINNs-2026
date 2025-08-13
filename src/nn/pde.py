@@ -97,7 +97,7 @@ def complex_wave_operator(model, t, x, sigma_t=1.0, sigma_x=1.0):
     return u, residual
 
 # ALR: Additional operator separated -> Schrödinger direct
-def schrodinger_operator(model, t, x, potential_fn=None, mass=1.0, hbar=1.0):
+def schrodinger_operator(model, t, x, potential_fn=0, mass=1.0, hbar=1.0):
     """
     Residuos de: i*hbar*psi_t = -(hbar^2/(2m)) * psi_xx + V * psi
     model(t,x) -> [psi_r, psi_i]
@@ -105,7 +105,7 @@ def schrodinger_operator(model, t, x, potential_fn=None, mass=1.0, hbar=1.0):
     t = t.requires_grad_(True)
     x = x.requires_grad_(True)
 
-    psi = model(torch.cat((t, x), dim=1))
+    psi = model(torch.concatenate((t, x), dim=1))
     psi_r = psi[:, 0:1]
     psi_i = psi[:, 1:2]
 
@@ -117,9 +117,9 @@ def schrodinger_operator(model, t, x, potential_fn=None, mass=1.0, hbar=1.0):
     psi_x_r  = torch.autograd.grad(psi_r, x, torch.ones_like(psi_r), create_graph=True)[0]
     psi_x_i  = torch.autograd.grad(psi_i, x, torch.ones_like(psi_i), create_graph=True)[0]
     psi_xx_r = torch.autograd.grad(psi_x_r, x, torch.ones_like(psi_x_r), create_graph=True)[0]
-    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0]
+    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0] # Obtenemos valores nan
 
-    V = potential_fn(t, x) if potential_fn is not None else torch.zeros_like(psi_r)
+    V = potential_fn(t, x) if potential_fn!=0 else torch.zeros_like(psi_r)
     coef = (hbar**2) / (2.0 * mass)
 
     residual_r = -hbar * psi_t_i + coef * psi_xx_r - V * psi_r

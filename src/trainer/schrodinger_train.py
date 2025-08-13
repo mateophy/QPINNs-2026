@@ -3,6 +3,9 @@ import torch
 
 import sys; import os
 
+from torch.optim import Adam
+from torch.nn    import MSELoss
+
 # ALR: Lineas adicionales para compatibilidad de path
 # Global path
 global_path = os.getcwd()
@@ -16,95 +19,60 @@ relative_path = '/'.join(global_path[:-2])
 # Linea adicional para ubicación de path en los scripts
 sys.path.append(relative_path)
 
-from data.synthetic.wave_dataset import generate_training_dataset
+from data.synthetic.schrodinger_dataset import sample_collocation, exact_eigenstate
 from src.nn.pde import schrodinger_operator
 
+# Parametros físicos del dominio
+L = 1.0        # dominio espacial [0, L]
+T = 0.2        # tiempo final
+hbar = 1.0
+mass = 1.0
+n_level = 2    # nivel del pozo (usaremos n=1)
 
-def fetch_minibatch(sampler, N):
-    X, Y = sampler.sample(N)
-    return X, Y
+# Parametros de Muestreo
+N_f = 100     # collocation (interior)
+N_b = 100      # borde (x=0 y x=L)
+N_0 = 100      # inicial (t=0)
 
+LR = 1e-3
+PRINT_EVERY = 10
 
-def train(model, nIter=10000, batch_size=128, log_NTK=False, update_lam=False):
-    [ics_sampler, bcs_sampler, res_sampler] = generate_training_dataset(model.device)
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
+torch.set_default_dtype(DTYPE)
+torch.manual_seed(0);
 
-    def objective_fn(it):
-        start_time = time.time()
-        if model.optimizer is not None:
-            model.optimizer.zero_grad()
-        # Fetch boundary mini-batches ,
-        X_ics_batch, u_ics_batch = fetch_minibatch(ics_sampler, batch_size // 3)
-        X_bc1_batch, _ = fetch_minibatch(bcs_sampler[0], batch_size // 3)
-        X_bc2_batch, _ = fetch_minibatch(bcs_sampler[1], batch_size // 3)
+def train(model):
+    opt = model.optimizer if model.optimizer is not None else Adam(model.parameters(), lr=1E-3)
+    mse = model.loss_fn if model.loss_fn is not None else MSELoss()
 
-        # Fetch residual mini-batch
-        X_res_batch, _ = fetch_minibatch(res_sampler, batch_size)
+    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE)
+    psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar)
 
-        X_ics_batch.requires_grad_(True)
-        t_ics = X_ics_batch[:, 0:1]  # temporal component
-        t_ics.requires_grad_(True)
-        u_bc1_pred = model.forward(X_bc1_batch)
-        u_bc2_pred = model.forward(X_bc2_batch)
-        u_ics_pred = model.forward(X_ics_batch)
+    t0 = time.time()
+    for epoch in range(1, model.epochs + 1):
+        opt.zero_grad()
 
-        # Compute gradients with respect to time
-        u_t = torch.autograd.grad(
-            u_ics_pred,
-            X_ics_batch,  # Changed from X_ics_batch[0] to t_ics
-            grad_outputs=torch.ones_like(u_ics_pred),
-            create_graph=True,
-        )[0]
+        # PDE (interior) con V=0 (pozo interior)
+        [_, _, rR, rI] = schrodinger_operator(model, t_f, x_f, potential_fn=0, mass=mass, hbar=hbar)
+        loss_pde = mse(rR[:, 0:1], torch.zeros_like(rR)) + mse(rI[:, 0:1], torch.zeros_like(rI))
 
-        x1_r, x2_r = X_res_batch[:, 0:1], X_res_batch[:, 1:2]
-        [_, r_pred] = schrodinger_operator(model, x1_r, x2_r)
+        # BC Dirichlet: ψ=0 en x=0 y x=L
+        psi_b = model(torch.cat((t_b, x_b), dim=1))
+        loss_bc = mse(psi_b[:, 0:1], torch.zeros_like(psi_b[:, 0:1])) + \
+                  mse(psi_b[:, 1:2], torch.zeros_like(psi_b[:, 1:2]))
 
-        # Compute the loss
+        # IC: ψ(t=0,x) = sqrt(2/L) sin(pi x/L) (parte imag=0 al inicio)
+        psi0 = model(torch.cat((t_0, x_0), dim=1))
+        loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) + mse(psi0[:, 1:2], psi0_i[:, 0:1])
 
-        loss_r = model.loss_fn(r_pred, torch.zeros_like(r_pred))
+        # Ponderación básica (ajústala si alguna pérdida domina)
+        loss = 1.0 * loss_pde + 1.0 * loss_bc + 2.0 * loss_ic
 
-        loss_bc1 = model.loss_fn(u_bc1_pred, torch.zeros_like(u_bc1_pred))
-        loss_bc2 = model.loss_fn(u_bc2_pred, torch.zeros_like(u_bc2_pred))
-        loss_ics = model.loss_fn(u_ics_pred, u_ics_batch)
+        loss.backward()
+        opt.step()
 
-        loss_u_t = model.loss_fn(u_t[:, 0], torch.zeros_like(u_t[:, 0]))
-
-        loss_bc = loss_bc1 + loss_bc2 + loss_ics
-        loss = 0.1 * (loss_r + loss_u_t) + 10 * loss_bc
-
-        elapsed = time.time() - start_time
-
-        # Print
-        if it % model.args["print_every"] == 0:
-            model.logger.print(
-                "It: %d, Loss: %.3e, Loss_res: %.3e,  Loss_bcs: %.3e, Loss_ut_ics: %.3e, lr: %.3e, Time: %.2e"
-                % (
-                    it,
-                    loss.item(),
-                    loss_r.item(),
-                    loss_bc.item(),
-                    loss_u_t.item(),
-                    model.optimizer.param_groups[0]["lr"] if model.optimizer else 0.0,
-                    elapsed,
-                )
-            )
-
-            # Compute and Print adaptive weights during training
-            # Compute the adaptive constant
-            model.save_state()
-        return loss
-
-    for it in range(model.epochs + 1):
-        loss = objective_fn(it)
-        # print(f"{loss.item()=}")
-        loss.backward(retain_graph=True)
-        if model.args["solver"] == "CV":
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=0.1)
-        else:
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1)
-        if model.optimizer is not None:
-            model.optimizer.step()
-
-        if model.scheduler is not None:
-            model.scheduler.step(loss)  # Step the learning rate scheduler
-
-        model.loss_history.append(loss.item())
+        if epoch % PRINT_EVERY == 0 or epoch == 1:
+            elapsed = time.time() - t0
+            print(f"Epoch {epoch:5d} | loss={loss.item():.3e} "
+                  f"(pde={loss_pde.item():.3e}, bc={loss_bc.item():.3e}, ic={loss_ic.item():.3e}) | {elapsed:.1f}s")

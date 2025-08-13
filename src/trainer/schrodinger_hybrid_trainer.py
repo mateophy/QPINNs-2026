@@ -10,21 +10,20 @@ global_path = os.getcwd()
 # Linea adicional para ubicación de path en los scripts
 sys.path.append(global_path)
 
-from src.utils.logger               import Logging
-from src.nn.pde                     import wave_operator
-from src.utils.plot_prediction      import plt_prediction
-from data.synthetic.wave_dataset    import u, r, Sampler
-from src.nn.DVPDESolver             import DVPDESolver
-from src.nn.CVPDESolver             import CVPDESolver
-from src.nn.ClassicalSolver2        import ClassicalSolver2
+from src.utils.logger                   import Logging
+from src.nn.pde                         import schrodinger_operator
+from data.synthetic.schrodinger_dataset import exact_eigenstate
+from src.nn.DVPDESolver                 import DVPDESolver
+from src.nn.CVPDESolver                 import CVPDESolver
+from src.nn.ClassicalSolver2            import ClassicalSolver2
 
-import src.trainer.wave_train as wave_train
+import src.trainer.schrodinger_train as wave_train
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 mode = "hybrid"
 num_qubits = 5
-output_dim = 1
+output_dim = 2
 input_dim = 2
 hidden_dim = 50
 num_quantum_layers = 1
@@ -33,8 +32,8 @@ classic_network = [input_dim, hidden_dim, output_dim]
 
 args = {
     "batch_size": 64,
-    "epochs": 10000,
-    "lr": 0.01,
+    "epochs": 200,
+    "lr": 0.001,
     "seed": 42,
     "print_every": 100,
     "log_path": "./results/models/checkpoints/wave",
@@ -48,15 +47,14 @@ args = {
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": None,  # Analytical gradients enabled
-    "problem": "wave",
-    "solver": "Classical",  # options : "CV", "Classical", "DV"
+    "problem": "schrodinger",
+    "solver": "DV",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "None",  # options : "ampiltude" , "angle" for DV , none for others
 }
-
 
 log_path = args["log_path"]
 logger = Logging(log_path)
@@ -75,6 +73,10 @@ model.logger.print(f"The settings used:")
 for key, value in args.items():
     model.logger.print(f"{key} : {value}")
 
+# Definición de tipado para entrenamiento
+DTYPE = torch.float32 
+torch.set_default_dtype(DTYPE)
+torch.manual_seed(0)
 
 # Print total number of parameters
 total_params = sum(p.numel() for p in model.parameters())
@@ -88,92 +90,40 @@ model.logger.print("Training completed successfuly!")
 
 # Testing
 
-# Define PINN model
-a = torch.tensor(0.7, dtype=torch.float32, device=DEVICE)
-c = torch.tensor(2.0, dtype=torch.float32, device=DEVICE)
+L = 1.0        # dominio espacial [0, L]
+T = 0.2        # tiempo final
+hbar = 1.0
+mass = 1.0
+n_level = 1    # nivel del pozo (usaremos n=1)
 
+with torch.no_grad():
+    t_eval = torch.full((800, 1), T, device=DEVICE, dtype=DTYPE)
+    x_eval = torch.linspace(0.0, L, 800, device=DEVICE, dtype=DTYPE).unsqueeze(1)
 
-# Domain boundaries - convert to float32
-ics_coords = np.array([[0.0, 0.0], [0.0, 1.0]], dtype=np.float32)
-bc1_coords = np.array([[0.0, 0.0], [1.0, 0.0]], dtype=np.float32)
-bc2_coords = np.array([[0.0, 1.0], [1.0, 1.0]], dtype=np.float32)
-dom_coords = np.array([[0.0, 0.0], [1.0, 1.0]], dtype=np.float32)
+    psi_pred = model(torch.cat((t_eval, x_eval), dim=1))
+    psi_r_pred = psi_pred[:, 0:1]
+    psi_i_pred = psi_pred[:, 1:2]
+    mod2_pred = (psi_r_pred**2 + psi_i_pred**2).squeeze(1).cpu().numpy()
 
-# Create initial conditions samplers
-ics_sampler = Sampler(2, ics_coords, lambda x: u(x, a, c), device=DEVICE)
+    psi_r_true, psi_i_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar)
+    mod2_true = (psi_r_true**2 + psi_i_true**2).squeeze(1).cpu().numpy()
 
-# Create boundary conditions samplers
-bc1 = Sampler(2, bc1_coords, lambda x: u(x, a, c), device=DEVICE)
-bc2 = Sampler(2, bc2_coords, lambda x: u(x, a, c), device=DEVICE)
-bcs_sampler = [bc1, bc2]
-
-# Create residual sampler
-res_sampler = Sampler(2, dom_coords, lambda x: r(x, a, c), device=DEVICE)
-coll_sampler = Sampler(2, dom_coords, lambda x: u(x, a, c), device=DEVICE)
-
-# Create mesh grid with float32
-number_of_points = 200
-t = np.linspace(dom_coords[0, 0], dom_coords[1, 0], number_of_points, dtype=np.float32)[
-    :, None
-]
-x = np.linspace(dom_coords[0, 1], dom_coords[1, 1], number_of_points, dtype=np.float32)[
-    :, None
-]
-t, x = np.meshgrid(t, x)
-
-# Convert to PyTorch tensor with float32
-X_star = (
-    torch.hstack(
-        (torch.from_numpy(t.flatten()[:, None]), torch.from_numpy(x.flatten()[:, None]))
-    )
-    .to(DEVICE)
-    .to(torch.float32)
-)
-
-u_star = u(X_star, a, c)
-f_star = r(X_star, a, c)
-
-
-plt.plot(range(len(model.loss_history)), model.loss_history)
-plt.xlabel("Epochs")
-plt.ylabel("Loss")
-plt.title("Training Loss Over Epochs")
-plt.grid()
-
-file_path = os.path.join(model.log_path, "loss_history.pdf")
-plt.savefig(file_path, bbox_inches="tight")
+# Gráfico 1: |psi|^2 en t=T (PINN vs exacto)
+plt.figure()
+plt.plot(x_eval.squeeze(1).cpu().numpy(), mod2_true, label="|ψ|^2 exacto")
+plt.plot(x_eval.squeeze(1).cpu().numpy(), mod2_pred, "--", label="|ψ|^2 PINN")
+plt.title("|ψ(x,T)|^2 en pozo infinito (n=1)")
+plt.xlabel("x")
+plt.ylabel("|ψ|^2")
+plt.legend()
 plt.show()
 
-plt.close(
-    "all",
-)
-
-# Predictions
-u_pred_star, f_pred_star = wave_operator(model, X_star[:, 0:1], X_star[:, 1:2])
-
-u_pred = u_pred_star.cpu().detach().numpy()
-f_pred = f_pred_star.cpu().detach().numpy()
-u_star = u_star.cpu().detach().numpy()
-f_star = f_star.cpu().detach().numpy()
-X = X_star.cpu().detach().numpy()
-
-
-# Relative L2 error
-error_u = (
-    np.linalg.norm(u_pred - u_star) / np.linalg.norm(u_star) * 100
-    if np.linalg.norm(u_star)
-    else float("inf")
-)
-error_f = np.linalg.norm(f_pred - f_star)
-logger.print("Relative L2 error_u: {:.2e}".format(error_u))
-logger.print("Relative L2 error_f: {:.2e}".format(error_f))
-
-
-plt_prediction(
-    logger,
-    X,
-    u_star,
-    u_pred,
-    f_star,
-    f_pred,
-)
+# Gráfico 2: error absoluto en |psi|^2
+plt.figure()
+abs_err = np.abs(mod2_pred - mod2_true)
+plt.plot(x_eval.squeeze(1).cpu().numpy(), abs_err, label="Error absoluto")
+plt.title("Error absoluto en |ψ(x,T)|^2")
+plt.xlabel("x")
+plt.ylabel("Error")
+plt.legend()
+plt.show()

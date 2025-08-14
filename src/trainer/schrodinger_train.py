@@ -22,17 +22,17 @@ sys.path.append(relative_path)
 from data.synthetic.schrodinger_dataset import sample_collocation, exact_eigenstate
 from src.nn.pde import schrodinger_operator
 
-# Parametros físicos del dominio
-L = 1.0        # dominio espacial [0, L]
-T = 0.2        # tiempo final
-hbar = 1.0
-mass = 110
-n_level = 1    # nivel del pozo (usaremos n=1)
-
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
 
 def train(model, N_f = 100, N_b = 100, N_0 = 100):
+
+    # Parametros físicos del dominio
+    L       = model.args['eq_params']['L']          # dominio espacial [0, L]
+    T       = model.args['eq_params']['T']          # tiempo final
+    hbar    = model.args['eq_params']['hbar'] 
+    mass    = model.args['eq_params']['mass']
+    n_level = model.args['eq_params']['n_level']    # nivel del pozo (usaremos n=1)
 
     # Parameters definition by model
     opt = model.optimizer if model.optimizer is not None else Adam(model.parameters(), lr=1E-3)
@@ -93,4 +93,7 @@ def train(model, N_f = 100, N_b = 100, N_0 = 100):
             # Compute and Print adaptive weights during training
             # Compute the adaptive constant
             model.save_state()
+
+        # Save of loss for each epoch
+        model.loss_history.append(loss.item())
 

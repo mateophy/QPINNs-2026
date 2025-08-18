@@ -36,15 +36,15 @@ eq_params = {
     'T' : 0.2,        # tiempo final
     'hbar' : 1.0,     # Atomic coordinates = 1
     'mass' : 1.0,     # Atomic coordinates = 1
-    'n_level' : 1,    # nivel del pozo (usaremos n=1)
+    'n_level' : 2,    # nivel del pozo (usaremos n=1)
 }
 
 args = {
     "batch_size": 64,
-    "epochs": 100,
+    "epochs": 2000, 
     "lr": 0.001,
     "seed": 42,
-    "print_every": 5,
+    "print_every": 10,
     "log_path": "./results/models/checkpoints/schrodinger",
     "input_dim": input_dim,
     "output_dim": output_dim,

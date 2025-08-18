@@ -1,0 +1,635 @@
+checkpoint path: self.log_path='./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447'
+Using Classical Solver
+The settings used:
+batch_size : 64
+epochs : 20000
+lr : 0.001
+seed : 42
+print_every : 100
+log_path : ./results/models/checkpoints/complex_wave
+input_dim : 2
+output_dim : 1
+num_qubits : 5
+hidden_dim : 50
+num_quantum_layers : 1
+classic_network : [2, 50, 1]
+q_ansatz : sim_circ_5
+mode : hybrid
+activation : null
+shots : None
+problem : complex_wave
+solver : Classical
+device : cpu
+method : None
+cutoff_dim : 20
+class : CVNeuralNetwork2
+encoding : None
+Total number of parameters: 7851
+It: 0, Loss: 3.109e+02, Loss_res: 1.535e-02,  Loss_bcs: 3.109e+01, Loss_ut_ics: 1.471e-02, lr: 1.000e-03, Time: 4.19e-02
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 100, Loss: 5.404e+01, Loss_res: 1.252e+01,  Loss_bcs: 4.865e+00, Loss_ut_ics: 4.132e+01, lr: 1.000e-03, Time: 5.56e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 200, Loss: 3.925e+01, Loss_res: 1.215e+02,  Loss_bcs: 2.344e+00, Loss_ut_ics: 3.667e+01, lr: 1.000e-03, Time: 4.35e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 300, Loss: 2.360e+01, Loss_res: 1.003e+02,  Loss_bcs: 4.691e-01, Loss_ut_ics: 8.876e+01, lr: 1.000e-03, Time: 4.35e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 400, Loss: 1.043e+01, Loss_res: 3.039e+01,  Loss_bcs: 4.587e-01, Loss_ut_ics: 2.806e+01, lr: 1.000e-03, Time: 4.31e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 500, Loss: 2.649e+00, Loss_res: 7.139e+00,  Loss_bcs: 1.698e-01, Loss_ut_ics: 2.367e+00, lr: 1.000e-03, Time: 4.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 600, Loss: 1.736e+00, Loss_res: 7.040e+00,  Loss_bcs: 8.726e-02, Loss_ut_ics: 1.594e+00, lr: 1.000e-03, Time: 4.26e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 700, Loss: 1.289e+00, Loss_res: 8.179e+00,  Loss_bcs: 2.748e-02, Loss_ut_ics: 1.966e+00, lr: 1.000e-03, Time: 4.31e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 800, Loss: 2.857e+00, Loss_res: 1.076e+01,  Loss_bcs: 8.002e-02, Loss_ut_ics: 9.817e+00, lr: 1.000e-03, Time: 4.42e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 900, Loss: 7.935e-01, Loss_res: 3.175e+00,  Loss_bcs: 2.973e-02, Loss_ut_ics: 1.787e+00, lr: 1.000e-03, Time: 4.36e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1000, Loss: 9.547e-01, Loss_res: 5.401e+00,  Loss_bcs: 3.000e-02, Loss_ut_ics: 1.146e+00, lr: 1.000e-03, Time: 4.68e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1100, Loss: 4.638e-01, Loss_res: 4.541e-01,  Loss_bcs: 2.606e-02, Loss_ut_ics: 1.578e+00, lr: 1.000e-03, Time: 4.35e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1200, Loss: 5.257e-01, Loss_res: 7.313e-01,  Loss_bcs: 2.805e-02, Loss_ut_ics: 1.721e+00, lr: 1.000e-03, Time: 4.30e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1300, Loss: 3.962e-01, Loss_res: 9.953e-01,  Loss_bcs: 6.385e-03, Loss_ut_ics: 2.328e+00, lr: 1.000e-03, Time: 4.36e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1400, Loss: 5.403e-01, Loss_res: 3.019e+00,  Loss_bcs: 1.757e-02, Loss_ut_ics: 6.268e-01, lr: 1.000e-03, Time: 4.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1500, Loss: 4.166e-01, Loss_res: 1.350e+00,  Loss_bcs: 9.672e-03, Loss_ut_ics: 1.849e+00, lr: 1.000e-03, Time: 5.83e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1600, Loss: 6.495e-01, Loss_res: 3.358e+00,  Loss_bcs: 2.499e-02, Loss_ut_ics: 6.382e-01, lr: 1.000e-03, Time: 4.32e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1700, Loss: 3.050e-01, Loss_res: 1.546e+00,  Loss_bcs: 6.930e-03, Loss_ut_ics: 8.102e-01, lr: 1.000e-03, Time: 4.31e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1800, Loss: 6.175e-01, Loss_res: 3.908e-01,  Loss_bcs: 3.361e-02, Loss_ut_ics: 2.424e+00, lr: 1.000e-03, Time: 4.30e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 1900, Loss: 3.687e-01, Loss_res: 5.679e-01,  Loss_bcs: 8.843e-03, Loss_ut_ics: 2.235e+00, lr: 1.000e-03, Time: 4.30e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2000, Loss: 6.072e-01, Loss_res: 1.052e+00,  Loss_bcs: 2.853e-02, Loss_ut_ics: 2.166e+00, lr: 1.000e-03, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2100, Loss: 5.724e-01, Loss_res: 3.741e+00,  Loss_bcs: 1.746e-02, Loss_ut_ics: 2.375e-01, lr: 1.000e-03, Time: 6.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2200, Loss: 1.528e+00, Loss_res: 1.283e+01,  Loss_bcs: 1.075e-02, Loss_ut_ics: 1.368e+00, lr: 1.000e-03, Time: 4.56e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2300, Loss: 5.843e-01, Loss_res: 2.897e-01,  Loss_bcs: 2.673e-02, Loss_ut_ics: 2.881e+00, lr: 1.000e-03, Time: 4.50e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2400, Loss: 2.914e-01, Loss_res: 4.906e-01,  Loss_bcs: 1.953e-02, Loss_ut_ics: 4.710e-01, lr: 9.000e-04, Time: 4.41e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2500, Loss: 4.806e-01, Loss_res: 3.026e-01,  Loss_bcs: 1.548e-02, Loss_ut_ics: 2.955e+00, lr: 9.000e-04, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2600, Loss: 4.124e-01, Loss_res: 3.161e-01,  Loss_bcs: 2.971e-02, Loss_ut_ics: 8.374e-01, lr: 9.000e-04, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2700, Loss: 7.188e-01, Loss_res: 2.335e+00,  Loss_bcs: 1.555e-02, Loss_ut_ics: 3.299e+00, lr: 9.000e-04, Time: 4.27e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2800, Loss: 1.255e+00, Loss_res: 3.779e+00,  Loss_bcs: 1.928e-02, Loss_ut_ics: 6.843e+00, lr: 9.000e-04, Time: 4.67e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 2900, Loss: 6.909e-01, Loss_res: 4.883e-01,  Loss_bcs: 6.562e-03, Loss_ut_ics: 5.765e+00, lr: 9.000e-04, Time: 4.44e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3000, Loss: 7.972e-01, Loss_res: 1.792e+00,  Loss_bcs: 3.941e-02, Loss_ut_ics: 2.239e+00, lr: 9.000e-04, Time: 4.51e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3100, Loss: 5.122e-01, Loss_res: 3.428e-01,  Loss_bcs: 3.032e-02, Loss_ut_ics: 1.746e+00, lr: 9.000e-04, Time: 4.68e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3200, Loss: 2.476e-01, Loss_res: 1.426e-01,  Loss_bcs: 1.175e-02, Loss_ut_ics: 1.158e+00, lr: 9.000e-04, Time: 4.62e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3300, Loss: 1.460e-01, Loss_res: 1.213e-01,  Loss_bcs: 7.528e-03, Loss_ut_ics: 5.856e-01, lr: 9.000e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3400, Loss: 4.275e-01, Loss_res: 6.495e-01,  Loss_bcs: 1.510e-02, Loss_ut_ics: 2.115e+00, lr: 9.000e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3500, Loss: 1.163e-01, Loss_res: 2.940e-01,  Loss_bcs: 6.555e-03, Loss_ut_ics: 2.132e-01, lr: 9.000e-04, Time: 4.34e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3600, Loss: 3.423e-01, Loss_res: 4.023e-01,  Loss_bcs: 1.527e-02, Loss_ut_ics: 1.494e+00, lr: 9.000e-04, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3700, Loss: 2.816e-01, Loss_res: 2.513e-01,  Loss_bcs: 1.707e-02, Loss_ut_ics: 8.582e-01, lr: 9.000e-04, Time: 4.85e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3800, Loss: 4.146e-01, Loss_res: 2.199e+00,  Loss_bcs: 1.493e-02, Loss_ut_ics: 4.544e-01, lr: 9.000e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 3900, Loss: 4.804e-01, Loss_res: 1.556e+00,  Loss_bcs: 1.256e-02, Loss_ut_ics: 1.991e+00, lr: 9.000e-04, Time: 4.69e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4000, Loss: 5.423e-01, Loss_res: 6.340e-01,  Loss_bcs: 3.424e-02, Loss_ut_ics: 1.365e+00, lr: 9.000e-04, Time: 5.02e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4100, Loss: 1.945e-01, Loss_res: 1.540e-01,  Loss_bcs: 1.331e-02, Loss_ut_ics: 4.593e-01, lr: 9.000e-04, Time: 4.50e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4200, Loss: 1.012e-01, Loss_res: 1.578e-01,  Loss_bcs: 3.701e-03, Loss_ut_ics: 4.844e-01, lr: 9.000e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4300, Loss: 2.004e-01, Loss_res: 1.773e-01,  Loss_bcs: 1.253e-02, Loss_ut_ics: 5.730e-01, lr: 9.000e-04, Time: 6.39e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4400, Loss: 2.469e-01, Loss_res: 1.812e+00,  Loss_bcs: 4.825e-03, Loss_ut_ics: 1.749e-01, lr: 8.100e-04, Time: 4.77e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4500, Loss: 1.467e+00, Loss_res: 1.374e-01,  Loss_bcs: 2.131e-02, Loss_ut_ics: 1.241e+01, lr: 8.100e-04, Time: 5.24e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4600, Loss: 1.180e+00, Loss_res: 1.017e+01,  Loss_bcs: 9.381e-03, Loss_ut_ics: 6.914e-01, lr: 8.100e-04, Time: 5.00e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4700, Loss: 9.755e-01, Loss_res: 6.817e-01,  Loss_bcs: 6.869e-02, Loss_ut_ics: 2.203e+00, lr: 8.100e-04, Time: 4.95e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4800, Loss: 2.024e-01, Loss_res: 1.338e-01,  Loss_bcs: 1.100e-02, Loss_ut_ics: 7.899e-01, lr: 8.100e-04, Time: 5.23e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 4900, Loss: 2.513e-01, Loss_res: 9.489e-01,  Loss_bcs: 1.096e-02, Loss_ut_ics: 4.683e-01, lr: 8.100e-04, Time: 5.34e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5000, Loss: 2.993e-01, Loss_res: 8.376e-02,  Loss_bcs: 8.287e-03, Loss_ut_ics: 2.080e+00, lr: 8.100e-04, Time: 4.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5100, Loss: 1.306e-01, Loss_res: 3.926e-01,  Loss_bcs: 4.203e-03, Loss_ut_ics: 4.936e-01, lr: 8.100e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5200, Loss: 2.683e-01, Loss_res: 3.181e-01,  Loss_bcs: 5.456e-03, Loss_ut_ics: 1.820e+00, lr: 8.100e-04, Time: 4.66e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5300, Loss: 5.689e-01, Loss_res: 1.172e-01,  Loss_bcs: 3.646e-02, Loss_ut_ics: 1.925e+00, lr: 8.100e-04, Time: 5.27e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5400, Loss: 1.721e-01, Loss_res: 2.398e-01,  Loss_bcs: 9.957e-03, Loss_ut_ics: 4.857e-01, lr: 8.100e-04, Time: 4.71e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5500, Loss: 4.340e-01, Loss_res: 2.969e-01,  Loss_bcs: 2.330e-02, Loss_ut_ics: 1.714e+00, lr: 8.100e-04, Time: 4.82e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5600, Loss: 1.167e-01, Loss_res: 9.953e-02,  Loss_bcs: 7.623e-03, Loss_ut_ics: 3.047e-01, lr: 8.100e-04, Time: 5.01e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5700, Loss: 1.571e-01, Loss_res: 1.537e-01,  Loss_bcs: 3.364e-03, Loss_ut_ics: 1.081e+00, lr: 8.100e-04, Time: 4.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5800, Loss: 8.144e-02, Loss_res: 1.133e-01,  Loss_bcs: 4.367e-03, Loss_ut_ics: 2.645e-01, lr: 8.100e-04, Time: 5.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 5900, Loss: 6.717e-02, Loss_res: 1.762e-01,  Loss_bcs: 2.967e-03, Loss_ut_ics: 1.988e-01, lr: 8.100e-04, Time: 7.42e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6000, Loss: 2.050e-01, Loss_res: 7.081e-01,  Loss_bcs: 1.162e-02, Loss_ut_ics: 1.801e-01, lr: 8.100e-04, Time: 4.65e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6100, Loss: 4.704e-01, Loss_res: 2.681e-01,  Loss_bcs: 2.547e-02, Loss_ut_ics: 1.888e+00, lr: 8.100e-04, Time: 4.57e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6200, Loss: 1.106e-01, Loss_res: 7.499e-01,  Loss_bcs: 2.980e-03, Loss_ut_ics: 5.825e-02, lr: 8.100e-04, Time: 4.58e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6300, Loss: 8.411e-01, Loss_res: 7.397e+00,  Loss_bcs: 5.823e-03, Loss_ut_ics: 4.316e-01, lr: 8.100e-04, Time: 4.42e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6400, Loss: 1.381e-01, Loss_res: 1.222e-01,  Loss_bcs: 8.136e-03, Loss_ut_ics: 4.451e-01, lr: 8.100e-04, Time: 4.37e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6500, Loss: 1.922e-01, Loss_res: 1.519e-01,  Loss_bcs: 1.133e-02, Loss_ut_ics: 6.366e-01, lr: 8.100e-04, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6600, Loss: 1.025e-01, Loss_res: 1.863e-01,  Loss_bcs: 4.306e-03, Loss_ut_ics: 4.081e-01, lr: 8.100e-04, Time: 4.62e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6700, Loss: 8.277e-02, Loss_res: 5.988e-02,  Loss_bcs: 5.131e-03, Loss_ut_ics: 2.547e-01, lr: 8.100e-04, Time: 4.58e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6800, Loss: 1.126e+00, Loss_res: 2.740e-01,  Loss_bcs: 2.229e-02, Loss_ut_ics: 8.761e+00, lr: 8.100e-04, Time: 4.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 6900, Loss: 3.567e-02, Loss_res: 1.006e-01,  Loss_bcs: 1.815e-03, Loss_ut_ics: 7.468e-02, lr: 8.100e-04, Time: 4.80e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7000, Loss: 2.565e-01, Loss_res: 4.205e-01,  Loss_bcs: 1.744e-02, Loss_ut_ics: 4.012e-01, lr: 8.100e-04, Time: 4.78e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7100, Loss: 3.765e-01, Loss_res: 3.397e-01,  Loss_bcs: 8.411e-03, Loss_ut_ics: 2.584e+00, lr: 8.100e-04, Time: 4.71e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7200, Loss: 2.421e-01, Loss_res: 8.306e-01,  Loss_bcs: 1.011e-02, Loss_ut_ics: 5.795e-01, lr: 8.100e-04, Time: 4.66e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7300, Loss: 7.028e-02, Loss_res: 5.600e-02,  Loss_bcs: 1.599e-03, Loss_ut_ics: 4.869e-01, lr: 7.290e-04, Time: 4.85e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7400, Loss: 9.076e-02, Loss_res: 1.048e-01,  Loss_bcs: 5.670e-03, Loss_ut_ics: 2.358e-01, lr: 7.290e-04, Time: 4.51e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7500, Loss: 4.011e-02, Loss_res: 5.190e-02,  Loss_bcs: 1.949e-03, Loss_ut_ics: 1.543e-01, lr: 7.290e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7600, Loss: 1.951e-01, Loss_res: 1.415e-01,  Loss_bcs: 5.141e-03, Loss_ut_ics: 1.296e+00, lr: 7.290e-04, Time: 4.98e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7700, Loss: 6.913e-02, Loss_res: 2.183e-01,  Loss_bcs: 3.152e-03, Loss_ut_ics: 1.578e-01, lr: 7.290e-04, Time: 5.30e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7800, Loss: 2.020e-01, Loss_res: 1.425e-01,  Loss_bcs: 6.612e-03, Loss_ut_ics: 1.216e+00, lr: 7.290e-04, Time: 4.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 7900, Loss: 1.864e-01, Loss_res: 2.820e-01,  Loss_bcs: 1.167e-02, Loss_ut_ics: 4.150e-01, lr: 7.290e-04, Time: 4.67e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8000, Loss: 2.979e-01, Loss_res: 1.956e-01,  Loss_bcs: 1.750e-03, Loss_ut_ics: 2.609e+00, lr: 7.290e-04, Time: 5.00e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8100, Loss: 1.906e-01, Loss_res: 9.682e-01,  Loss_bcs: 7.815e-03, Loss_ut_ics: 1.563e-01, lr: 7.290e-04, Time: 4.55e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8200, Loss: 8.770e-02, Loss_res: 3.188e-01,  Loss_bcs: 4.171e-03, Loss_ut_ics: 1.411e-01, lr: 7.290e-04, Time: 4.35e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8300, Loss: 6.468e-02, Loss_res: 2.251e-01,  Loss_bcs: 1.801e-03, Loss_ut_ics: 2.417e-01, lr: 6.561e-04, Time: 5.02e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8400, Loss: 1.039e-01, Loss_res: 1.673e-01,  Loss_bcs: 4.167e-03, Loss_ut_ics: 4.555e-01, lr: 6.561e-04, Time: 4.81e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8500, Loss: 4.582e-02, Loss_res: 1.610e-01,  Loss_bcs: 1.195e-03, Loss_ut_ics: 1.776e-01, lr: 6.561e-04, Time: 4.55e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8600, Loss: 2.841e-01, Loss_res: 9.424e-01,  Loss_bcs: 8.988e-03, Loss_ut_ics: 9.997e-01, lr: 6.561e-04, Time: 4.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8700, Loss: 5.312e-02, Loss_res: 6.581e-02,  Loss_bcs: 1.656e-03, Loss_ut_ics: 2.998e-01, lr: 6.561e-04, Time: 4.68e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8800, Loss: 9.279e-02, Loss_res: 4.629e-02,  Loss_bcs: 3.339e-03, Loss_ut_ics: 5.477e-01, lr: 6.561e-04, Time: 4.61e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 8900, Loss: 2.636e-01, Loss_res: 1.122e-01,  Loss_bcs: 1.969e-02, Loss_ut_ics: 5.542e-01, lr: 6.561e-04, Time: 4.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9000, Loss: 1.536e-01, Loss_res: 6.222e-02,  Loss_bcs: 9.099e-03, Loss_ut_ics: 5.640e-01, lr: 6.561e-04, Time: 4.65e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9100, Loss: 4.836e-01, Loss_res: 3.539e+00,  Loss_bcs: 1.402e-03, Loss_ut_ics: 1.157e+00, lr: 6.561e-04, Time: 5.37e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9200, Loss: 4.715e-02, Loss_res: 5.486e-02,  Loss_bcs: 3.509e-03, Loss_ut_ics: 6.577e-02, lr: 6.561e-04, Time: 4.66e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9300, Loss: 1.643e-01, Loss_res: 2.869e-01,  Loss_bcs: 1.101e-02, Loss_ut_ics: 2.560e-01, lr: 6.561e-04, Time: 5.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9400, Loss: 6.490e-02, Loss_res: 9.511e-02,  Loss_bcs: 4.036e-03, Loss_ut_ics: 1.504e-01, lr: 6.561e-04, Time: 5.24e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9500, Loss: 4.361e-02, Loss_res: 7.473e-02,  Loss_bcs: 3.374e-03, Loss_ut_ics: 2.398e-02, lr: 6.561e-04, Time: 4.66e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9600, Loss: 9.408e-02, Loss_res: 4.434e-01,  Loss_bcs: 2.583e-03, Loss_ut_ics: 2.392e-01, lr: 5.905e-04, Time: 4.72e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9700, Loss: 2.545e-01, Loss_res: 1.055e+00,  Loss_bcs: 7.424e-03, Loss_ut_ics: 7.474e-01, lr: 5.905e-04, Time: 5.65e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9800, Loss: 3.663e-02, Loss_res: 7.986e-02,  Loss_bcs: 9.163e-04, Loss_ut_ics: 1.948e-01, lr: 5.905e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 9900, Loss: 4.844e-02, Loss_res: 6.063e-02,  Loss_bcs: 1.932e-03, Loss_ut_ics: 2.306e-01, lr: 5.905e-04, Time: 4.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10000, Loss: 7.195e-02, Loss_res: 1.199e-01,  Loss_bcs: 3.056e-03, Loss_ut_ics: 2.940e-01, lr: 5.905e-04, Time: 4.73e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10100, Loss: 2.250e-01, Loss_res: 1.471e-01,  Loss_bcs: 8.589e-03, Loss_ut_ics: 1.244e+00, lr: 5.905e-04, Time: 4.67e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10200, Loss: 9.130e-02, Loss_res: 2.258e-01,  Loss_bcs: 4.857e-03, Loss_ut_ics: 2.016e-01, lr: 5.905e-04, Time: 4.57e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10300, Loss: 5.672e-02, Loss_res: 1.008e-01,  Loss_bcs: 2.342e-03, Loss_ut_ics: 2.323e-01, lr: 5.905e-04, Time: 4.49e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10400, Loss: 1.586e-01, Loss_res: 8.409e-02,  Loss_bcs: 1.185e-03, Loss_ut_ics: 1.384e+00, lr: 5.905e-04, Time: 4.58e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10500, Loss: 1.351e-01, Loss_res: 6.024e-02,  Loss_bcs: 4.616e-03, Loss_ut_ics: 8.288e-01, lr: 5.905e-04, Time: 4.65e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10600, Loss: 3.678e+00, Loss_res: 3.528e+01,  Loss_bcs: 1.154e-02, Loss_ut_ics: 3.426e-01, lr: 5.905e-04, Time: 4.55e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10700, Loss: 6.277e-01, Loss_res: 5.613e+00,  Loss_bcs: 3.073e-03, Loss_ut_ics: 3.569e-01, lr: 5.905e-04, Time: 4.57e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10800, Loss: 2.542e+00, Loss_res: 2.477e+01,  Loss_bcs: 3.404e-03, Loss_ut_ics: 3.053e-01, lr: 5.905e-04, Time: 4.46e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 10900, Loss: 1.600e-01, Loss_res: 9.667e-02,  Loss_bcs: 1.335e-03, Loss_ut_ics: 1.370e+00, lr: 5.905e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11000, Loss: 4.533e-02, Loss_res: 1.019e-01,  Loss_bcs: 1.652e-03, Loss_ut_ics: 1.862e-01, lr: 5.314e-04, Time: 4.59e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11100, Loss: 6.350e-02, Loss_res: 7.221e-02,  Loss_bcs: 3.416e-03, Loss_ut_ics: 2.212e-01, lr: 5.314e-04, Time: 4.75e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11200, Loss: 6.416e-02, Loss_res: 8.580e-02,  Loss_bcs: 4.374e-03, Loss_ut_ics: 1.183e-01, lr: 5.314e-04, Time: 4.61e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11300, Loss: 4.160e-02, Loss_res: 4.862e-02,  Loss_bcs: 9.279e-04, Loss_ut_ics: 2.746e-01, lr: 5.314e-04, Time: 4.65e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11400, Loss: 6.755e-02, Loss_res: 4.129e-02,  Loss_bcs: 2.450e-03, Loss_ut_ics: 3.892e-01, lr: 5.314e-04, Time: 4.46e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11500, Loss: 5.380e-02, Loss_res: 1.292e-01,  Loss_bcs: 8.249e-04, Loss_ut_ics: 3.263e-01, lr: 5.314e-04, Time: 4.49e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11600, Loss: 7.293e-02, Loss_res: 2.001e-01,  Loss_bcs: 3.281e-03, Loss_ut_ics: 2.011e-01, lr: 5.314e-04, Time: 4.60e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11700, Loss: 2.571e-01, Loss_res: 8.828e-01,  Loss_bcs: 1.517e-02, Loss_ut_ics: 1.708e-01, lr: 5.314e-04, Time: 4.55e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11800, Loss: 5.226e-02, Loss_res: 5.798e-02,  Loss_bcs: 1.644e-03, Loss_ut_ics: 3.002e-01, lr: 5.314e-04, Time: 4.62e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 11900, Loss: 3.498e-01, Loss_res: 2.977e+00,  Loss_bcs: 1.742e-03, Loss_ut_ics: 3.468e-01, lr: 5.314e-04, Time: 5.29e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12000, Loss: 6.697e-02, Loss_res: 6.012e-02,  Loss_bcs: 2.487e-03, Loss_ut_ics: 3.609e-01, lr: 5.314e-04, Time: 6.07e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12100, Loss: 5.815e-02, Loss_res: 5.733e-02,  Loss_bcs: 3.546e-03, Loss_ut_ics: 1.695e-01, lr: 5.314e-04, Time: 4.46e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12200, Loss: 1.151e-01, Loss_res: 5.801e-02,  Loss_bcs: 4.935e-03, Loss_ut_ics: 5.993e-01, lr: 5.314e-04, Time: 4.59e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12300, Loss: 2.087e-02, Loss_res: 5.467e-02,  Loss_bcs: 6.625e-04, Loss_ut_ics: 8.781e-02, lr: 5.314e-04, Time: 4.74e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12400, Loss: 1.311e-01, Loss_res: 3.384e-02,  Loss_bcs: 5.315e-03, Loss_ut_ics: 7.452e-01, lr: 5.314e-04, Time: 4.75e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12500, Loss: 6.852e-02, Loss_res: 8.859e-02,  Loss_bcs: 3.601e-03, Loss_ut_ics: 2.365e-01, lr: 5.314e-04, Time: 4.50e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12600, Loss: 3.780e-02, Loss_res: 1.235e-01,  Loss_bcs: 1.094e-03, Loss_ut_ics: 1.452e-01, lr: 5.314e-04, Time: 5.56e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12700, Loss: 2.315e-02, Loss_res: 4.034e-02,  Loss_bcs: 1.695e-03, Loss_ut_ics: 2.169e-02, lr: 5.314e-04, Time: 4.49e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12800, Loss: 5.764e-02, Loss_res: 5.615e-02,  Loss_bcs: 1.488e-03, Loss_ut_ics: 3.714e-01, lr: 5.314e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 12900, Loss: 3.857e-02, Loss_res: 5.132e-02,  Loss_bcs: 1.503e-03, Loss_ut_ics: 1.841e-01, lr: 5.314e-04, Time: 4.67e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13000, Loss: 4.393e-02, Loss_res: 7.172e-02,  Loss_bcs: 2.876e-03, Loss_ut_ics: 7.995e-02, lr: 5.314e-04, Time: 4.48e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13100, Loss: 9.910e-02, Loss_res: 1.273e-01,  Loss_bcs: 3.492e-03, Loss_ut_ics: 5.145e-01, lr: 5.314e-04, Time: 4.80e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13200, Loss: 5.463e-02, Loss_res: 3.779e-02,  Loss_bcs: 2.763e-03, Loss_ut_ics: 2.322e-01, lr: 4.783e-04, Time: 5.35e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13300, Loss: 3.416e-02, Loss_res: 1.690e-01,  Loss_bcs: 1.497e-03, Loss_ut_ics: 2.289e-02, lr: 4.783e-04, Time: 4.75e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13400, Loss: 5.808e-02, Loss_res: 4.191e-01,  Loss_bcs: 7.778e-04, Loss_ut_ics: 8.394e-02, lr: 4.783e-04, Time: 5.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13500, Loss: 6.112e-02, Loss_res: 6.780e-02,  Loss_bcs: 3.402e-03, Loss_ut_ics: 2.032e-01, lr: 4.783e-04, Time: 4.56e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13600, Loss: 8.014e-02, Loss_res: 7.005e-02,  Loss_bcs: 3.973e-03, Loss_ut_ics: 3.341e-01, lr: 4.783e-04, Time: 5.18e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13700, Loss: 8.429e-02, Loss_res: 1.388e-01,  Loss_bcs: 2.753e-03, Loss_ut_ics: 4.288e-01, lr: 4.783e-04, Time: 4.57e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13800, Loss: 1.012e-01, Loss_res: 5.212e-02,  Loss_bcs: 7.934e-03, Loss_ut_ics: 1.664e-01, lr: 4.783e-04, Time: 4.84e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 13900, Loss: 5.604e-02, Loss_res: 5.899e-02,  Loss_bcs: 1.356e-03, Loss_ut_ics: 3.658e-01, lr: 4.783e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14000, Loss: 3.057e-02, Loss_res: 4.861e-02,  Loss_bcs: 1.914e-03, Loss_ut_ics: 6.569e-02, lr: 4.783e-04, Time: 4.44e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14100, Loss: 2.582e-02, Loss_res: 5.859e-02,  Loss_bcs: 5.858e-04, Loss_ut_ics: 1.411e-01, lr: 4.783e-04, Time: 4.50e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14200, Loss: 2.799e-02, Loss_res: 2.653e-02,  Loss_bcs: 1.461e-03, Loss_ut_ics: 1.073e-01, lr: 4.305e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14300, Loss: 2.111e-02, Loss_res: 6.205e-02,  Loss_bcs: 8.683e-04, Loss_ut_ics: 6.225e-02, lr: 4.305e-04, Time: 4.77e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14400, Loss: 2.340e-02, Loss_res: 5.897e-02,  Loss_bcs: 7.006e-04, Loss_ut_ics: 1.050e-01, lr: 4.305e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14500, Loss: 1.700e-02, Loss_res: 5.919e-02,  Loss_bcs: 6.151e-04, Loss_ut_ics: 4.927e-02, lr: 4.305e-04, Time: 4.46e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14600, Loss: 6.729e-02, Loss_res: 4.236e-02,  Loss_bcs: 4.274e-03, Loss_ut_ics: 2.032e-01, lr: 4.305e-04, Time: 4.48e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14700, Loss: 5.479e-02, Loss_res: 2.888e-02,  Loss_bcs: 2.884e-03, Loss_ut_ics: 2.306e-01, lr: 4.305e-04, Time: 4.67e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14800, Loss: 5.473e-02, Loss_res: 4.711e-02,  Loss_bcs: 2.948e-03, Loss_ut_ics: 2.054e-01, lr: 4.305e-04, Time: 4.68e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 14900, Loss: 6.159e-02, Loss_res: 2.925e-02,  Loss_bcs: 1.651e-03, Loss_ut_ics: 4.216e-01, lr: 4.305e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15000, Loss: 8.044e-02, Loss_res: 2.748e-02,  Loss_bcs: 4.828e-03, Loss_ut_ics: 2.941e-01, lr: 4.305e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15100, Loss: 1.541e-02, Loss_res: 2.466e-02,  Loss_bcs: 6.835e-04, Loss_ut_ics: 6.112e-02, lr: 4.305e-04, Time: 4.70e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15200, Loss: 3.503e-02, Loss_res: 1.081e-01,  Loss_bcs: 1.908e-03, Loss_ut_ics: 5.141e-02, lr: 4.305e-04, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15300, Loss: 2.278e-02, Loss_res: 6.269e-02,  Loss_bcs: 4.707e-04, Loss_ut_ics: 1.180e-01, lr: 4.305e-04, Time: 4.56e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15400, Loss: 4.179e-01, Loss_res: 3.944e+00,  Loss_bcs: 9.992e-04, Loss_ut_ics: 1.344e-01, lr: 4.305e-04, Time: 5.55e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15500, Loss: 3.585e-02, Loss_res: 4.665e-02,  Loss_bcs: 1.403e-03, Loss_ut_ics: 1.715e-01, lr: 4.305e-04, Time: 4.56e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15600, Loss: 3.890e-02, Loss_res: 5.615e-02,  Loss_bcs: 2.075e-03, Loss_ut_ics: 1.254e-01, lr: 4.305e-04, Time: 4.50e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15700, Loss: 4.893e-02, Loss_res: 5.736e-02,  Loss_bcs: 1.119e-03, Loss_ut_ics: 3.201e-01, lr: 4.305e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15800, Loss: 5.252e-02, Loss_res: 1.814e-01,  Loss_bcs: 1.773e-03, Loss_ut_ics: 1.665e-01, lr: 4.305e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 15900, Loss: 3.885e-02, Loss_res: 1.075e-01,  Loss_bcs: 1.459e-03, Loss_ut_ics: 1.352e-01, lr: 4.305e-04, Time: 4.44e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16000, Loss: 3.269e-02, Loss_res: 3.148e-02,  Loss_bcs: 1.355e-03, Loss_ut_ics: 1.600e-01, lr: 4.305e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16100, Loss: 1.419e-01, Loss_res: 3.781e-02,  Loss_bcs: 2.770e-03, Loss_ut_ics: 1.104e+00, lr: 4.305e-04, Time: 4.62e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16200, Loss: 2.710e-02, Loss_res: 1.308e-01,  Loss_bcs: 8.358e-04, Loss_ut_ics: 5.659e-02, lr: 4.305e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16300, Loss: 4.720e-02, Loss_res: 5.406e-02,  Loss_bcs: 3.548e-03, Loss_ut_ics: 6.313e-02, lr: 3.874e-04, Time: 4.42e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16400, Loss: 3.409e-02, Loss_res: 3.508e-02,  Loss_bcs: 2.320e-03, Loss_ut_ics: 7.387e-02, lr: 3.874e-04, Time: 4.61e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16500, Loss: 5.737e-02, Loss_res: 4.288e-02,  Loss_bcs: 2.421e-03, Loss_ut_ics: 2.887e-01, lr: 3.874e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16600, Loss: 5.229e-02, Loss_res: 5.290e-02,  Loss_bcs: 3.035e-03, Loss_ut_ics: 1.665e-01, lr: 3.874e-04, Time: 4.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16700, Loss: 5.951e-02, Loss_res: 6.102e-02,  Loss_bcs: 3.477e-03, Loss_ut_ics: 1.863e-01, lr: 3.874e-04, Time: 4.52e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16800, Loss: 3.453e-02, Loss_res: 1.401e-01,  Loss_bcs: 8.480e-04, Loss_ut_ics: 1.205e-01, lr: 3.874e-04, Time: 4.45e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 16900, Loss: 1.599e-02, Loss_res: 4.844e-02,  Loss_bcs: 4.855e-04, Loss_ut_ics: 6.296e-02, lr: 3.874e-04, Time: 4.90e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17000, Loss: 3.726e-02, Loss_res: 2.747e-02,  Loss_bcs: 1.886e-03, Loss_ut_ics: 1.566e-01, lr: 3.874e-04, Time: 4.36e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17100, Loss: 1.165e-02, Loss_res: 3.018e-02,  Loss_bcs: 7.769e-04, Loss_ut_ics: 8.626e-03, lr: 3.874e-04, Time: 4.93e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17200, Loss: 9.982e-03, Loss_res: 1.299e-02,  Loss_bcs: 5.845e-04, Loss_ut_ics: 2.838e-02, lr: 3.874e-04, Time: 4.58e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17300, Loss: 5.062e-02, Loss_res: 2.743e-01,  Loss_bcs: 1.212e-03, Loss_ut_ics: 1.107e-01, lr: 3.487e-04, Time: 4.80e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17400, Loss: 5.074e-02, Loss_res: 2.858e-01,  Loss_bcs: 1.421e-03, Loss_ut_ics: 7.952e-02, lr: 3.487e-04, Time: 4.68e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17500, Loss: 1.046e-02, Loss_res: 2.949e-02,  Loss_bcs: 6.599e-04, Loss_ut_ics: 9.145e-03, lr: 3.487e-04, Time: 4.51e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17600, Loss: 2.446e-02, Loss_res: 7.680e-02,  Loss_bcs: 1.174e-03, Loss_ut_ics: 5.047e-02, lr: 3.487e-04, Time: 4.46e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17700, Loss: 2.261e-02, Loss_res: 6.416e-02,  Loss_bcs: 7.670e-04, Loss_ut_ics: 8.526e-02, lr: 3.487e-04, Time: 4.69e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17800, Loss: 2.528e-02, Loss_res: 7.430e-03,  Loss_bcs: 1.027e-03, Loss_ut_ics: 1.427e-01, lr: 3.487e-04, Time: 4.62e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 17900, Loss: 4.140e-02, Loss_res: 2.239e-02,  Loss_bcs: 2.167e-03, Loss_ut_ics: 1.749e-01, lr: 3.487e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18000, Loss: 1.500e-02, Loss_res: 3.020e-02,  Loss_bcs: 5.896e-04, Loss_ut_ics: 6.088e-02, lr: 3.487e-04, Time: 4.58e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18100, Loss: 1.447e-02, Loss_res: 3.452e-02,  Loss_bcs: 9.337e-04, Loss_ut_ics: 1.686e-02, lr: 3.487e-04, Time: 4.49e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18200, Loss: 7.115e-02, Loss_res: 6.740e-02,  Loss_bcs: 3.876e-03, Loss_ut_ics: 2.565e-01, lr: 3.487e-04, Time: 4.42e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18300, Loss: 3.625e-02, Loss_res: 1.035e-01,  Loss_bcs: 1.717e-03, Loss_ut_ics: 8.732e-02, lr: 3.138e-04, Time: 4.58e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18400, Loss: 3.566e-02, Loss_res: 1.593e-02,  Loss_bcs: 2.869e-03, Loss_ut_ics: 5.377e-02, lr: 3.138e-04, Time: 4.67e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18500, Loss: 2.277e-02, Loss_res: 6.911e-02,  Loss_bcs: 1.170e-03, Loss_ut_ics: 4.155e-02, lr: 3.138e-04, Time: 4.43e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18600, Loss: 3.586e-02, Loss_res: 3.436e-02,  Loss_bcs: 2.531e-03, Loss_ut_ics: 7.115e-02, lr: 3.138e-04, Time: 4.49e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18700, Loss: 1.764e-02, Loss_res: 2.006e-02,  Loss_bcs: 4.870e-04, Loss_ut_ics: 1.076e-01, lr: 3.138e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18800, Loss: 1.749e-02, Loss_res: 1.935e-02,  Loss_bcs: 7.459e-04, Loss_ut_ics: 8.097e-02, lr: 3.138e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 18900, Loss: 3.793e-01, Loss_res: 3.474e+00,  Loss_bcs: 9.455e-04, Loss_ut_ics: 2.241e-01, lr: 3.138e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19000, Loss: 3.398e-02, Loss_res: 1.235e-02,  Loss_bcs: 2.346e-03, Loss_ut_ics: 9.281e-02, lr: 3.138e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19100, Loss: 3.401e-02, Loss_res: 1.308e-02,  Loss_bcs: 1.505e-03, Loss_ut_ics: 1.765e-01, lr: 3.138e-04, Time: 6.36e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19200, Loss: 2.149e-02, Loss_res: 1.497e-02,  Loss_bcs: 1.560e-03, Loss_ut_ics: 4.384e-02, lr: 3.138e-04, Time: 4.63e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19300, Loss: 2.122e-02, Loss_res: 2.943e-02,  Loss_bcs: 8.313e-04, Loss_ut_ics: 9.969e-02, lr: 2.824e-04, Time: 4.75e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19400, Loss: 9.368e-03, Loss_res: 2.641e-02,  Loss_bcs: 3.146e-04, Loss_ut_ics: 3.581e-02, lr: 2.824e-04, Time: 4.55e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19500, Loss: 3.923e-02, Loss_res: 2.360e-02,  Loss_bcs: 1.389e-03, Loss_ut_ics: 2.298e-01, lr: 2.824e-04, Time: 4.98e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19600, Loss: 2.443e-02, Loss_res: 8.522e-02,  Loss_bcs: 3.528e-04, Loss_ut_ics: 1.238e-01, lr: 2.824e-04, Time: 4.64e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19700, Loss: 3.352e-02, Loss_res: 8.735e-02,  Loss_bcs: 1.539e-03, Loss_ut_ics: 9.396e-02, lr: 2.824e-04, Time: 4.53e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19800, Loss: 1.534e-02, Loss_res: 3.118e-02,  Loss_bcs: 3.448e-04, Loss_ut_ics: 8.777e-02, lr: 2.824e-04, Time: 4.44e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 19900, Loss: 2.545e-02, Loss_res: 6.387e-02,  Loss_bcs: 1.259e-03, Loss_ut_ics: 6.482e-02, lr: 2.824e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+It: 20000, Loss: 2.111e-02, Loss_res: 6.025e-02,  Loss_bcs: 9.576e-04, Loss_ut_ics: 5.508e-02, lr: 2.824e-04, Time: 4.47e-03
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model.pth
+Model state saved to ./results/models/checkpoints/complex_wave/2025-08-13_10-33-10-840447/model_weights.pth
+Training completed successfuly!
+Relative L2 error_u: 1.12e+02
+Relative L2 error_f: 1.81e+02

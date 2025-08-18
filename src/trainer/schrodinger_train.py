@@ -25,7 +25,7 @@ from src.nn.pde import schrodinger_operator
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
 
-def train(model, N_f = 100, N_b = 100, N_0 = 100):
+def train(model, N_f = 7, N_b = 5, N_0 = 5):
 
     # Parametros físicos del dominio
     L       = model.args['eq_params']['L']          # dominio espacial [0, L]
@@ -52,6 +52,8 @@ def train(model, N_f = 100, N_b = 100, N_0 = 100):
 
     t0 = time.time()
     for epoch in range(1, model.epochs + 1):
+
+        # Preparation per epoch 
         opt.zero_grad()
 
         # PDE (interior) con V=0 (pozo interior)
@@ -67,16 +69,14 @@ def train(model, N_f = 100, N_b = 100, N_0 = 100):
         psi0 = model(torch.cat((t_0, x_0), dim=1))
         loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) + mse(psi0[:, 1:2], psi0_i[:, 0:1])
 
-        # Ponderación básica (ajústala si alguna pérdida domina)
+        # Ponderación básica 
         loss = 1.0 * loss_pde + 1.0 * loss_bc + 2.0 * loss_ic
 
         loss.backward()
         opt.step()
 
         if epoch % PRINT_EVERY == 0 or epoch == 1:
-            elapsed = time.time() - t0
-            # print(f"Epoch {epoch:5d} | loss={loss.item():.3e} "
-            #       f"(pde={loss_pde.item():.3e}, bc={loss_bc.item():.3e}, ic={loss_ic.item():.3e}) | {elapsed:.1f}s")
+            elapsed = time.time() - t0 
             model.logger.print(
                     "It: %d, Loss: %.3e, Loss_res: %.3e,  Loss_bcs: %.3e, Loss_ut_ics: %.3e, lr: %.3e, Time: %.2e"
                     % (

@@ -30,19 +30,32 @@ num_quantum_layers = 1
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
+# Input parameters: Iterable
+L = 1.0        # dominio espacial [0, L]
+T = 0.2        # tiempo final
+hbar = 1.0
+mass = 1.0
+n_level = 1    # nivel del pozo (usaremos n=1)
+omega  = 1.0
+
+potential_fn = f"lambda t, x : 0.5 * {mass} * ({omega}**2) * (x**2)"
+
 # Equation parameters
 eq_params = {
-    'L': 1.0,         # dominio espacial [0, L]
-    'T' : 0.2,        # tiempo final
-    'hbar' : 1.0,     # Atomic coordinates = 1
-    'mass' : 1.0,     # Atomic coordinates = 1
-    'n_level' : 2,    # nivel del pozo (usaremos n=1)
+    'example' : 'HO',                # Ejemplo a correr: "BOX", "HO" 
+    'L': L,                          # dominio espacial [0, L]
+    'T' : T,                         # tiempo final
+    'hbar' : hbar,                   # Atomic coordinates = 1
+    'mass' : mass,                   # Atomic coordinates = 1
+    'n_level' : n_level,             # nivel del pozo (usaremos n=1)
+    'omega'   : omega,               # Natural frequency
+    'potential_fn' : potential_fn,   # potential function
 }
 
 args = {
     "batch_size": 64,
-    "epochs": 2000, 
-    "lr": 0.001,
+    "epochs": 1000, 
+    "lr": 1E-3,
     "seed": 42,
     "print_every": 10,
     "log_path": "./results/models/checkpoints/schrodinger",
@@ -122,6 +135,15 @@ hbar    = model.args['eq_params']['hbar']
 mass    = model.args['eq_params']['mass']
 n_level = model.args['eq_params']['n_level']    # nivel del pozo (usaremos n=1)
 
+# Definición por defecto de parametros
+potential_fn = 0; omega = None
+
+# Cargado según ejemplos de uso
+if model.args['eq_params']['example'].lower() == 'ho':             # Oscilador armonico
+
+    potential_fn = eval(model.args['eq_params']['potential_fn'])   # Función de potencial
+    omega        = model.args['eq_params']['omega']                # Frecuencia natural
+
 # arguments preparation
 number_of_points = 20
 
@@ -132,7 +154,7 @@ with torch.no_grad():
     # mesh of t - x evaluation
     # - Create mesh grid with float32
     t = np.linspace(0, T, number_of_points, dtype=np.float32)[:, None]
-    x = np.linspace(0, L, number_of_points, dtype=np.float32)[:, None]
+    x = np.linspace(-L, L, number_of_points, dtype=np.float32)[:, None]
 
     t, x = np.meshgrid(t, x);
 

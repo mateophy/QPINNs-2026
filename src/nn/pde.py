@@ -102,6 +102,7 @@ def schrodinger_operator(model, t, x, potential_fn=0, mass=1.0, hbar=1.0):
     Residuos de: i*hbar*psi_t = -(hbar^2/(2m)) * psi_xx + V * psi
     model(t,x) -> [psi_r, psi_i]
     """
+
     t = t.requires_grad_(True)
     x = x.requires_grad_(True)
 
@@ -117,7 +118,7 @@ def schrodinger_operator(model, t, x, potential_fn=0, mass=1.0, hbar=1.0):
     psi_x_r  = torch.autograd.grad(psi_r, x, torch.ones_like(psi_r), create_graph=True)[0]
     psi_x_i  = torch.autograd.grad(psi_i, x, torch.ones_like(psi_i), create_graph=True)[0]
     psi_xx_r = torch.autograd.grad(psi_x_r, x, torch.ones_like(psi_x_r), create_graph=True)[0]
-    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0] # Obtenemos valores nan
+    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0] 
 
     V = potential_fn(t, x) if potential_fn!=0 else torch.zeros_like(psi_r)
     coef = (hbar**2) / (2.0 * mass)

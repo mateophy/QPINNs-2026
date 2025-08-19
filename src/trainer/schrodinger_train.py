@@ -27,12 +27,24 @@ DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
 
 def train(model, N_f = 7, N_b = 5, N_0 = 5):
 
+    # Parametros de decisión 
+    example = model.args['eq_params']['example']    # Ejemplo a replicar
+
     # Parametros físicos del dominio
     L       = model.args['eq_params']['L']          # dominio espacial [0, L]
     T       = model.args['eq_params']['T']          # tiempo final
     hbar    = model.args['eq_params']['hbar'] 
     mass    = model.args['eq_params']['mass']
     n_level = model.args['eq_params']['n_level']    # nivel del pozo (usaremos n=1)
+
+    # Definición por defecto de parametros
+    potential_fn = 0; omega = 0
+
+    # Cargado según ejemplos de uso
+    if model.args['eq_params']['example'].lower() == 'ho':             # Oscilador armonico
+
+        potential_fn = eval(model.args['eq_params']['potential_fn'])   # Función de potencial
+        omega        = model.args['eq_params']['omega']                # Frecuencia natural
 
     # Parameters definition by model
     opt = model.optimizer if model.optimizer is not None else Adam(model.parameters(), lr=1E-3)
@@ -47,8 +59,8 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
     torch.set_default_dtype(DTYPE)
     torch.manual_seed(0);
 
-    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE)
-    psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar)
+    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE, example=example)
+    psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
     t0 = time.time()
     for epoch in range(1, model.epochs + 1):
@@ -57,7 +69,7 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
         opt.zero_grad()
 
         # PDE (interior) con V=0 (pozo interior)
-        [_, _, rR, rI] = schrodinger_operator(model, t_f, x_f, potential_fn=0, mass=mass, hbar=hbar)
+        [_, _, rR, rI] = schrodinger_operator(model, t_f, x_f, potential_fn= potential_fn, mass=mass, hbar=hbar)
         loss_pde = mse(rR[:, 0:1], torch.zeros_like(rR)) + mse(rI[:, 0:1], torch.zeros_like(rI))
 
         # BC Dirichlet: ψ=0 en x=0 y x=L

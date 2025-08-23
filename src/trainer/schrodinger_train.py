@@ -41,29 +41,31 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
     potential_fn = 0; omega = 0
 
     # Cargado según ejemplos de uso
-    if model.args['eq_params']['example'].lower() == 'ho':             # Oscilador armonico
+    if example.lower() == 'ho':                                        # Oscilador armonico
 
         potential_fn = eval(model.args['eq_params']['potential_fn'])   # Función de potencial
         omega        = model.args['eq_params']['omega']                # Frecuencia natural
 
-    # Parameters definition by model
-    opt = model.optimizer if model.optimizer is not None else Adam(model.parameters(), lr=1E-3)
-    mse = model.loss_fn if model.loss_fn is not None else MSELoss()
 
     # Constants parameters
     LR = model.args['lr']; PRINT_EVERY = model.args['print_every']
+
+    # Parameters definition by model
+    opt = model.optimizer if model.optimizer is not None else Adam(model.parameters(), lr=LR)
+    mse = model.loss_fn if model.loss_fn is not None else MSELoss() 
     
     DEVICE = model.args['device']; DTYPE = torch.float32 
 
     # Dtype definition 
     torch.set_default_dtype(DTYPE)
-    torch.manual_seed(0);
-
-    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE, example=example)
-    psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+    torch.manual_seed(42);
 
     t0 = time.time()
-    for epoch in range(1, model.epochs + 1):
+
+    # Points definition
+    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE, example=example)
+    psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+    for epoch in range(1, model.epochs + 1): 
 
         # Preparation per epoch 
         opt.zero_grad()
@@ -82,7 +84,7 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
         loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) + mse(psi0[:, 1:2], psi0_i[:, 0:1])
 
         # Ponderación básica 
-        loss = 1.0 * loss_pde + 1.0 * loss_bc + 2.0 * loss_ic
+        loss = 2.0 * loss_pde + 1.0 * loss_bc + 2.0 * loss_ic
 
         loss.backward()
         opt.step()

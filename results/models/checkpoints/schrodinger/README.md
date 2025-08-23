@@ -1,7 +1,7 @@
 # Schrodinger models
 The models presented are the different tests made to validate the performance and use of the different resources.
 
-For instance, consider the moodels:
+For instance, consider the box potential moodels _./box/_:
 - **2025-08-14_11-59-09-776585** mode (n) = 1
 - **2025-08-14_12-00-04-985624** mode (n) = 2
 - **2025-08-14_12-00-53-768193** mode (n) = 3
@@ -16,3 +16,13 @@ For instance, consider the moodels:
 - **2025-08-15_10-42-37-026722**
 - **2025-08-15_10-44-54-274464**
 - **2025-08-15_11-18-48-113934** mode (n) = 2
+
+On the other hand you may consider the quantum harmonic oscillator models _./qho/_:
+- **2025-08-18_17-58-41-957028** mode (n) = 0 · epochs = 1E3 · N_f =  7, N_b = N_0 = 5
+- **2025-08-18_17-58-41-902603** mode (n) = 1 · epochs = 1E3 · N_f =  7, N_b = N_0 = 5
+- **2025-08-18_17-58-41-663855** mode (n) = 1 · epochs = 2E3 · N_f =  7, N_b = N_0 = 5
+- **2025-08-18_17-58-41-601022** mode (n) = 1 · epochs = 2E3 · N_f =  7, N_b = N_0 = 5
+- **2025-08-22_09-46-02-757815** mode (n) = 2 · epochs = 2E3 · N_f =  7, N_b = N_0 = 5
+- **2025-08-22_09-46-02-172919** mode (n) = 2 · epochs = 2E3 · N_f = 10, N_b = N_0 = 5
+- **2025-08-22_09-46-02-112305** mode (n) = 2 · epochs = 2E3 · N_f = 10, N_b = N_0 = 5
+- **2025-08-22_09-46-02-600107** mode (n) = 2 · epochs = 2E3 · N_f = 10, N_b = N_0 = 5

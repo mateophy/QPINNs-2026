@@ -26,23 +26,26 @@ num_qubits = 5
 output_dim = 2
 input_dim = 2
 hidden_dim = 50
-num_quantum_layers = 1
+num_quantum_layers = 2
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
 # Input parameters: Iterable
-L = 1.0        # dominio espacial [0, L]
-T = 0.2        # tiempo final
+L = 5.0        # dominio espacial [0, L]
+T = 0.1        # tiempo final
 hbar = 1.0
 mass = 1.0
-n_level = 1    # nivel del pozo (usaremos n=1)
+n_level = 1    # nivel (usaremos n=1)
 omega  = 1.0
+example = 'ho'
+potential_fn = 0
 
-potential_fn = f"lambda t, x : 0.5 * {mass} * ({omega}**2) * (x**2)"
+if example.lower() != 'box':
+    potential_fn = f"lambda t, x : 0.5 * {mass} * ({omega}**2) * (x**2)"
 
 # Equation parameters
 eq_params = {
-    'example' : 'HO',                # Ejemplo a correr: "BOX", "HO" 
+    'example' : example,             # Ejemplo a correr: "BOX", "HO" 
     'L': L,                          # dominio espacial [0, L]
     'T' : T,                         # tiempo final
     'hbar' : hbar,                   # Atomic coordinates = 1
@@ -54,18 +57,18 @@ eq_params = {
 
 args = {
     "batch_size": 64,
-    "epochs": 1000, 
+    "epochs": 2000, 
     "lr": 1E-3,
     "seed": 42,
     "print_every": 10,
-    "log_path": "./results/models/checkpoints/schrodinger",
+    "log_path": "./results/models/checkpoints/schrodinger/qho",
     "input_dim": input_dim,
     "output_dim": output_dim,
     "num_qubits": num_qubits,
     "hidden_dim": hidden_dim,
     "num_quantum_layers": num_quantum_layers,
     "classic_network": classic_network,
-    "q_ansatz": "sim_circ_19",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
+    "q_ansatz": "sim_circ_15",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": None,  # Analytical gradients enabled
@@ -105,7 +108,7 @@ torch.manual_seed(0)
 total_params = sum(p.numel() for p in model.parameters())
 model.logger.print(f"Total number of parameters: {total_params}")
 
-wave_train.train(model)
+wave_train.train(model, N_0=5, N_b=5, N_f=20)
 
 model.save_state()
 
@@ -126,35 +129,18 @@ plt.close(
     "all",
 )
 
-# Testing
-
-# Parametros físicos del dominio
-L       = model.args['eq_params']['L']          # dominio espacial [0, L]
-T       = model.args['eq_params']['T']          # tiempo final
-hbar    = model.args['eq_params']['hbar'] 
-mass    = model.args['eq_params']['mass']
-n_level = model.args['eq_params']['n_level']    # nivel del pozo (usaremos n=1)
-
-# Definición por defecto de parametros
-potential_fn = 0; omega = None
-
-# Cargado según ejemplos de uso
-if model.args['eq_params']['example'].lower() == 'ho':             # Oscilador armonico
-
-    potential_fn = eval(model.args['eq_params']['potential_fn'])   # Función de potencial
-    omega        = model.args['eq_params']['omega']                # Frecuencia natural
-
-# arguments preparation
-number_of_points = 20
+# settings
+number_of_points = 25
 
 with torch.no_grad():
-    # t_eval = torch.full((number_of_points, 1), T, device=DEVICE, dtype=DTYPE)
-    # x_eval = torch.linspace(0.0, L, number_of_points, device=DEVICE, dtype=DTYPE).unsqueeze(1)
-
     # mesh of t - x evaluation
     # - Create mesh grid with float32
-    t = np.linspace(0, T, number_of_points, dtype=np.float32)[:, None]
-    x = np.linspace(-L, L, number_of_points, dtype=np.float32)[:, None]
+    if example.lower() == 'ho':
+        t = np.linspace(0, T, number_of_points, dtype=np.float32)[:, None]
+        x = np.linspace(-L, L, number_of_points, dtype=np.float32)[:, None]
+    else:
+        t = np.linspace(0, T, number_of_points, dtype=np.float32)[:, None]
+        x = torch.linspace(0.0, L, number_of_points, device=DEVICE, dtype=DTYPE).unsqueeze(1)
 
     t, x = np.meshgrid(t, x);
 
@@ -169,9 +155,8 @@ with torch.no_grad():
     psi_i_pred = psi_pred[:, 1:2]
     mod2_pred = (psi_r_pred**2 + psi_i_pred**2).squeeze(1).cpu().numpy()
 
-    psi_r_true, psi_i_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar)
+    psi_r_true, psi_i_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
     mod2_true = (psi_r_true**2 + psi_i_true**2).squeeze(1).cpu().numpy()
-
 
 # - Generation of input argument
 X = (

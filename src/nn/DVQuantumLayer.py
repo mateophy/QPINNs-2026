@@ -316,10 +316,16 @@ class DVQuantumLayer(nn.Module):
         param_index = 0
 
         # apply rotations
-        def apply_rotations():
+        def apply_rotations1():
             nonlocal param_index
             for i in range(self.num_qubits):
                 qml.RY(params[param_index], wires=i)
+                param_index += 1
+
+        def apply_rotations2():
+            nonlocal param_index
+            for i in range(self.num_qubits):
+                qml.RX(params[param_index], wires=i)
                 param_index += 1
 
         # apply entangling gates block 1
@@ -335,13 +341,13 @@ class DVQuantumLayer(nn.Module):
                 qml.CNOT(wires=[control_qubit, target_qubit])
 
         # main circuit construction
-        apply_rotations()
+        apply_rotations1()
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
         apply_entangling_block1()
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
-        apply_rotations()
+        apply_rotations2()
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
         apply_entangling_block2()

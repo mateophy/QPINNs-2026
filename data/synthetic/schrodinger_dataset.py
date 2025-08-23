@@ -4,6 +4,8 @@ import torch
 
 import numpy as np
 
+from math import factorial
+
 # Sample collocation of points
 def sample_collocation(Nf, Nb, N0, L=1.0, T=0.2, device="cpu", dtype=torch.float64, example= 'box'):
     
@@ -57,7 +59,7 @@ def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0, omega= 1.0, example= 'b
             return Hnm1
 
         xi   = np.sqrt(mass*omega/hbar) * x
-        fact = np.math.factorial(n)
+        fact = factorial(n)
         norm = (mass*omega/(np.pi*hbar))**0.25 * (1.0/np.sqrt((2.0**n)*fact))
         phi_x = norm * hermite_physicists(n, xi) * torch.exp(-0.5*(xi**2))
         E_n   = hbar*omega*(n + 0.5)

@@ -27,7 +27,7 @@ num_qubits = 5
 output_dim = 1
 input_dim = 2
 hidden_dim = 50
-num_quantum_layers = 1
+num_quantum_layers = 2
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 

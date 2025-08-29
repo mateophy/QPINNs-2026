@@ -3,7 +3,6 @@ import torch
 import numpy as np
 import torch.nn as nn
 
-
 class DVQuantumLayer(nn.Module):
     def __init__(self, args, diff_method="backprop"):
         super().__init__()
@@ -22,6 +21,9 @@ class DVQuantumLayer(nn.Module):
         self.q_ansatz = args["q_ansatz"]
         self.problem = args["problem"]
         self.encoding = args.get("encoding", "angle")
+
+        # Variable por shot counting
+        self.shots_done = 0
 
         if self.q_ansatz == "layered_circuit":
             self.params = nn.Parameter(
@@ -92,7 +94,7 @@ class DVQuantumLayer(nn.Module):
 
         self.dev = qml.device("default.qubit", wires=self.num_qubits, shots=self.shots)
         self.circuit = qml.QNode(
-            self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method
+            self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method 
         )
 
     def _quantum_circuit(self, x):
@@ -159,6 +161,8 @@ class DVQuantumLayer(nn.Module):
         # return torch.stack([self.circuit(sample) for sample in x])
 
         # ALR: Compatibility modification
+        self.shots_done += x.shape[0]
+
         return torch.stack([torch.hstack(self.circuit(sample)) for sample in x])
 
     def layered_circuit(self, params):
@@ -315,30 +319,39 @@ class DVQuantumLayer(nn.Module):
 
         param_index = 0
 
+
+        # ALR: Final modification, gate manipulable with simlators on AWS 
+        # Originals: 
+        # - apply_rotations1 -> RY  
+        # - apply_rotations2 -> Rx  
+        # - apply_entangling_block1 -> CNOT 
+        # - apply_entangling_block2 -> CNOT 
+
+
         # apply rotations
         def apply_rotations1():
             nonlocal param_index
             for i in range(self.num_qubits):
-                qml.RY(params[param_index], wires=i)
+                qml.RZ(params[param_index], wires=i)
                 param_index += 1
 
         def apply_rotations2():
             nonlocal param_index
             for i in range(self.num_qubits):
-                qml.RX(params[param_index], wires=i)
+                qml.RZ(params[param_index], wires=i)
                 param_index += 1
 
         # apply entangling gates block 1
         def apply_entangling_block1():
             for i in reversed(range(self.num_qubits)):
-                qml.CNOT(wires=[i, (i + 1) % self.num_qubits])
+                qml.ISWAP(wires=[i, (i + 1) % self.num_qubits])
 
         # apply entangling gates block 2
         def apply_entangling_block2():
             for i in range(self.num_qubits):
                 control_qubit = (i + self.num_qubits - 1) % self.num_qubits
                 target_qubit = (control_qubit + 3) % self.num_qubits
-                qml.CNOT(wires=[control_qubit, target_qubit])
+                qml.ISWAP(wires=[control_qubit, target_qubit])
 
         # main circuit construction
         apply_rotations1()

@@ -25,8 +25,8 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 2
 input_dim = 2
-hidden_dim = 50
-num_quantum_layers = 2
+hidden_dim = 20
+num_quantum_layers = 1
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
@@ -35,7 +35,7 @@ L = 5.0        # dominio espacial [0, L]
 T = 0.1        # tiempo final
 hbar = 1.0
 mass = 1.0
-n_level = 1    # nivel (usaremos n=1)
+n_level = 0    # nivel (usaremos n=1)
 omega  = 1.0
 example = 'ho'
 potential_fn = 0
@@ -112,7 +112,7 @@ wave_train.train(model, N_0=5, N_b=5, N_f=20)
 
 model.save_state()
 
-model.logger.print("Training completed successfuly!")
+model.logger.print(f"Training completed successfuly!, shots made: {model.quantum_layer.shots_done}")
 
 # Loss history plot 
 plt.semilogy(range(len(model.loss_history)), model.loss_history)

@@ -61,11 +61,12 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
     torch.manual_seed(42);
 
     t0 = time.time()
-
-    # Points definition
-    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE, example=example)
-    psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+ 
     for epoch in range(1, model.epochs + 1): 
+
+        # Points definition
+        (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE, example=example)
+        psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
         # Preparation per epoch 
         opt.zero_grad()

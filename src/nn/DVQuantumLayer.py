@@ -3,8 +3,11 @@ import torch
 import numpy as np
 import torch.nn as nn
 
+# Addition of error operators for simulations with errors
+from qiskit_aer.noise import NoiseModel, depolarizing_error, pauli_error
+
 class DVQuantumLayer(nn.Module):
-    def __init__(self, args, diff_method="backprop"):
+    def __init__(self, args, diff_method="best"):
         super().__init__()
 
         """
@@ -68,7 +71,7 @@ class DVQuantumLayer(nn.Module):
             self.params = nn.Parameter(
                 torch.empty(
                     self.num_quantum_layers,
-                    self.num_qubits * 2,
+                    self.num_qubits * 4,
                     requires_grad=True,
                     dtype=torch.float32,
                 )
@@ -90,9 +93,33 @@ class DVQuantumLayer(nn.Module):
             raise ValueError(
                 "Parameters are not initialized. Check the q_ansatz value."
             )
+        
         self._initialize_weights()
 
+        # Add noise models
+        noise_model = NoiseModel()
+
+        prob_1 = np.random.rand(1)[0]/20; prob_2 = np.random.rand(1)[0]/20
+
+        error_1 = depolarizing_error(prob_1, 1)
+        error_2 = pauli_error([('X',prob_2), ('I', 1 - prob_2)])
+        error_3 = pauli_error([('X',(prob_1 + prob_1)/2), 
+                               ('I', 1 - (prob_1 + prob_1)/2)])
+
+        noise_model.add_all_qubit_quantum_error(error_1, ['rx'])
+        noise_model.add_all_qubit_quantum_error(error_2, ['ry'])
+        noise_model.add_all_qubit_quantum_error(error_3, "measure")
+
+        print(noise_model)
+
+        # Change of device to add noise
+        self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots, 
+                              noise_model=noise_model)
+        """
+        # Default device
         self.dev = qml.device("default.qubit", wires=self.num_qubits, shots=self.shots)
+        """
+
         self.circuit = qml.QNode(
             self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method 
         )
@@ -138,7 +165,7 @@ class DVQuantumLayer(nn.Module):
             )
         elif self.q_ansatz in ["sim_circ_15"]:
             torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, self.num_qubits * 2)
+                self.params.view(self.num_quantum_layers, self.num_qubits * 4)
             )
         elif self.q_ansatz in ["layered_circuit", "alternating_layer_tdcnot"]:
             torch.nn.init.xavier_normal_(
@@ -183,8 +210,6 @@ class DVQuantumLayer(nn.Module):
 
         # track the parameter index
         param_idx = 0
-
-        # print(f"{len(params)=}")
 
         # apply RZ and RX gates for each qubit in the layer
         for qubit_id in range(self.num_qubits):
@@ -248,6 +273,7 @@ class DVQuantumLayer(nn.Module):
             build_tdcnot(ctrl, tgt)
 
     def sim_circ_19(self, params):
+
         def add_rotations():
             param_counter = 0
             for i in range(0, self.num_qubits):
@@ -272,6 +298,7 @@ class DVQuantumLayer(nn.Module):
         # add layers of the ansatz
         add_rotations()
         add_entangling_gates()
+
 
     def farhi_ansatz(self, params):
         param_counter = 0
@@ -300,7 +327,7 @@ class DVQuantumLayer(nn.Module):
         for i in range(self.num_qubits - 1):
             RZX(params[param_counter], wires=[self.num_qubits - 1, i])
             param_counter += 1
-
+    
     def create_sim_circuit_15(self, params):
         """
         Creates a variational circuit based on circuit 15 in arXiv:1905.10876.
@@ -314,7 +341,7 @@ class DVQuantumLayer(nn.Module):
         Returns:
             callable: A function that constructs the quantum circuit with given parameters
         """
-        if params is None or len(params) != 2 * self.num_qubits:
+        if params is None or len(params) != 4 * self.num_qubits:
             raise ValueError("Insufficient parameters for RXX and RZX gates")
 
         param_index = 0
@@ -327,43 +354,66 @@ class DVQuantumLayer(nn.Module):
         # - apply_entangling_block1 -> CNOT 
         # - apply_entangling_block2 -> CNOT 
 
+        # ALR: Addition of noise at the ends of the circuits.
+        # - Consider amplitud damping and depolirazing
+
 
         # apply rotations
         def apply_rotations1():
             nonlocal param_index
             for i in range(self.num_qubits):
-                qml.RZ(params[param_index], wires=i)
+                qml.RY(params[param_index], wires=i)
                 param_index += 1
 
         def apply_rotations2():
             nonlocal param_index
             for i in range(self.num_qubits):
-                qml.RZ(params[param_index], wires=i)
+                qml.RX(params[param_index], wires=i)
                 param_index += 1
 
         # apply entangling gates block 1
         def apply_entangling_block1():
             for i in reversed(range(self.num_qubits)):
-                qml.ISWAP(wires=[i, (i + 1) % self.num_qubits])
+                qml.CRZ(params[param_index], wires=[i, (i + 1) % self.num_qubits])
 
         # apply entangling gates block 2
         def apply_entangling_block2():
             for i in range(self.num_qubits):
                 control_qubit = (i + self.num_qubits - 1) % self.num_qubits
                 target_qubit = (control_qubit + 3) % self.num_qubits
-                qml.ISWAP(wires=[control_qubit, target_qubit])
+                qml.CRZ(params[param_index], wires=[control_qubit, target_qubit])
+
+        """
+        def apply_noise_blocks1():
+
+            probability = np.random.rand(1) # Noise probability
+
+            for i in range(self.num_qubits):
+                qml.AmplitudeDamping(probability, wires=i)
+
+        def apply_noise_blocks2():
+
+            probability = np.random.rand(1) # Noise probability
+
+            for i in range(self.num_qubits):
+                qml.DepolarizingChannel(probability, wires=i)
+        """
 
         # main circuit construction
         apply_rotations1()
+    
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
         apply_entangling_block1()
+
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
         apply_rotations2()
+
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
         apply_entangling_block2()
+
         # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
 

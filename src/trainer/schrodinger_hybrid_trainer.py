@@ -25,8 +25,8 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 2
 input_dim = 2
-hidden_dim = 1
-num_quantum_layers = 3
+hidden_dim = 5
+num_quantum_layers = 2
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
@@ -35,7 +35,7 @@ L = 5.0        # dominio espacial [0, L]
 T = 0.1        # tiempo final
 hbar = 1.0
 mass = 1.0
-n_level = 3    # nivel (usaremos n=1)
+n_level = 0    # nivel (usaremos n=1)
 omega  = 1.0
 example = 'ho'
 potential_fn = 0

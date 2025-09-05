@@ -1,0 +1,87 @@
+Using DV Solver
+Total number of parameters: 1041
+The circuit used in the study:
+It: 1, Loss: 6.317e+00, Loss_res: 2.854e+00,  Loss_bcs: 8.759e-02, Loss_ut_ics: 2.606e-01, lr: 1.000e-03, Time: 2.04e+00
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 10, Loss: 6.521e-01, Loss_res: 2.017e-01,  Loss_bcs: 1.123e-02, Loss_ut_ics: 1.187e-01, lr: 1.000e-03, Time: 1.97e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 20, Loss: 5.819e-01, Loss_res: 1.279e-01,  Loss_bcs: 1.844e-03, Loss_ut_ics: 1.621e-01, lr: 1.000e-03, Time: 4.06e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 30, Loss: 1.313e-01, Loss_res: 1.448e-02,  Loss_bcs: 1.469e-04, Loss_ut_ics: 5.111e-02, lr: 1.000e-03, Time: 5.99e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 40, Loss: 1.384e-01, Loss_res: 1.084e-02,  Loss_bcs: 1.147e-03, Loss_ut_ics: 5.781e-02, lr: 1.000e-03, Time: 8.04e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 50, Loss: 2.530e-01, Loss_res: 3.052e-03,  Loss_bcs: 3.938e-04, Loss_ut_ics: 1.233e-01, lr: 1.000e-03, Time: 1.00e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 60, Loss: 1.415e-01, Loss_res: 7.317e-03,  Loss_bcs: 6.076e-06, Loss_ut_ics: 6.345e-02, lr: 1.000e-03, Time: 1.20e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 70, Loss: 2.993e-01, Loss_res: 3.609e-03,  Loss_bcs: 6.483e-05, Loss_ut_ics: 1.460e-01, lr: 1.000e-03, Time: 1.40e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 80, Loss: 5.348e-01, Loss_res: 3.514e-03,  Loss_bcs: 9.848e-05, Loss_ut_ics: 2.638e-01, lr: 1.000e-03, Time: 1.61e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 90, Loss: 4.301e-01, Loss_res: 1.293e-03,  Loss_bcs: 5.204e-05, Loss_ut_ics: 2.137e-01, lr: 1.000e-03, Time: 1.82e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+It: 100, Loss: 1.292e-01, Loss_res: 1.301e-03,  Loss_bcs: 1.692e-05, Loss_ut_ics: 6.327e-02, lr: 1.000e-03, Time: 2.01e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+Training completed successfuly!, shots made: 3000
+Using DV Solver
+Total number of parameters: 4113
+The circuit used in the study:
+It: 1, Loss: 1.013e+00, Loss_res: 3.957e-01,  Loss_bcs: 1.118e-02, Loss_ut_ics: 1.051e-01, lr: 1.000e-03, Time: 2.01e+00
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 10, Loss: 4.181e-01, Loss_res: 9.418e-02,  Loss_bcs: 3.283e-03, Loss_ut_ics: 1.132e-01, lr: 1.000e-03, Time: 1.84e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 20, Loss: 3.373e-01, Loss_res: 5.837e-02,  Loss_bcs: 2.103e-03, Loss_ut_ics: 1.092e-01, lr: 1.000e-03, Time: 3.65e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 30, Loss: 1.458e-01, Loss_res: 1.206e-03,  Loss_bcs: 4.945e-05, Loss_ut_ics: 7.168e-02, lr: 1.000e-03, Time: 5.50e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 40, Loss: 1.236e-01, Loss_res: 8.044e-03,  Loss_bcs: 5.836e-04, Loss_ut_ics: 5.346e-02, lr: 1.000e-03, Time: 7.36e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 50, Loss: 2.442e-01, Loss_res: 6.689e-03,  Loss_bcs: 4.574e-04, Loss_ut_ics: 1.152e-01, lr: 1.000e-03, Time: 9.15e+01
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 60, Loss: 1.506e-01, Loss_res: 2.345e-04,  Loss_bcs: 3.808e-05, Loss_ut_ics: 7.507e-02, lr: 1.000e-03, Time: 1.09e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 70, Loss: 3.195e-01, Loss_res: 2.061e-03,  Loss_bcs: 4.609e-05, Loss_ut_ics: 1.577e-01, lr: 1.000e-03, Time: 1.27e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 80, Loss: 5.182e-01, Loss_res: 2.001e-03,  Loss_bcs: 2.315e-04, Loss_ut_ics: 2.570e-01, lr: 1.000e-03, Time: 1.45e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 90, Loss: 3.720e-01, Loss_res: 4.772e-04,  Loss_bcs: 3.915e-05, Loss_ut_ics: 1.855e-01, lr: 1.000e-03, Time: 1.63e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+It: 100, Loss: 1.356e-01, Loss_res: 3.231e-03,  Loss_bcs: 1.224e-04, Loss_ut_ics: 6.451e-02, lr: 1.000e-03, Time: 1.81e+02
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-45-50-074034/model_weights.pth
+Training completed successfuly!, shots made: 3000
+Model score: 0.20055149495601654, under: ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-42-28-094702/model_weights.pth
+Using DV Solver
+Total number of parameters: 43
+The circuit used in the study:
+It: 1, Loss: 4.632e+01, Loss_res: 2.215e+01,  Loss_bcs: 7.236e-01, Loss_ut_ics: 6.528e-01, lr: 1.000e-03, Time: 2.91e+00
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-48-51-715013/model.pth
+Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-48-51-715013/model_weights.pth

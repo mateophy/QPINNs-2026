@@ -99,7 +99,7 @@ class DVQuantumLayer(nn.Module):
         # Add noise models
         noise_model = NoiseModel()
 
-        prob_1 = np.random.rand(1)[0]/20; prob_2 = np.random.rand(1)[0]/20
+        prob_1 = 0.05 + np.random.rand(1)[0]/10; prob_2 = 0.05 + np.random.rand(1)[0]/10
 
         error_1 = depolarizing_error(prob_1, 1)
         error_2 = pauli_error([('X',prob_2), ('I', 1 - prob_2)])
@@ -110,6 +110,7 @@ class DVQuantumLayer(nn.Module):
         noise_model.add_all_qubit_quantum_error(error_2, ['ry'])
         noise_model.add_all_qubit_quantum_error(error_3, "measure")
 
+        print(f"Probabilities: \epsilon_1 = {round(prob_1, 2)}, \epsilon_2 = {round(prob_2, 2)}")
         print(noise_model)
 
         # Change of device to add noise
@@ -350,7 +351,7 @@ class DVQuantumLayer(nn.Module):
         # ALR: Final modification, gate manipulable with simlators on AWS 
         # Originals: 
         # - apply_rotations1 -> RY  
-        # - apply_rotations2 -> Rx  
+        # - apply_rotations2 -> RX  
         # - apply_entangling_block1 -> CNOT 
         # - apply_entangling_block2 -> CNOT 
 

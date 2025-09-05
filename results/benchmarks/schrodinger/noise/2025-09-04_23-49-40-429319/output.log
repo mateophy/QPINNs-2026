@@ -1,0 +1,58 @@
+Using DV Solver
+The settings used:
+batch_size : 16
+epochs : 400
+lr : 0.001
+seed : 42
+print_every : 1
+log_path : ./results/models/checkpoints/schrodinger/qho
+input_dim : 2
+output_dim : 2
+num_qubits : 10
+hidden_dim : 30
+num_quantum_layers : 2
+classic_network : [2, 30, 2]
+q_ansatz : sim_circ_15
+mode : hybrid
+activation : null
+shots : 1
+problem : schrodinger
+solver : DV
+device : cpu
+method : None
+cutoff_dim : 20
+class : CVNeuralNetwork2
+encoding : None
+eq_params : {'example': 'ho', 'L': 5.0, 'T': 0.1, 'hbar': 1.0, 'mass': 1.0, 'n_level': 0, 'omega': 1.0, 'potential_fn': 'lambda t, x : 0.5 * 1.0 * (1.0**2) * (x**2)'}
+Total number of parameters: 872
+The circuit used in the study:
+It: 1, Loss: 9.051e+00, Loss_res: 4.170e+00,  Loss_bcs: 2.207e-01, Loss_ut_ics: 2.454e-01, lr: 1.000e-03, Time: 1.93e+03
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 2, Loss: 2.076e+01, Loss_res: 1.002e+01,  Loss_bcs: 2.132e-01, Loss_ut_ics: 2.488e-01, lr: 1.000e-03, Time: 3.87e+03
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 3, Loss: 7.326e+00, Loss_res: 3.350e+00,  Loss_bcs: 3.236e-01, Loss_ut_ics: 1.510e-01, lr: 1.000e-03, Time: 5.80e+03
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 4, Loss: 6.429e+00, Loss_res: 2.812e+00,  Loss_bcs: 7.188e-02, Loss_ut_ics: 3.666e-01, lr: 1.000e-03, Time: 7.74e+03
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 5, Loss: 1.301e+01, Loss_res: 6.158e+00,  Loss_bcs: 3.097e-01, Loss_ut_ics: 1.933e-01, lr: 1.000e-03, Time: 9.68e+03
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 6, Loss: 2.074e+01, Loss_res: 9.934e+00,  Loss_bcs: 2.846e-01, Loss_ut_ics: 2.921e-01, lr: 1.000e-03, Time: 1.16e+04
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 7, Loss: 1.670e+01, Loss_res: 8.194e+00,  Loss_bcs: 6.990e-02, Loss_ut_ics: 1.232e-01, lr: 1.000e-03, Time: 1.36e+04
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 8, Loss: 1.089e+01, Loss_res: 5.159e+00,  Loss_bcs: 1.991e-01, Loss_ut_ics: 1.852e-01, lr: 1.000e-03, Time: 1.55e+04
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 9, Loss: 7.579e+00, Loss_res: 3.575e+00,  Loss_bcs: 2.301e-01, Loss_ut_ics: 9.961e-02, lr: 1.000e-03, Time: 1.75e+04
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth
+It: 10, Loss: 1.280e+01, Loss_res: 6.033e+00,  Loss_bcs: 1.484e-01, Loss_ut_ics: 2.947e-01, lr: 1.000e-03, Time: 1.95e+04
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-04_23-49-40-429319/model_weights.pth

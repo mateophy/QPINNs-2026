@@ -85,7 +85,7 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
         loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) + mse(psi0[:, 1:2], psi0_i[:, 0:1])
 
         # Ponderación básica 
-        loss = 2.0 * loss_pde + 1.0 * loss_bc + 2.0 * loss_ic
+        loss = 1.0E-2 * loss_pde + 1.0E0 * loss_bc + 1.0E-2 * loss_ic
 
         loss.backward()
         opt.step()

@@ -71,15 +71,16 @@ args = {
     "q_ansatz": "sim_circ_15",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
-    "shots": None,  # Analytical gradients enabled
+    "shots": 1,  # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "DV",  # options : "CV", "Classical", "DV"
+    "solver": "Classical",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "None",  # options : "ampiltude" , "angle" for DV , none for others
-    "eq_params" : eq_params,
+    "eq_params" : eq_params,    # Equation parameters
+    "noise" : True,            # Boolean -> Noise of the system
 }
 
 log_path = args["log_path"]
@@ -112,7 +113,8 @@ wave_train.train(model, N_0=5, N_b=5, N_f=20)
 
 model.save_state()
 
-model.logger.print(f"Training completed successfuly!, shots made: {model.quantum_layer.shots_done}")
+if args['solver'] != "Classical":
+    model.logger.print(f"Training completed successfuly!, shots made: {model.quantum_layer.shots_done}")
 
 # Loss history plot 
 plt.semilogy(range(len(model.loss_history)), model.loss_history)

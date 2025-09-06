@@ -4,10 +4,10 @@ import numpy as np
 import torch.nn as nn
 
 # Addition of error operators for simulations with errors
-from qiskit_aer.noise import NoiseModel, depolarizing_error, pauli_error
+from qiskit_aer.noise import NoiseModel, amplitude_damping_error, pauli_error
 
 class DVQuantumLayer(nn.Module):
-    def __init__(self, args, diff_method="best"):
+    def __init__(self, args):
         super().__init__()
 
         """
@@ -24,6 +24,12 @@ class DVQuantumLayer(nn.Module):
         self.q_ansatz = args["q_ansatz"]
         self.problem = args["problem"]
         self.encoding = args.get("encoding", "angle")
+
+        # Additional parameters for noise support
+        self.noise_flag = args["noise"]
+
+        # - In case we are supporting noise we need to modify the Differentiation method:
+        diff_method = "best" if self.noise_flag else "backprop"
 
         # Variable por shot counting
         self.shots_done = 0
@@ -96,34 +102,35 @@ class DVQuantumLayer(nn.Module):
         
         self._initialize_weights()
 
-        # Add noise models
-        noise_model = NoiseModel()
+        # Initialize noise models in case of selected
+        if self.noise_flag:
+            noise_model = NoiseModel()
+            
+            prob_1 = np.random.rand(1)[0]*0.05; prob_2 = np.random.rand(1)[0]*0.05
+            
+            error_1 = amplitude_damping_error(prob_1, 1)
+            error_2 = pauli_error([('X',prob_2), ('I', 1 - prob_2)])
+            error_3 = pauli_error([('X',(prob_1 + prob_1)/2), 
+                                   ('I', 1 - (prob_1 + prob_1)/2)])
+            
+            noise_model.add_all_qubit_quantum_error(error_1, ['rx'])
+            noise_model.add_all_qubit_quantum_error(error_2, ['ry'])
+            noise_model.add_all_qubit_quantum_error(error_3, "measure")
+            
+            print(f"Probabilities: \epsilon_1 = {round(prob_1, 2)}, \epsilon_2 = {round(prob_2, 2)}, \epsilon_3 = {round((prob_1 + prob_1)/2, 2)}")
+            print(noise_model)
+            
+            # Change of device to add noise
+            self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots, 
+                                  noise_model=noise_model)
 
-        prob_1 = 0.05 + np.random.rand(1)[0]/10; prob_2 = 0.05 + np.random.rand(1)[0]/10
+        else:
+            # Default device
+            self.dev = qml.device("default.qubit", wires=self.num_qubits)
+        
 
-        error_1 = depolarizing_error(prob_1, 1)
-        error_2 = pauli_error([('X',prob_2), ('I', 1 - prob_2)])
-        error_3 = pauli_error([('X',(prob_1 + prob_1)/2), 
-                               ('I', 1 - (prob_1 + prob_1)/2)])
-
-        noise_model.add_all_qubit_quantum_error(error_1, ['rx'])
-        noise_model.add_all_qubit_quantum_error(error_2, ['ry'])
-        noise_model.add_all_qubit_quantum_error(error_3, "measure")
-
-        print(f"Probabilities: \epsilon_1 = {round(prob_1, 2)}, \epsilon_2 = {round(prob_2, 2)}")
-        print(noise_model)
-
-        # Change of device to add noise
-        self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots, 
-                              noise_model=noise_model)
-        """
-        # Default device
-        self.dev = qml.device("default.qubit", wires=self.num_qubits, shots=self.shots)
-        """
-
-        self.circuit = qml.QNode(
-            self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method 
-        )
+        self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch",
+                                 diff_method=diff_method)
 
     def _quantum_circuit(self, x):
         if self.encoding == "amplitude":

@@ -1,7 +1,6 @@
 import torch
 import os
 import sys
-import matplotlib.pyplot as plt
 import numpy as np
 
 # Global path
@@ -11,11 +10,8 @@ global_path = os.getcwd()
 sys.path.append(global_path)
 
 from src.utils.logger                   import Logging
-from src.utils.plot_prediction          import plt_prediction
 from data.synthetic.schrodinger_dataset import exact_eigenstate
 from src.nn.DVPDESolver                 import DVPDESolver
-from src.nn.CVPDESolver                 import CVPDESolver
-from src.nn.ClassicalSolver2            import ClassicalSolver2
 
 import src.trainer.schrodinger_train as wave_train
 

@@ -121,9 +121,7 @@ class DVQuantumLayer(nn.Module):
             print(noise_model)
             
             # Change of device to add noise
-            self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots, 
-                                  noise_model=noise_model)
-
+            self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots,noise_model=noise_model)
         else:
             # Default device
             self.dev = qml.device("default.qubit", wires=self.num_qubits)

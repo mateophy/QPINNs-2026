@@ -25,8 +25,8 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 2
 input_dim = 2
-hidden_dim = 5
-num_quantum_layers = 2
+hidden_dim = 30
+num_quantum_layers = 1
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
@@ -57,10 +57,10 @@ eq_params = {
 
 args = {
     "batch_size": 64,
-    "epochs": 2000, 
+    "epochs": 100, 
     "lr": 1E-3,
     "seed": 42,
-    "print_every": 10,
+    "print_every": 1,
     "log_path": "./results/models/checkpoints/schrodinger/qho",
     "input_dim": input_dim,
     "output_dim": output_dim,
@@ -73,12 +73,12 @@ args = {
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": 1,  # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "Classical",  # options : "CV", "Classical", "DV"
+    "solver": "DV",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
-    "encoding": "None",  # options : "ampiltude" , "angle" for DV , none for others
+    "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,    # Equation parameters
     "noise" : True,            # Boolean -> Noise of the system
 }

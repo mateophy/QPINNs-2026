@@ -125,3 +125,6 @@ Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-10_11-
 It: 6, Loss: 2.486e-03, Loss_res: 5.649e-02,  Loss_bcs: 1.542e-03, Loss_ut_ics: 3.787e-02, lr: 1.000e-03, Time: 1.43e+03
 Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-10_11-43-03-756709/model.pth
 Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-10_11-43-03-756709/model_weights.pth
+It: 7, Loss: 2.309e-03, Loss_res: 7.117e-03,  Loss_bcs: 1.559e-03, Loss_ut_ics: 6.791e-02, lr: 1.000e-03, Time: 1.65e+03
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-10_11-43-03-756709/model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho/2025-09-10_11-43-03-756709/model_weights.pth

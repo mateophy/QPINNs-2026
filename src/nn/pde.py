@@ -1,4 +1,19 @@
-import torch
+import os, sys, torch
+
+# ALR: Lineas adicionales para compatibilidad de path
+# Global path
+global_path = os.getcwd()
+
+# Composición del path
+global_path = global_path.split('/')
+
+# Generación de path global al directorio padre 
+relative_path = '/'.join(global_path[:-2])
+
+# Linea adicional para ubicación de path en los scripts
+sys.path.append(relative_path)
+
+from data.synthetic.schrodinger_dataset import exact_eigenstate, sample_collocation
 
 def navier_stokes_2D_operator(model, t, x, y, min_x=0, max_x=1):
     """
@@ -98,35 +113,65 @@ def complex_wave_operator(model, t, x, sigma_t=1.0, sigma_x=1.0):
 
 # ALR: Additional operator separated -> Schrödinger direct
 def schrodinger_operator(model, t, x, potential_fn=0, mass=1.0, hbar=1.0):
+
     """
     Residuos de: i*hbar*psi_t = -(hbar^2/(2m)) * psi_xx + V * psi
     model(t,x) -> [psi_r, psi_i]
     """
+    # ALR: Modification into pure real solutions
+    # - All imaginary Components are going to be unused
+    # - The model it's going to be reduced into 1 output neuron with just real solutions
+    # - Samplers are modified to just output reals
+
+    DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+    DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
+
+    # Points definition
+    # Parametros físicos del dominio
+    L       = model.args['eq_params']['L']          # dominio espacial [0, L]
+    T       = model.args['eq_params']['T']          # tiempo final
+    hbar    = model.args['eq_params']['hbar'] 
+    mass    = model.args['eq_params']['mass']
+    n_level = model.args['eq_params']['n_level']    # nivel del pozo (usaremos n=1)
+
+    omega   = model.args['eq_params']['omega'] if model.args['eq_params']['omega'] is not None else 1
+
+    example = model.args['eq_params']['example']
+
+    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(1, 1, 1, L=1, T=2, example=example)
+    _, E_n = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
     t = t.requires_grad_(True)
     x = x.requires_grad_(True)
 
     psi = model(torch.concatenate((t, x), dim=1))
     psi_r = psi[:, 0:1]
-    psi_i = psi[:, 1:2]
+    
+    # ALR Imaginary : psi_i = psi[:, 1:2]
 
     # Derivadas temporales
     psi_t_r = torch.autograd.grad(psi_r, t, torch.ones_like(psi_r), create_graph=True)[0]
-    psi_t_i = torch.autograd.grad(psi_i, t, torch.ones_like(psi_i), create_graph=True)[0]
+    
+    # ALR Imaginary : psi_t_i = torch.autograd.grad(psi_i, t, torch.ones_like(psi_i), create_graph=True)[0]
 
     # Derivadas espaciales segunda
     psi_x_r  = torch.autograd.grad(psi_r, x, torch.ones_like(psi_r), create_graph=True)[0]
-    psi_x_i  = torch.autograd.grad(psi_i, x, torch.ones_like(psi_i), create_graph=True)[0]
+
+    # ALR Imaginary: psi_x_i  = torch.autograd.grad(psi_i, x, torch.ones_like(psi_i), create_graph=True)[0]
+
     psi_xx_r = torch.autograd.grad(psi_x_r, x, torch.ones_like(psi_x_r), create_graph=True)[0]
-    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0] 
+    # ALR Imaginary : psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0] 
 
     V = potential_fn(t, x) if potential_fn!=0 else torch.zeros_like(psi_r)
     coef = (hbar**2) / (2.0 * mass)
 
-    residual_r = -hbar * psi_t_i + coef * psi_xx_r - V * psi_r
-    residual_i =  hbar * psi_t_r + coef * psi_xx_i - V * psi_i
+    # ALR Imaginary : residual_r = -hbar * psi_t_i + coef * psi_xx_r - V * psi_r
+    residual_r = coef * psi_xx_r * (E_n - V) * psi_r
 
-    return psi_r, psi_i, residual_r, residual_i
+    # ALR Imaginary : residual_i =  hbar * psi_t_r + coef * psi_xx_i - V * psi_i
+
+    # return psi_r, psi_i, residual_r, residual_i
+    return psi_r, residual_r
 
 def diffusion_operator(model, t, x, y, sigma_t=1.0, sigma_x=1.0, sigma_y=1.0, D=0.01, v_x=1.0, v_y=1.0):
     """

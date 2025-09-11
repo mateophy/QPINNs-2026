@@ -21,11 +21,16 @@ import src.trainer.schrodinger_train as wave_train
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# ALR: Modification into pure real solutions
+# - All imaginary Components are going to be unused
+# - The model it's going to be reduced into 1 output neuron with just real solutions
+# - Samplers are modified to just output reals
+
 mode = "hybrid"
 num_qubits = 5
-output_dim = 2
+output_dim = 1
 input_dim = 2
-hidden_dim = 30
+hidden_dim = 50
 num_quantum_layers = 1
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
@@ -35,7 +40,7 @@ L = 5.0        # dominio espacial [0, L]
 T = 0.1        # tiempo final
 hbar = 1.0
 mass = 1.0
-n_level = 0    # nivel (usaremos n=1)
+n_level = 1    # nivel (usaremos n=1)
 omega  = 1.0
 example = 'ho'
 potential_fn = 0
@@ -57,7 +62,7 @@ eq_params = {
 
 args = {
     "batch_size": 64,
-    "epochs": 100, 
+    "epochs": 1500, 
     "lr": 1E-3,
     "seed": 42,
     "print_every": 1,
@@ -80,7 +85,7 @@ args = {
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,    # Equation parameters
-    "noise" : True,            # Boolean -> Noise of the system
+    "noise" : False,            # Boolean -> Noise of the system
 }
 
 log_path = args["log_path"]
@@ -109,7 +114,7 @@ torch.manual_seed(0)
 total_params = sum(p.numel() for p in model.parameters())
 model.logger.print(f"Total number of parameters: {total_params}")
 
-wave_train.train(model, N_0=5, N_b=5, N_f=20)
+wave_train.train(model, N_0=10, N_b=10, N_f=20)
 
 model.save_state()
 
@@ -154,11 +159,13 @@ with torch.no_grad():
 
     psi_pred = model(torch.cat((t_eval, x_eval), dim=1))
     psi_r_pred = psi_pred[:, 0:1]
-    psi_i_pred = psi_pred[:, 1:2]
-    mod2_pred = (psi_r_pred**2 + psi_i_pred**2).squeeze(1).cpu().numpy()
+    mod2_pred = (psi_r_pred**2).squeeze(1).cpu().numpy()
 
-    psi_r_true, psi_i_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
-    mod2_true = (psi_r_true**2 + psi_i_true**2).squeeze(1).cpu().numpy()
+    # psi_r_true, psi_i_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+
+    psi_r_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+
+    mod2_true = (psi_r_true**2).squeeze(1).cpu().numpy()
 
 # - Generation of input argument
 X = (
@@ -201,6 +208,6 @@ plt_prediction(
     X,
     psi_r_true.cpu().detach().numpy(),
     psi_r_pred.cpu().detach().numpy(),
-    psi_i_true.cpu().detach().numpy(),
-    psi_i_pred.cpu().detach().numpy(),
+    psi_r_true.cpu().detach().numpy()**2,
+    psi_r_pred.cpu().detach().numpy()**2,
 )

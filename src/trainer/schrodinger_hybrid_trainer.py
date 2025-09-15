@@ -30,8 +30,8 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 1
 input_dim = 2
-hidden_dim = 50
-num_quantum_layers = 1
+hidden_dim = 5
+num_quantum_layers = 2
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
@@ -40,7 +40,7 @@ L = 5.0        # dominio espacial [0, L]
 T = 0.1        # tiempo final
 hbar = 1.0
 mass = 1.0
-n_level = 1    # nivel (usaremos n=1)
+n_level = 0    # nivel (usaremos n=1)
 omega  = 1.0
 example = 'ho'
 potential_fn = 0
@@ -61,8 +61,8 @@ eq_params = {
 }
 
 args = {
-    "batch_size": 64,
-    "epochs": 1500, 
+    "batch_size": 32,
+    "epochs": 1000, 
     "lr": 1E-3,
     "seed": 42,
     "print_every": 1,
@@ -83,9 +83,9 @@ args = {
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
-    "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
+    "encoding": "ampiltude",  # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,    # Equation parameters
-    "noise" : False,            # Boolean -> Noise of the system
+    "noise" : True,            # Boolean -> Noise of the system
 }
 
 log_path = args["log_path"]
@@ -114,7 +114,7 @@ torch.manual_seed(0)
 total_params = sum(p.numel() for p in model.parameters())
 model.logger.print(f"Total number of parameters: {total_params}")
 
-wave_train.train(model, N_0=10, N_b=10, N_f=20)
+wave_train.train(model, N_0=10, N_b=10, N_f=200)
 
 model.save_state()
 
@@ -159,13 +159,16 @@ with torch.no_grad():
 
     psi_pred = model(torch.cat((t_eval, x_eval), dim=1))
     psi_r_pred = psi_pred[:, 0:1]
-    mod2_pred = (psi_r_pred**2).squeeze(1).cpu().numpy()
+    mod2_pred = (psi_r_pred**2).squeeze(1)
 
     # psi_r_true, psi_i_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
     psi_r_true, En = exact_eigenstate(n_level, t_eval, x_eval, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
-    mod2_true = (psi_r_true**2).squeeze(1).cpu().numpy()
+    mod2_true = (psi_r_true**2).squeeze(1)
+
+    # - Normalization of solutions
+    psi_pred /= torch.norm(psi_pred); psi_r_true /= torch.norm(psi_r_true);
 
 # - Generation of input argument
 X = (
@@ -178,8 +181,8 @@ X = (
 
 # Gráfico 1: |psi|^2 en t=T (PINN vs exacto)
 plt.figure()
-plt.plot(x_eval.squeeze(1).cpu().numpy(), mod2_true, label="|ψ|^2 exacto")
-plt.plot(x_eval.squeeze(1).cpu().numpy(), mod2_pred, "--", label="|ψ|^2 PINN")
+plt.plot(x_eval.squeeze(1).cpu().numpy(), psi_pred, label="|ψ|^2 exacto")
+plt.plot(x_eval.squeeze(1).cpu().numpy(), psi_r_true, "--", label="|ψ|^2 PINN")
 plt.title(f"|ψ(x,T)|^2 en pozo infinito (n={n_level})")
 plt.xlabel("x"); plt.ylabel("|ψ|^2")
 plt.legend(); plt.grid()
@@ -191,7 +194,7 @@ plt.show(); plt.close("all")
 
 # Gráfico 2: error absoluto en |psi|^2
 plt.figure()
-abs_err = np.abs(mod2_pred - mod2_true)
+abs_err = np.abs(psi_r_pred - psi_r_true)
 plt.plot(x_eval.squeeze(1).cpu().numpy(), abs_err, label="Error absoluto")
 plt.title("Error absoluto en |ψ(x,T)|^2")
 plt.xlabel("x"); plt.ylabel("Error")
@@ -208,6 +211,6 @@ plt_prediction(
     X,
     psi_r_true.cpu().detach().numpy(),
     psi_r_pred.cpu().detach().numpy(),
-    psi_r_true.cpu().detach().numpy()**2,
-    psi_r_pred.cpu().detach().numpy()**2,
+    mod2_pred .cpu().detach().numpy(),
+    mod2_true .cpu().detach().numpy(),
 )

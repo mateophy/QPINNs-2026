@@ -6,6 +6,8 @@ import numpy as np
 
 from math import factorial
 
+
+
 # Sample collocation of points
 def sample_collocation(Nf, Nb, N0, L=1.0, T=0.2, device="cpu", dtype=torch.float64, example= 'box'):
     

@@ -138,7 +138,7 @@ def schrodinger_operator(model, t, x, potential_fn=0, mass=1.0, hbar=1.0):
 
     example = model.args['eq_params']['example']
 
-    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(1, 1, 1, L=1, T=2, example=example)
+    (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(1, 1, 1, L=L, T=T, example=example)
     _, E_n = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
     t = t.requires_grad_(True)

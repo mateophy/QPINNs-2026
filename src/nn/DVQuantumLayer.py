@@ -4,7 +4,7 @@ import numpy as np
 import torch.nn as nn
 
 # Addition of error operators for simulations with errors
-from qiskit_aer.noise import NoiseModel, amplitude_damping_error, pauli_error
+from qiskit_aer.noise import NoiseModel, amplitude_damping_error, depolarizing_error, pauli_error
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
@@ -106,9 +106,9 @@ class DVQuantumLayer(nn.Module):
         if self.noise_flag:
             noise_model = NoiseModel()
             
-            prob_1 = np.random.rand(1)[0]*0.05; prob_2 = np.random.rand(1)[0]*0.05
+            prob_1 = np.random.rand(1)[0]*0.1; prob_2 = np.random.rand(1)[0]*0.1
             
-            error_1 = amplitude_damping_error(prob_1, 1)
+            error_1 = depolarizing_error(prob_1, 1)
             error_2 = pauli_error([('X',prob_2), ('I', 1 - prob_2)])
             error_3 = pauli_error([('X',(prob_1 + prob_1)/2), 
                                    ('I', 1 - (prob_1 + prob_1)/2)])

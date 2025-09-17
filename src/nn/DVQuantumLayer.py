@@ -1,10 +1,12 @@
-import pennylane as qml
 import torch
-import numpy as np
 import torch.nn as nn
+import pennylane as qml
 
-# Addition of error operators for simulations with errors
-from qiskit_aer.noise import NoiseModel, amplitude_damping_error, pauli_error
+from numpy.random import rand
+
+# What if we used real backend results
+from qiskit_aer.noise               import NoiseModel
+from qiskit.providers.fake_provider import Fake5QV1
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
@@ -104,24 +106,18 @@ class DVQuantumLayer(nn.Module):
 
         # Initialize noise models in case of selected
         if self.noise_flag:
-            noise_model = NoiseModel()
-            
-            prob_1 = np.random.rand(1)[0]*0.05; prob_2 = np.random.rand(1)[0]*0.05
-            
-            error_1 = amplitude_damping_error(prob_1, 1)
-            error_2 = pauli_error([('X',prob_2), ('I', 1 - prob_2)])
-            error_3 = pauli_error([('X',(prob_1 + prob_1)/2), 
-                                   ('I', 1 - (prob_1 + prob_1)/2)])
-            
-            noise_model.add_all_qubit_quantum_error(error_1, ['rx'])
-            noise_model.add_all_qubit_quantum_error(error_2, ['ry'])
-            noise_model.add_all_qubit_quantum_error(error_3, "measure")
-            
-            print(f"Probabilities: \epsilon_1 = {round(prob_1, 2)}, \epsilon_2 = {round(prob_2, 2)}, \epsilon_3 = {round((prob_1 + prob_1)/2, 2)}")
-            print(noise_model)
-            
+
+            # Inhirit form providers
+            # noise_model = NoiseModel.from_backend(Fake5QV1())
+                        
             # Change of device to add noise
-            self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots,noise_model=noise_model)
+            # self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots,noise_model=noise_model)
+
+            # print(noise_model)
+
+            self.dev = qml.device("default.mixed", wires=self.num_qubits, shots= self.shots)
+
+            self.dev = qml.transforms.insert(self.dev, qml.AmplitudeDamping, 0.05)
         else:
             # Default device
             self.dev = qml.device("default.qubit", wires=self.num_qubits)
@@ -387,23 +383,7 @@ class DVQuantumLayer(nn.Module):
             for i in range(self.num_qubits):
                 control_qubit = (i + self.num_qubits - 1) % self.num_qubits
                 target_qubit = (control_qubit + 3) % self.num_qubits
-                qml.CRZ(params[param_index], wires=[control_qubit, target_qubit])
-
-        """
-        def apply_noise_blocks1():
-
-            probability = np.random.rand(1) # Noise probability
-
-            for i in range(self.num_qubits):
-                qml.AmplitudeDamping(probability, wires=i)
-
-        def apply_noise_blocks2():
-
-            probability = np.random.rand(1) # Noise probability
-
-            for i in range(self.num_qubits):
-                qml.DepolarizingChannel(probability, wires=i)
-        """
+                qml.CRZ(params[param_index], wires=[control_qubit, target_qubit]) 
 
         # main circuit construction
         apply_rotations1()
@@ -487,8 +467,8 @@ class DVQuantumLayer(nn.Module):
         if params is None:
             # create parameters for both direct and cross interactions
             n_params = self.num_qubits * (self.num_qubits - 1) // 2
-            params = [scale * np.pi / 2.0 * index for index in range(n_params)]
+            params = [scale * torch.pi / 2.0 * index for index in range(n_params)]
 
         # add nonlinear phase shifts
         for index in range(self.num_qubits):
-            qml.PhaseShift(np.sin(params[index]) * np.pi, wires=index)
+            qml.PhaseShift(torch.sin(params[index]) * torch.pi, wires=index)

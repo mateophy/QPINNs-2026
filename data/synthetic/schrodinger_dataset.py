@@ -2,8 +2,6 @@ import os
 import sys
 import torch
 
-import numpy as np
-
 from math import factorial
 
 # Sample collocation of points
@@ -42,25 +40,25 @@ def sample_collocation(Nf, Nb, N0, L=1.0, T=0.2, device="cpu", dtype=torch.float
 
     return (t_f, x_f), (t_b, x_b), (t_0, x_0)
 
+# Hermite polynomials definition
+def hermite_physicists(n, z):
+    if n == 0: return torch.ones_like(z)
+    if n == 1: return 2.0*z
+    Hnm2 = torch.ones_like(z); Hnm1 = 2.0*z
+    for k in range(1, n):
+        Hn = 2.0*z*Hnm1 - 2.0*k*Hnm2
+        Hnm2, Hnm1 = Hnm1, Hn
+    return Hnm1
+
 # Definition of exact eigen state of analysis
 def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0, omega= 1.0, example= 'box'):
 
     # Harmonic Oscillator solution
     if example.lower() == 'ho':
 
-        # Hermite polynomials definition
-        def hermite_physicists(n, z):
-            if n == 0: return torch.ones_like(z)
-            if n == 1: return 2.0*z
-            Hnm2 = torch.ones_like(z); Hnm1 = 2.0*z
-            for k in range(1, n):
-                Hn = 2.0*z*Hnm1 - 2.0*k*Hnm2
-                Hnm2, Hnm1 = Hnm1, Hn
-            return Hnm1
-
-        xi   = np.sqrt(mass*omega/hbar) * x
+        xi   = (mass*omega/hbar)**0.5 * x
         fact = factorial(n)
-        norm = (mass*omega/(np.pi*hbar))**0.25 * (1.0/np.sqrt((2.0**n)*fact))
+        norm = (mass*omega/(torch.pi*hbar))**0.25 * (1.0/(2.0**n)*fact)**0.5
         phi_x = norm * hermite_physicists(n, xi) * torch.exp(-0.5*(xi**2))
         E_n   = hbar*omega*(n + 0.5)
         phase = -(E_n/hbar) * t

@@ -4,6 +4,10 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Set variable for number of threads 
+os.environ['OMP_NUM_THREADS']    = '16'
+os.environ['QULACS_NUM_THREADS'] = '16'
+
 # Global path
 global_path = os.getcwd()
 
@@ -57,7 +61,7 @@ eq_params = {
 
 args = {
     "batch_size": 64,
-    "epochs": 100, 
+    "epochs": 2000, 
     "lr": 1E-3,
     "seed": 42,
     "print_every": 1,
@@ -73,14 +77,14 @@ args = {
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": 1,  # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "DV",  # options : "CV", "Classical", "DV"
+    "solver": "Classical",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,    # Equation parameters
-    "noise" : True,            # Boolean -> Noise of the system
+    "noise" : False,            # Boolean -> Noise of the system
 }
 
 log_path = args["log_path"]

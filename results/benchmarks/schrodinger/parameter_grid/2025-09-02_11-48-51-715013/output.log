@@ -1,6 +1,0 @@
-Using DV Solver
-Total number of parameters: 43
-The circuit used in the study:
-It: 1, Loss: 4.632e+01, Loss_res: 2.215e+01,  Loss_bcs: 7.236e-01, Loss_ut_ics: 6.528e-01, lr: 1.000e-03, Time: 2.91e+00
-Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-48-51-715013/model.pth
-Model state saved to ./results/benchmarks/schrodinger/parameter_grid/2025-09-02_11-48-51-715013/model_weights.pth

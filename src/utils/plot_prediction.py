@@ -22,13 +22,13 @@ def plt_prediction(logger, X_star, u_star, u_pred, f_star, f_pred):
             "exact": u_star,
             "predicted": u_pred,
             "error": np.abs(u_star - u_pred),
-            "title": r"$u(x)$",
+            "title": r"$\Re \lbrace \psi(x) \rbrace$",
         },
         "f": {
             "exact": f_star,
             "predicted": f_pred,
             "error": np.abs(f_star - f_pred),
-            "title": r"$f(x)$",
+            "title": r"$\Im \lbrace \psi(x) \rbrace$",
         },
     }
 
@@ -43,33 +43,73 @@ def plt_prediction(logger, X_star, u_star, u_pred, f_star, f_pred):
         for col, field in enumerate(content):
             Z = value[field].reshape(len(y_unique), len(x_unique))
 
-            contour = axs[row, col].contourf(
-                X,
-                Y,
-                Z,
-                levels=20,  # Number of contour levels
-                cmap="coolwarm",
-            )
-
-            # Only show y-axis labels and ticks for leftmost column
-            if (col == 0) and (
-                row == (len(data.items()) - 1)
-            ):  # If not leftmost column
-                axs[row, col].set_ylabel(r"$x_2$ →", fontsize=14)
-                axs[row, col].set_xlabel(r"$x_1$ →", fontsize=14)
+            if col != 2:
+                contour = axs[row, col].contourf(
+                    X,
+                    Y,
+                    Z,
+                    levels=40,                # Number of contour levels
+                    cmap="coolwarm",
+                    vmin=value["exact"].min(), vmax=value["exact"].max()
+                )
             else:
-                axs[row, col].set_yticklabels([])
-                axs[row, col].set_xticklabels([])
-                axs[row, col].set_ylabel("")
-                axs[row, col].set_xlabel("")
+                contour = axs[row, col].contourf(
+                    X,
+                    Y,
+                    Z,
+                    levels=40,                # Number of contour levels
+                    cmap="coolwarm",
+                    vmin=value["error"].min(), vmax=value["error"].max()
+                )
+
+            """
+            # Versión Manuela
+            if col != 2:
+                contour = axs[row, col].contourf(
+                    X,
+                    Y,
+                    Z,
+                    levels=40,                # Number of contour levels
+                    cmap="coolwarm",
+                    vmin=value["exact"].min(), vmax=value["exact"].max()
+                )
+            else:
+                contour = axs[row, col].contourf(
+                    X,
+                    Y,
+                    Z,
+                    levels=40,                # Number of contour levels
+                    cmap="coolwarm",
+                    vmin=value["error"].min(), vmax=value["error"].max()
+                )
+            """
+
+            # If not leftmost column
+            axs[row, col].set_ylabel(r"$x$ →", fontsize=14)
+            axs[row, col].set_xlabel(r"$t$ →", fontsize=14)
 
             axs[row, col].set_title(
                 f"{field.capitalize()} {value['title']}", fontsize=16
             )
 
-            # Add colorbar with larger font size
-            cbar = fig.colorbar(contour, ax=axs[row, col])
-            cbar.ax.tick_params(labelsize=12)
+            """
+            # Set vars just for right column
+            if col == 0:
+                # Add colorbar with larger font size
+                cbar = fig.colorbar(contour, ax=axs[row, -1])
+                cbar.ax.tick_params(labelsize=12)
+            """
+
+            # Valores exactos
+            if col == 0:
+                # Add colorbar with larger font size
+                cbar = fig.colorbar(contour, ax=axs[row, 1])
+                cbar.ax.tick_params(labelsize=12)
+            # Errores
+            if col == 2:
+                # Add colorbar with larger font size
+                cbar = fig.colorbar(contour, ax=axs[row, col])
+                cbar.ax.tick_params(labelsize=12)
 
     # Adjust layout and save the figure
     plt.tight_layout()
@@ -80,7 +120,7 @@ def plt_prediction(logger, X_star, u_star, u_pred, f_star, f_pred):
 
 
 def plot_contour(
-    X_star, u_star, img_name, plot_xy=False, xy_labels=[r"$x_1$", r"$x_2$"]
+    X_star, u_star, img_name, plot_xy=False, xy_labels=[r"$t$", r"$x$"]
 ):
     """ """
     fig, axs = plt.subplots(1, 1, figsize=(5, 4))

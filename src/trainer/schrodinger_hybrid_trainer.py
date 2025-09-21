@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Set variable for number of threads 
-os.environ['OMP_NUM_THREADS']    = '16'
-os.environ['QULACS_NUM_THREADS'] = '16'
+os.environ['OMP_NUM_THREADS']    = '64'
+os.environ['QULACS_NUM_THREADS'] = '64'
 
 # Global path
 global_path = os.getcwd()
@@ -14,6 +14,7 @@ global_path = os.getcwd()
 # Linea adicional para ubicación de path en los scripts
 sys.path.append(global_path)
 
+from src.utils.plot_loss                import smooth_loss
 from src.utils.logger                   import Logging
 from src.utils.plot_prediction          import plt_prediction
 from data.synthetic.schrodinger_dataset import exact_eigenstate
@@ -29,8 +30,8 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 2
 input_dim = 2
-hidden_dim = 30
-num_quantum_layers = 1
+hidden_dim = 50
+num_quantum_layers = 2
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
 
@@ -72,19 +73,19 @@ args = {
     "hidden_dim": hidden_dim,
     "num_quantum_layers": num_quantum_layers,
     "classic_network": classic_network,
-    "q_ansatz": "sim_circ_15",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
+    "q_ansatz": "sim_circ_19",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
-    "shots": 1,  # Analytical gradients enabled
+    "shots": 20,  # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "Classical",  # options : "CV", "Classical", "DV"
+    "solver": "DV",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
-    "eq_params" : eq_params,    # Equation parameters
-    "noise" : False,            # Boolean -> Noise of the system
+    "eq_params" : eq_params,
+    "noise" : True,
 }
 
 log_path = args["log_path"]
@@ -113,7 +114,7 @@ torch.manual_seed(0)
 total_params = sum(p.numel() for p in model.parameters())
 model.logger.print(f"Total number of parameters: {total_params}")
 
-wave_train.train(model, N_0=5, N_b=5, N_f=20)
+wave_train.train(model)
 
 model.save_state()
 
@@ -135,8 +136,23 @@ plt.close(
     "all",
 )
 
+# Loss history plot 
+plt.semilogy(range(len(model.loss_history)), smooth_loss(model.loss_history))
+plt.xlabel("Epochs")
+plt.ylabel("Loss")
+plt.title("Training Loss Over Epochs")
+plt.grid()
+
+file_path = os.path.join(model.log_path, "loss_history_smooth.pdf")
+plt.savefig(file_path, bbox_inches="tight")
+plt.show()
+
+plt.close(
+    "all",
+)
+
 # settings
-number_of_points = 25
+number_of_points = 50 
 
 with torch.no_grad():
     # mesh of t - x evaluation

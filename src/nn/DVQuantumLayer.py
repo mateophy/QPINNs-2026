@@ -2,11 +2,15 @@ import torch
 import torch.nn as nn
 import pennylane as qml
 
-from numpy.random import rand
-
-# What if we used real backend results
-from qiskit_aer.noise               import NoiseModel
-from qiskit.providers.fake_provider import Fake5QV1
+# Additional function to reduce nested list of tensors 
+def nested_list_to_tensor(x, out_shape, out, top_level=True):
+    if isinstance(x[0], list):
+        for i in range(out_shape[0]):
+            nested_list_to_tensor(x[i], out_shape[1:], out, top_level=False)
+    else:
+        out.extend(x)
+    if top_level:
+        return torch.stack(out).reshape(*out_shape)
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
@@ -107,24 +111,14 @@ class DVQuantumLayer(nn.Module):
         # Initialize noise models in case of selected
         if self.noise_flag:
 
-            # Inhirit form providers
-            # noise_model = NoiseModel.from_backend(Fake5QV1())
-                        
-            # Change of device to add noise
-            # self.dev = qml.device("qiskit.aer", wires=self.num_qubits, shots=self.shots,noise_model=noise_model)
+            self.dev = qml.device("default.mixed", wires=self.num_qubits) 
 
-            # print(noise_model)
-
-            self.dev = qml.device("default.mixed", wires=self.num_qubits, shots= self.shots)
-
-            self.dev = qml.transforms.insert(self.dev, qml.AmplitudeDamping, 0.05)
+            self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
+            self.circuit = qml.transforms.insert(self.circuit, qml.ResetError, (0.05, 0.05), position="end")
         else:
             # Default device
             self.dev = qml.device("default.qubit", wires=self.num_qubits)
-        
-
-        self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch",
-                                 diff_method=diff_method)
+            self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
 
     def _quantum_circuit(self, x):
         if self.encoding == "amplitude":
@@ -188,11 +182,12 @@ class DVQuantumLayer(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         # return torch.stack([self.circuit(sample) for sample in x])
+        # return nested_list_to_tensor([self.circuit(sample) for sample in x], x.shape, [])
 
         # ALR: Compatibility modification
-        self.shots_done += x.shape[0]
+        self.shots_done += x.shape[0] 
 
-        return torch.stack([torch.hstack(self.circuit(sample)) for sample in x])
+        return torch.stack([torch.stack(self.circuit(sample)) for sample in x])
 
     def layered_circuit(self, params):
         """

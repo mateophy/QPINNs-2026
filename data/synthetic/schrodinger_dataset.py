@@ -67,7 +67,7 @@ def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0, omega= 1.0, example= 'b
 
     # Box potential solution
     else:
-        pi = torch.tensor(np.pi, device=t.device, dtype=t.dtype)
+        pi = torch.tensor(torch.pi, device=t.device, dtype=t.dtype)
         k = n * pi / L
         E_n = (n**2) * (pi**2) * (hbar**2) / (2.0 * mass * (L**2))
         phase = - (E_n / hbar) * t

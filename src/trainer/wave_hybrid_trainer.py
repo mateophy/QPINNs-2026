@@ -18,25 +18,25 @@ from src.nn.DVPDESolver             import DVPDESolver
 from src.nn.CVPDESolver             import CVPDESolver
 from src.nn.ClassicalSolver2        import ClassicalSolver2
 
-import src.trainer.schrodinger_train as wave_train
+import src.trainer.wave_train as wave_train
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 mode = "hybrid"
-num_qubits = 5
+num_qubits = 2
 output_dim = 1
 input_dim = 2
 hidden_dim = 50
-num_quantum_layers = 2
-cutoff_dim = 20
+num_quantum_layers = 1
+cutoff_dim = 5
 classic_network = [input_dim, hidden_dim, output_dim]
 
 args = {
     "batch_size": 64,
-    "epochs": 10000,
+    "epochs": 1000,
     "lr": 0.01,
     "seed": 42,
-    "print_every": 100,
+    "print_every": 1,
     "log_path": "./results/models/checkpoints/wave",
     "input_dim": input_dim,
     "output_dim": output_dim,
@@ -44,12 +44,12 @@ args = {
     "hidden_dim": hidden_dim,
     "num_quantum_layers": num_quantum_layers,
     "classic_network": classic_network,
-    "q_ansatz": "sim_circ_5",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
+    "q_ansatz": "sim_circ_13_half",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": None,  # Analytical gradients enabled
     "problem": "wave",
-    "solver": "Classical",  # options : "CV", "Classical", "DV"
+    "solver": "CV",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim

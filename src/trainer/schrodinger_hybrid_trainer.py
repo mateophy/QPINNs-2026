@@ -30,7 +30,7 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 2
 input_dim = 2
-hidden_dim = 5
+hidden_dim = 30
 num_quantum_layers = 1
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
@@ -73,19 +73,19 @@ args = {
     "hidden_dim": hidden_dim,
     "num_quantum_layers": num_quantum_layers,
     "classic_network": classic_network,
-    "q_ansatz": "sim_circ_13",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
+    "q_ansatz": "sim_circ_15",      # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
     "mode": mode,
-    "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
-    "shots": 20,  # Analytical gradients enabled
+    "activation": "null",           # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
+    "shots": 20,                    # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "CV",  # options : "CV", "Classical", "DV"
+    "solver": "DV",                 # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
-    "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim
-    "class": "CVNeuralNetwork1",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
-    "encoding": None,  # options : "ampiltude" , "angle" for DV , none for others
+    "cutoff_dim": cutoff_dim,       # num_qubits >= cutoff_dim
+    "class": "CVNeuralNetwork2",    # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
+    "encoding": "amplitude",        # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,
-    "noise" : False,
+    "noise" : True,
 }
 
 log_path = args["log_path"]

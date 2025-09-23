@@ -62,7 +62,7 @@ eq_params = {
 
 args = {
     "batch_size": 64,
-    "epochs": 2000, 
+    "epochs": 500, 
     "lr": 1E-3,
     "seed": 42,
     "print_every": 1,

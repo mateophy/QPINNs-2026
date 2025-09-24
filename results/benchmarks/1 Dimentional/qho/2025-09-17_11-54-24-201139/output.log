@@ -1,0 +1,95 @@
+checkpoint path: self.log_path='./results/models/checkpoints/wave/2025-09-17_11-54-24-201139'
+Using Classical Solver
+The settings used:
+batch_size : 64
+epochs : 2000
+lr : 0.01
+seed : 42
+print_every : 100
+log_path : ./results/models/checkpoints/wave
+input_dim : 2
+output_dim : 1
+num_qubits : 5
+hidden_dim : 50
+num_quantum_layers : 2
+classic_network : [2, 50, 1]
+q_ansatz : sim_circ_5
+mode : hybrid
+activation : null
+shots : None
+problem : wave
+solver : Classical
+device : cpu
+method : None
+cutoff_dim : 20
+class : CVNeuralNetwork2
+encoding : None
+Total number of parameters: 7851
+It: 0, Loss: 6.269e+00, Loss_res: 1.126e-05,  Loss_bcs: 6.269e-01, Loss_ut_ics: 1.318e-03, lr: 1.000e-02, Time: 3.46e-02
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 100, Loss: 2.175e+00, Loss_res: 1.569e+00,  Loss_bcs: 1.892e-01, Loss_ut_ics: 1.269e+00, lr: 1.000e-02, Time: 2.94e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 200, Loss: 1.607e+00, Loss_res: 2.067e+00,  Loss_bcs: 1.293e-01, Loss_ut_ics: 1.069e+00, lr: 1.000e-02, Time: 2.86e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 300, Loss: 2.398e-01, Loss_res: 3.868e-01,  Loss_bcs: 1.790e-02, Loss_ut_ics: 2.218e-01, lr: 1.000e-02, Time: 2.83e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 400, Loss: 2.565e-01, Loss_res: 1.887e-01,  Loss_bcs: 2.266e-02, Loss_ut_ics: 1.111e-01, lr: 1.000e-02, Time: 2.88e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 500, Loss: 7.945e-02, Loss_res: 1.279e-01,  Loss_bcs: 6.612e-03, Loss_ut_ics: 5.391e-03, lr: 1.000e-02, Time: 2.89e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 600, Loss: 5.880e-02, Loss_res: 1.002e-01,  Loss_bcs: 4.752e-03, Loss_ut_ics: 1.260e-02, lr: 1.000e-02, Time: 2.90e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 700, Loss: 2.169e-01, Loss_res: 3.449e-01,  Loss_bcs: 1.807e-02, Loss_ut_ics: 1.727e-02, lr: 1.000e-02, Time: 3.46e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 800, Loss: 1.981e-01, Loss_res: 7.109e-02,  Loss_bcs: 1.899e-02, Loss_ut_ics: 1.094e-02, lr: 1.000e-02, Time: 2.95e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 900, Loss: 2.318e-02, Loss_res: 6.049e-02,  Loss_bcs: 1.594e-03, Loss_ut_ics: 1.192e-02, lr: 1.000e-02, Time: 2.88e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1000, Loss: 6.640e-02, Loss_res: 4.591e-02,  Loss_bcs: 6.161e-03, Loss_ut_ics: 1.926e-03, lr: 1.000e-02, Time: 3.05e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1100, Loss: 1.083e-01, Loss_res: 9.168e-02,  Loss_bcs: 9.798e-03, Loss_ut_ics: 1.111e-02, lr: 1.000e-02, Time: 2.87e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1200, Loss: 1.957e-02, Loss_res: 5.843e-02,  Loss_bcs: 1.331e-03, Loss_ut_ics: 4.194e-03, lr: 1.000e-02, Time: 3.08e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1300, Loss: 1.991e-02, Loss_res: 3.309e-02,  Loss_bcs: 1.617e-03, Loss_ut_ics: 4.294e-03, lr: 1.000e-02, Time: 2.88e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1400, Loss: 5.162e-02, Loss_res: 1.109e-01,  Loss_bcs: 3.959e-03, Loss_ut_ics: 9.445e-03, lr: 1.000e-02, Time: 2.84e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1500, Loss: 3.903e-02, Loss_res: 3.533e-02,  Loss_bcs: 3.472e-03, Loss_ut_ics: 7.761e-03, lr: 1.000e-02, Time: 3.02e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1600, Loss: 4.716e-02, Loss_res: 1.218e-01,  Loss_bcs: 3.415e-03, Loss_ut_ics: 8.318e-03, lr: 1.000e-02, Time: 2.83e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1700, Loss: 3.454e-02, Loss_res: 2.525e-01,  Loss_bcs: 8.590e-04, Loss_ut_ics: 6.946e-03, lr: 1.000e-02, Time: 2.81e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1800, Loss: 4.491e-02, Loss_res: 1.767e-02,  Loss_bcs: 4.285e-03, Loss_ut_ics: 2.939e-03, lr: 1.000e-02, Time: 2.84e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 1900, Loss: 6.387e-02, Loss_res: 2.635e-02,  Loss_bcs: 5.995e-03, Loss_ut_ics: 1.277e-02, lr: 1.000e-02, Time: 2.77e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+It: 2000, Loss: 1.620e-02, Loss_res: 1.863e-02,  Loss_bcs: 1.400e-03, Loss_ut_ics: 3.369e-03, lr: 1.000e-02, Time: 2.82e-03
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model.pth
+Model state saved to ./results/models/checkpoints/wave/2025-09-17_11-54-24-201139/model_weights.pth
+Training completed successfuly!
+Relative L2 error_u: 4.18e+00
+Relative L2 error_f: 3.92e+01

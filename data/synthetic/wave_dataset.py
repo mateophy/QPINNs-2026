@@ -71,8 +71,8 @@ def r(x, a, c):
 
 
 def generate_training_dataset(device):
-    a = torch.tensor(0.5, dtype=torch.float32, device=device)
-    c = torch.tensor(2.0, dtype=torch.float32, device=device)
+    a = torch.tensor(0.0, dtype=torch.float32, device=device)
+    c = torch.tensor(1.0, dtype=torch.float32, device=device)
 
     ics_coords = np.array([[0.0, 0.0], [0.0, 1.0]], dtype=np.float32)
     bc1_coords = np.array([[0.0, 0.0], [1.0, 0.0]], dtype=np.float32)

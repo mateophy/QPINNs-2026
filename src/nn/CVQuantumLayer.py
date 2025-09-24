@@ -52,6 +52,7 @@ class CVQuantumLayer(nn.Module):
         self.dev_x = qml.device("default.gaussian", wires=self.num_qubits)
         self.dev_p = qml.device("default.gaussian", wires=self.num_qubits)
 
+
         self.circuit_X = qml.QNode(
             self.quantum_circuit_X, self.dev_x, interface="torch"
         )
@@ -81,7 +82,7 @@ class CVQuantumLayer(nn.Module):
 
         for i in range(self.num_qubits):
             qml.Displacement(inputs[i], 0.0, wires=i)
-
+   
         for layer in range(self.num_layers):
             for wire in range(self.num_qubits):
                 #

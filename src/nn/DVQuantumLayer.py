@@ -39,7 +39,7 @@ class DVQuantumLayer(nn.Module):
         self.noise_flag = args["noise"]
 
         # - In case we are supporting noise we need to modify the Differentiation method:
-        diff_method = "best" if self.noise_flag else "backprop"
+        diff_method = "best" if self.noise_flag else "best"
 
         # Variable por shot counting
         self.shots_done = 0
@@ -130,10 +130,10 @@ class DVQuantumLayer(nn.Module):
             self.dev = qml.device("default.mixed", wires=self.num_qubits) 
 
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
-            self.circuit = qml.transforms.insert(self.circuit, qml.ResetError, (0.05, 0.05), position="end")
+            self.circuit = qml.transforms.insert(self.circuit, qml.DepolarizingChannel, 0.05, position="end")
         else:
             # Default device
-            self.dev = qml.device("default.qubit", wires=self.num_qubits)
+            self.dev = qml.device("cirq.qsim", wires=self.num_qubits, shots= self.shots)
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
 >>>>>>> main
 
@@ -303,10 +303,10 @@ class DVQuantumLayer(nn.Module):
 
         def add_entangling_gates():
             param_counter = 0
-            qml.CRX(params[param_counter], wires=[self.num_qubits - 1, 0])
+            qml.CNOT(params[param_counter], wires=[self.num_qubits - 1, 0])
             param_counter += 1
             for i in reversed(range(1, self.num_qubits)):
-                qml.CRX(params[param_counter], wires=[i - 1, i])
+                qml.CNOT(params[param_counter], wires=[i - 1, i])
                 param_counter += 1
 
         # add layers of the ansatz

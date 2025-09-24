@@ -2,9 +2,6 @@ import torch
 import torch.nn as nn
 import pennylane as qml
 
-<<<<<<< HEAD
-from numpy.random import rand
-=======
 # Additional function to reduce nested list of tensors 
 def nested_list_to_tensor(x, out_shape, out, top_level=True):
     if isinstance(x[0], list):
@@ -14,7 +11,6 @@ def nested_list_to_tensor(x, out_shape, out, top_level=True):
         out.extend(x)
     if top_level:
         return torch.stack(out).reshape(*out_shape)
->>>>>>> main
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
@@ -39,7 +35,7 @@ class DVQuantumLayer(nn.Module):
         self.noise_flag = args["noise"]
 
         # - In case we are supporting noise we need to modify the Differentiation method:
-        diff_method = "best" if self.noise_flag else "best"
+        diff_method = "best" if self.noise_flag else "backprop"
 
         # Variable por shot counting
         self.shots_done = 0
@@ -115,27 +111,14 @@ class DVQuantumLayer(nn.Module):
         # Initialize noise models in case of selected
         if self.noise_flag:
 
-<<<<<<< HEAD
-            self.dev = qml.device("default.mixed", wires=self.num_qubits, shots= self.shots)
-
-            self.dev = qml.transforms.insert(self.dev, qml.AmplitudeDamping, 0.05)
-        else:
-            # Default device
-            self.dev = qml.device("default.qubit", wires=self.num_qubits, shots= self.shots)
-        
-
-        self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch",
-                                 diff_method=diff_method)
-=======
             self.dev = qml.device("default.mixed", wires=self.num_qubits) 
 
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
-            self.circuit = qml.transforms.insert(self.circuit, qml.DepolarizingChannel, 0.05, position="end")
+            self.circuit = qml.transforms.insert(self.circuit, qml.ResetError, (0.05, 0.05), position="end")
         else:
             # Default device
-            self.dev = qml.device("cirq.qsim", wires=self.num_qubits, shots= self.shots)
+            self.dev = qml.device("default.qubit", wires=self.num_qubits)
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
->>>>>>> main
 
     def _quantum_circuit(self, x):
         if self.encoding == "amplitude":
@@ -303,10 +286,10 @@ class DVQuantumLayer(nn.Module):
 
         def add_entangling_gates():
             param_counter = 0
-            qml.CNOT(params[param_counter], wires=[self.num_qubits - 1, 0])
+            qml.CRX(params[param_counter], wires=[self.num_qubits - 1, 0])
             param_counter += 1
             for i in reversed(range(1, self.num_qubits)):
-                qml.CNOT(params[param_counter], wires=[i - 1, i])
+                qml.CRX(params[param_counter], wires=[i - 1, i])
                 param_counter += 1
 
         # add layers of the ansatz

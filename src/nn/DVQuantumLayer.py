@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import pennylane as qml
 
+<<<<<<< HEAD
+from numpy.random import rand
+=======
 # Additional function to reduce nested list of tensors 
 def nested_list_to_tensor(x, out_shape, out, top_level=True):
     if isinstance(x[0], list):
@@ -11,6 +14,7 @@ def nested_list_to_tensor(x, out_shape, out, top_level=True):
         out.extend(x)
     if top_level:
         return torch.stack(out).reshape(*out_shape)
+>>>>>>> main
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
@@ -111,6 +115,18 @@ class DVQuantumLayer(nn.Module):
         # Initialize noise models in case of selected
         if self.noise_flag:
 
+<<<<<<< HEAD
+            self.dev = qml.device("default.mixed", wires=self.num_qubits, shots= self.shots)
+
+            self.dev = qml.transforms.insert(self.dev, qml.AmplitudeDamping, 0.05)
+        else:
+            # Default device
+            self.dev = qml.device("default.qubit", wires=self.num_qubits, shots= self.shots)
+        
+
+        self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch",
+                                 diff_method=diff_method)
+=======
             self.dev = qml.device("default.mixed", wires=self.num_qubits) 
 
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
@@ -119,6 +135,7 @@ class DVQuantumLayer(nn.Module):
             # Default device
             self.dev = qml.device("cirq.qsim", wires=self.num_qubits, shots= self.shots)
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
+>>>>>>> main
 
     def _quantum_circuit(self, x):
         if self.encoding == "amplitude":

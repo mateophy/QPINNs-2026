@@ -6,24 +6,32 @@ import sys; import os
 from torch.optim import Adam
 from torch.nn    import MSELoss
 
-# ALR: Lineas adicionales para compatibilidad de path
-# Global path
-global_path = os.getcwd()
-
-# Composición del path
-global_path = global_path.split('/')
-
-# Generación de path global al directorio padre 
-relative_path = '/'.join(global_path[:-2])
-
-# Linea adicional para ubicación de path en los scripts
-sys.path.append(relative_path)
-
 from data.synthetic.schrodinger_dataset import sample_collocation, exact_eigenstate
 from src.nn.pde import schrodinger_operator
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
+
+# -------------------------- Early stopping Class -------------------------- #
+class EarlyStopper:
+    def __init__(self, patience=1, min_delta=1E-15):
+        self.patience = patience
+        self.min_delta = min_delta
+        self.counter = 0
+        self.min_validation_loss = float('inf')
+
+    def early_stop(self, validation_loss):
+        if validation_loss < self.min_validation_loss:
+            self.min_validation_loss = validation_loss
+            self.counter = 0
+        elif validation_loss > (self.min_validation_loss + self.min_delta):
+            self.counter += 1
+            if self.counter >= self.patience:
+                return True
+        return False
+
+# Call of early stopping 
+early_stopper = EarlyStopper(patience=20, min_delta=1E-4)
 
 def train(model, N_f = 7, N_b = 5, N_0 = 5):
 
@@ -46,7 +54,6 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
         potential_fn = eval(model.args['eq_params']['potential_fn'])   # Función de potencial
         omega        = model.args['eq_params']['omega']                # Frecuencia natural
 
-
     # Constants parameters
     LR = model.args['lr']; PRINT_EVERY = model.args['print_every']
 
@@ -58,37 +65,72 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
 
     # Dtype definition 
     torch.set_default_dtype(DTYPE)
-    torch.manual_seed(42);
+    torch.manual_seed(42)
 
     t0 = time.time()
  
     for epoch in range(1, model.epochs + 1): 
 
+        # ALR: Modification into pure real solutions
+        # - All imaginary Components are going to be unused
+        # - The model it's going to be reduced into 1 output neuron with just real solutions
+        # - Samplers are modified to just output reals
+
         # Points definition
         (t_f, x_f), (t_b, x_b), (t_0, x_0) = sample_collocation(N_f, N_b, N_0, L=L, T=T, device=DEVICE, dtype=DTYPE, example=example)
-        psi0_r, psi0_i, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+        psi0_r, _ = exact_eigenstate(n_level, t_0, x_0, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
+
+        psif_r, _ = exact_eigenstate(n_level, t_f, x_f, L=L, mass=mass, hbar=hbar, omega=omega, example=example)
 
         # Preparation per epoch 
         opt.zero_grad()
 
+        # ALR: Modification into pure real solutions
+        # - All imaginary Components are going to be unused
+        # - The model it's going to be reduced into 1 output neuron with just real solutions
+        # - Samplers are modified to just output reals
+
+        # -- Addition of error with known solution
+
         # PDE (interior) con V=0 (pozo interior)
-        [_, _, rR, rI] = schrodinger_operator(model, t_f, x_f, potential_fn= potential_fn, mass=mass, hbar=hbar)
-        loss_pde = mse(rR[:, 0:1], torch.zeros_like(rR)) + mse(rI[:, 0:1], torch.zeros_like(rI))
+        [psi_r, rR] = schrodinger_operator(model, t_f, x_f, potential_fn= potential_fn, mass=mass, hbar=hbar)
+        
+        # loss_pde = mse(rR[:, 0:1], torch.zeros_like(rR)) + mse(rI[:, 0:1], torch.zeros_like(rI))
+
+        loss_pde = mse(rR[:, 0:1], torch.zeros_like(rR))
+
+        loss_pde_amplitude =  mse(psi_r[:, 0:1], psif_r[:, 0:1])
 
         # BC Dirichlet: ψ=0 en x=0 y x=L
         psi_b = model(torch.cat((t_b, x_b), dim=1))
-        loss_bc = mse(psi_b[:, 0:1], torch.zeros_like(psi_b[:, 0:1])) + \
-                  mse(psi_b[:, 1:2], torch.zeros_like(psi_b[:, 1:2]))
+        # loss_bc = mse(psi_b[:, 0:1], torch.zeros_like(psi_b[:, 0:1])) + \
+        #           mse(psi_b[:, 1:2], torch.zeros_like(psi_b[:, 1:2]))
+
+        loss_bc = mse(psi_b[:, 0:1], torch.zeros_like(psi_b[:, 0:1]))
 
         # IC: ψ(t=0,x) = sqrt(2/L) sin(pi x/L) (parte imag=0 al inicio)
         psi0 = model(torch.cat((t_0, x_0), dim=1))
-        loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) + mse(psi0[:, 1:2], psi0_i[:, 0:1])
+
+        # loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) + mse(psi0[:, 1:2], psi0_i[:, 0:1])
+
+        loss_ic = mse(psi0[:, 0:1], psi0_r[:, 0:1]) 
 
         # Ponderación básica 
-        loss = 1.0E-2 * loss_pde + 1.0E0 * loss_bc + 1.0E-2 * loss_ic
+        loss = 1.0E-2 * (loss_pde + loss_pde_amplitude) + 1.0E0 * loss_bc + 1.0E-2 * loss_ic
 
         loss.backward()
         opt.step()
+
+        # Early stopping criterion
+        if early_stopper.early_stop(loss): 
+
+            model.logger.print(f"Stopped by early stopping on epoch {epoch}")
+            model.save_state()
+
+            # Save of loss for each epoch
+            model.loss_history.append(loss.item())
+
+            break
 
         if epoch % PRINT_EVERY == 0 or epoch == 1:
             elapsed = time.time() - t0 
@@ -105,8 +147,6 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
                 )
             )
 
-            # Compute and Print adaptive weights during training
-            # Compute the adaptive constant
             model.save_state()
 
         # Save of loss for each epoch

@@ -4,6 +4,8 @@ import torch
 
 from math import factorial
 
+
+
 # Sample collocation of points
 def sample_collocation(Nf, Nb, N0, L=1.0, T=0.2, device="cpu", dtype=torch.float64, example= 'box'):
     
@@ -53,6 +55,11 @@ def hermite_physicists(n, z):
 # Definition of exact eigen state of analysis
 def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0, omega= 1.0, example= 'box'):
 
+    # ALR: Modification into pure real solutions
+    # - All imaginary Components are going to be unused
+    # - The model it's going to be reduced into 1 output neuron with just real solutions
+    # - Samplers are modified to just output reals
+
     # Harmonic Oscillator solution
     if example.lower() == 'ho':
 
@@ -63,7 +70,8 @@ def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0, omega= 1.0, example= 'b
         E_n   = hbar*omega*(n + 0.5)
         phase = -(E_n/hbar) * t
         psi_r = phi_x * torch.cos(phase)
-        psi_i = phi_x * torch.sin(phase)
+
+        # psi_i = phi_x * torch.sin(phase)
 
     # Box potential solution
     else:
@@ -73,6 +81,9 @@ def exact_eigenstate(n, t, x, L=1.0, mass=1.0, hbar=1.0, omega= 1.0, example= 'b
         phase = - (E_n / hbar) * t
         spatial = torch.sqrt(2.0 / torch.tensor(L, device=t.device, dtype=t.dtype)) * torch.sin(k * x)
         psi_r = spatial * torch.cos(phase)
-        psi_i = spatial * torch.sin(phase)
 
-    return psi_r, psi_i, E_n
+        # psi_i = spatial * torch.sin(phase)
+
+    # ALR: Complex solutions return psi_r, psi_i, E_n
+    # ALR: Pure real solutions
+    return psi_r, E_n

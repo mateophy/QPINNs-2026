@@ -4,12 +4,6 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Global path
-global_path = os.getcwd()
-
-# Linea adicional para ubicación de path en los scripts
-sys.path.append(global_path)
-
 from src.utils.logger               import Logging
 from src.nn.pde                     import wave_operator
 from src.utils.plot_prediction      import plt_prediction
@@ -56,7 +50,6 @@ args = {
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "None",  # options : "ampiltude" , "angle" for DV , none for others
 }
-
 
 log_path = args["log_path"]
 logger = Logging(log_path)

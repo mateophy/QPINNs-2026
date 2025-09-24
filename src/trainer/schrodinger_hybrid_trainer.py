@@ -8,12 +8,6 @@ import numpy as np
 os.environ['OMP_NUM_THREADS']    = '64'
 os.environ['QULACS_NUM_THREADS'] = '64'
 
-# Global path
-global_path = os.getcwd()
-
-# Linea adicional para ubicación de path en los scripts
-sys.path.append(global_path)
-
 from src.utils.plot_loss                import smooth_loss
 from src.utils.logger                   import Logging
 from src.utils.plot_prediction          import plt_prediction

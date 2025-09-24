@@ -6,19 +6,6 @@ import sys; import os
 from torch.optim import Adam
 from torch.nn    import MSELoss
 
-# ALR: Lineas adicionales para compatibilidad de path
-# Global path
-global_path = os.getcwd()
-
-# Composición del path
-global_path = global_path.split('/')
-
-# Generación de path global al directorio padre 
-relative_path = '/'.join(global_path[:-2])
-
-# Linea adicional para ubicación de path en los scripts
-sys.path.append(relative_path)
-
 from data.synthetic.schrodinger_dataset import sample_collocation, exact_eigenstate
 from src.nn.pde import schrodinger_operator
 
@@ -46,7 +33,6 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
         potential_fn = eval(model.args['eq_params']['potential_fn'])   # Función de potencial
         omega        = model.args['eq_params']['omega']                # Frecuencia natural
 
-
     # Constants parameters
     LR = model.args['lr']; PRINT_EVERY = model.args['print_every']
 
@@ -58,7 +44,7 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
 
     # Dtype definition 
     torch.set_default_dtype(DTYPE)
-    torch.manual_seed(42);
+    torch.manual_seed(42)
 
     t0 = time.time()
  

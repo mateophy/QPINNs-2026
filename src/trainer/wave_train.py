@@ -1,11 +1,6 @@
 import time
 import torch
 
-import sys; import os
-
-# Additional line used for compatibility
-sys.path.append(os.getcwd())
-
 from data.synthetic.wave_dataset import generate_training_dataset
 from src.nn.pde import wave_operator
 

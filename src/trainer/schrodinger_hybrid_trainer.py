@@ -4,12 +4,11 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Global path
-global_path = os.getcwd()
+# Set variable for number of threads 
+os.environ['OMP_NUM_THREADS']    = '64'
+os.environ['QULACS_NUM_THREADS'] = '64'
 
-# Linea adicional para ubicación de path en los scripts
-sys.path.append(global_path)
-
+from src.utils.plot_loss                import smooth_loss
 from src.utils.logger                   import Logging
 from src.utils.plot_prediction          import plt_prediction
 from data.synthetic.schrodinger_dataset import exact_eigenstate
@@ -30,7 +29,7 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 1
 input_dim = 2
-hidden_dim = 25
+hidden_dim = 50
 num_quantum_layers = 2
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
@@ -61,7 +60,7 @@ eq_params = {
 }
 
 args = {
-    "batch_size": 32,
+    "batch_size": 64,
     "epochs": 1000, 
     "lr": 1E-3,
     "seed": 42,
@@ -73,10 +72,10 @@ args = {
     "hidden_dim": hidden_dim,
     "num_quantum_layers": num_quantum_layers,
     "classic_network": classic_network,
-    "q_ansatz": "sim_circ_15",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
+    "q_ansatz": "sim_circ_19",  # options: "alternating_layer_tdcnot", "abbas" , farhi , sim_circ_13_half, sim_circ_13 , sim_circ_14_half, sim_circ_14 , sim_circ_15 ,sim_circ_19
     "mode": mode,
     "activation": "null",  # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
-    "shots": 1,  # Analytical gradients enabled
+    "shots": 20,  # Analytical gradients enabled
     "problem": "schrodinger",
     "solver": "DV",  # options : "CV", "Classical", "DV"
     "device": DEVICE,
@@ -114,7 +113,7 @@ torch.manual_seed(0)
 total_params = sum(p.numel() for p in model.parameters())
 model.logger.print(f"Total number of parameters: {total_params}")
 
-wave_train.train(model, N_0=10, N_b=10, N_f=200)
+wave_train.train(model)
 
 model.save_state()
 
@@ -136,8 +135,23 @@ plt.close(
     "all",
 )
 
+# Loss history plot 
+plt.semilogy(range(len(model.loss_history)), smooth_loss(model.loss_history))
+plt.xlabel("Epochs")
+plt.ylabel("Loss")
+plt.title("Training Loss Over Epochs")
+plt.grid()
+
+file_path = os.path.join(model.log_path, "loss_history_smooth.pdf")
+plt.savefig(file_path, bbox_inches="tight")
+plt.show()
+
+plt.close(
+    "all",
+)
+
 # settings
-number_of_points = 25
+number_of_points = 50 
 
 with torch.no_grad():
     # mesh of t - x evaluation

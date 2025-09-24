@@ -18,7 +18,7 @@ from src.nn.DVPDESolver             import DVPDESolver
 from src.nn.CVPDESolver             import CVPDESolver
 from src.nn.ClassicalSolver2        import ClassicalSolver2
 
-import src.trainer.schrodinger_train as wave_train
+import src.trainer.wave_train as wave_train
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -33,7 +33,7 @@ classic_network = [input_dim, hidden_dim, output_dim]
 
 args = {
     "batch_size": 64,
-    "epochs": 10000,
+    "epochs": 2000,
     "lr": 0.01,
     "seed": 42,
     "print_every": 100,
@@ -89,8 +89,8 @@ model.logger.print("Training completed successfuly!")
 # Testing
 
 # Define PINN model
-a = torch.tensor(0.7, dtype=torch.float32, device=DEVICE)
-c = torch.tensor(2.0, dtype=torch.float32, device=DEVICE)
+a = torch.tensor(0.0, dtype=torch.float32, device=DEVICE)
+c = torch.tensor(1.0, dtype=torch.float32, device=DEVICE)
 
 
 # Domain boundaries - convert to float32
@@ -134,7 +134,7 @@ u_star = u(X_star, a, c)
 f_star = r(X_star, a, c)
 
 
-plt.plot(range(len(model.loss_history)), model.loss_history)
+plt.semilogy(range(len(model.loss_history)), model.loss_history)
 plt.xlabel("Epochs")
 plt.ylabel("Loss")
 plt.title("Training Loss Over Epochs")
@@ -168,6 +168,11 @@ error_f = np.linalg.norm(f_pred - f_star)
 logger.print("Relative L2 error_u: {:.2e}".format(error_u))
 logger.print("Relative L2 error_f: {:.2e}".format(error_f))
 
+plt.figure()
+plt.plot(X_star[:, 0], u_pred[:, 0], label="u PINN")
+plt.plot(X_star[:, 0], u_star[:, 0], "--", label="u True")
+plt.xlabel("x"); plt.ylabel("|ψ|^2")
+plt.legend(); plt.grid()
 
 plt_prediction(
     logger,

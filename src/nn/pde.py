@@ -82,7 +82,7 @@ def wave_operator(model, t, x, sigma_t=1.0, sigma_x=1.0):
     """
     Operator to compute residuals for the 1D wave equation
     """
-    c = 2
+    c = 1
     t.requires_grad = True
     x.requires_grad = True
 

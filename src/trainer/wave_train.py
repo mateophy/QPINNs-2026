@@ -3,18 +3,8 @@ import torch
 
 import sys; import os
 
-# ALR: Lineas adicionales para compatibilidad de path
-# Global path
-global_path = os.getcwd()
-
-# Composición del path
-global_path = global_path.split('/')
-
-# Generación de path global al directorio padre 
-relative_path = '/'.join(global_path[:-2])
-
-# Linea adicional para ubicación de path en los scripts
-sys.path.append(relative_path)
+# Additional line used for compatibility
+sys.path.append(os.getcwd())
 
 from data.synthetic.wave_dataset import generate_training_dataset
 from src.nn.pde import wave_operator

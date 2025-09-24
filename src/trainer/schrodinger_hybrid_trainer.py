@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Set variable for number of threads 
-os.environ['OMP_NUM_THREADS']    = '64'
-os.environ['QULACS_NUM_THREADS'] = '64'
+# os.environ['OMP_NUM_THREADS']    = '64'
+# os.environ['QULACS_NUM_THREADS'] = '64'
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 # Global path
 global_path = os.getcwd()
@@ -85,7 +87,7 @@ args = {
     "class": "CVNeuralNetwork2",    # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "amplitude",        # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,
-    "noise" : True,
+    "noise" : False,
 }
 
 log_path = args["log_path"]

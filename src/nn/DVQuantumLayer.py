@@ -35,7 +35,7 @@ class DVQuantumLayer(nn.Module):
         self.noise_flag = args["noise"]
 
         # - In case we are supporting noise we need to modify the Differentiation method:
-        diff_method = "best" if self.noise_flag else "backprop"
+        diff_method = "best" if self.noise_flag else "best"
 
         # Variable por shot counting
         self.shots_done = 0
@@ -117,7 +117,7 @@ class DVQuantumLayer(nn.Module):
             self.circuit = qml.transforms.insert(self.circuit, qml.DepolarizingChannel, 0.05, position="end")
         else:
             # Default device
-            self.dev = qml.device("default.qubit", wires=self.num_qubits)
+            self.dev = qml.device("cirq.qsim", wires=self.num_qubits, shots= self.shots)
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
 
     def _quantum_circuit(self, x):

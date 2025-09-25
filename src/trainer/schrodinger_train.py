@@ -47,6 +47,21 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
     torch.manual_seed(42)
 
     t0 = time.time()
+
+    # Exact solution with N points  
+    Nx_val = 1000 # Number of points 
+    x_val_fixed = torch.linspace(0.0, L, Nx_val, device=DEVICE, dtype=DTYPE).reshape(-1, 1)
+    t_val_fixed = torch.full_like(x_val_fixed, T)  # with  t = T
+
+    with torch.no_grad():
+        psi_r_exact_T, psi_i_exact_T, _ = exact_eigenstate(
+            n_level, t_val_fixed, x_val_fixed,
+            L=L, mass=mass, hbar=hbar, omega=omega, example=example
+        )
+    if not hasattr(model, 'l2_abs_history'): model.l2_abs_history = []
+    if not hasattr(model, 'l2_rel_history'): model.l2_rel_history = []
+
+    
  
     for epoch in range(1, model.epochs + 1): 
 
@@ -75,17 +90,32 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
 
         loss.backward()
         opt.step()
+        # error calculation with a L^2 norm 
+        model.eval()
+        with torch.no_grad(): # ahorra memoria 
+
+            psi_pred = model(torch.cat((t_val_fixed, x_val_fixed), dim=1))
+            # Real and complex error  
+            err_r = psi_pred[:, 0:1] - psi_r_exact_T[:, 0:1]
+            err_i = psi_pred[:, 1:2] - psi_i_exact_T[:, 0:1]
+            
+            l2_abs = torch.sqrt(torch.mean(err_r**2 + err_i**2))
+            ref_norm = torch.sqrt(torch.mean(psi_r_exact_T[:, 0:1]**2 + psi_i_exact_T[:, 0:1]**2)) + 1e-12
+            l2_rel = l2_abs / ref_norm
+            model.l2_rel_history.append(float(l2_rel))
+
 
         if epoch % PRINT_EVERY == 0 or epoch == 1:
             elapsed = time.time() - t0 
             model.logger.print(
-                    "It: %d, Loss: %.3e, Loss_res: %.3e,  Loss_bcs: %.3e, Loss_ut_ics: %.3e, lr: %.3e, Time: %.2e"
+                    "It: %d, Loss: %.3e, Loss_res: %.3e,  Loss_bcs: %.3e, Loss_ut_ics: %.3e, L^2_error: %3e, lr: %.3e, Time: %.2e"
                     % (
                         epoch,
                         loss.item(),
                         loss_pde.item(),
                         loss_bc.item(),
                         loss_ic.item(),
+                        l2_rel.item(),
                         model.optimizer.param_groups[0]["lr"] if model.optimizer else 0.0,
                         elapsed,
                 )

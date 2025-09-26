@@ -9,10 +9,13 @@ from torch.nn    import MSELoss
 from data.synthetic.schrodinger_dataset import sample_collocation, exact_eigenstate
 from src.nn.pde import schrodinger_operator
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
 DTYPE = torch.float32  # mejor precisión para EDP de 2º orden
 
 def train(model, N_f = 7, N_b = 5, N_0 = 5):
+
+    DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(DEVICE)
 
     # Parametros de decisión 
     example = model.args['eq_params']['example']    # Ejemplo a replicar
@@ -49,15 +52,20 @@ def train(model, N_f = 7, N_b = 5, N_0 = 5):
     t0 = time.time()
 
     # Exact solution with N points  
-    Nx_val = 1000 # Number of points 
+    Nx_val = 100 # Number of points 
     x_val_fixed = torch.linspace(0.0, L, Nx_val, device=DEVICE, dtype=DTYPE).reshape(-1, 1)
     t_val_fixed = torch.full_like(x_val_fixed, T)  # with  t = T
+    x_val_fixed = x_val_fixed.to(DEVICE)
+    t_val_fixed = t_val_fixed.to(DEVICE)
 
     with torch.no_grad():
         psi_r_exact_T, psi_i_exact_T, _ = exact_eigenstate(
             n_level, t_val_fixed, x_val_fixed,
             L=L, mass=mass, hbar=hbar, omega=omega, example=example
         )
+        psi_r_exact_T = psi_r_exact_T.to(DEVICE)
+        psi_i_exact_T = psi_i_exact_T.to(DEVICE)
+
     if not hasattr(model, 'l2_abs_history'): model.l2_abs_history = []
     if not hasattr(model, 'l2_rel_history'): model.l2_rel_history = []
 

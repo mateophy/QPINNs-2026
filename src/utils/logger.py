@@ -1,9 +1,7 @@
 import logging
 from datetime import datetime
 import os
-
 import sys
-
 import numpy as np
 
 class Logging:
@@ -31,10 +29,6 @@ class Logging:
         try:
             self.output_dir = os.path.join(self.log_path, timestamp)
             os.makedirs(self.output_dir, exist_ok=True)
-            ## to copy training file in the log directory
-            # destination_path = os.path.join(self.output_dir, "training.py")
-            # if source_path is not None:
-            # shutil.copy(source_path, destination_path)
 
         except OSError as error:
             print(f"Error: {error.strerror}")
@@ -44,11 +38,6 @@ class Logging:
         self.logger.setLevel(logging.DEBUG)
 
         logging.basicConfig(filemode="w")
-
-        # sh = logging.StreamHandler()
-        # sh.setLevel(logging.DEBUG)
-        # sh.setFormatter(logging.Formatter("%(message)s"))
-        # self.logger.addHandler(sh)
 
         fh = logging.FileHandler(f"{self.output_dir}/output.log")
 

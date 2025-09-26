@@ -1,2 +1,0 @@
-Using CVNeuralNetwork2 
-Failed to initialize quantum layer: cannot import name 'simps' from 'scipy.integrate' (/usr/local/anaconda3/envs/qpinns_env/lib/python3.10/site-packages/scipy/integrate/__init__.py)

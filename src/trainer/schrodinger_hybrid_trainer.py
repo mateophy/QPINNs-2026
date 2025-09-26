@@ -79,7 +79,7 @@ args = {
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,
-    "noise" : True,
+    "noise" : False,
 }
 
 log_path = args["log_path"]
@@ -158,14 +158,15 @@ with torch.no_grad():
         t = np.linspace(0, T, number_of_points, dtype=np.float32)[:, None]
         x = torch.linspace(0.0, L, number_of_points, device=DEVICE, dtype=DTYPE).unsqueeze(1)
 
-    t, x = np.meshgrid(t, x);
+    t, x = np.meshgrid(t, x)
 
     t = t.flatten()[:, None]
     x = x.flatten()[:, None]
 
     # - Generation of torch elements
-    t_eval = torch.from_numpy(t); x_eval = torch.from_numpy(x)
-
+    t_eval = torch.from_numpy(t).to(DEVICE).to(DTYPE)
+    x_eval = torch.from_numpy(x).to(DEVICE).to(DTYPE)
+    
     psi_pred = model(torch.cat((t_eval, x_eval), dim=1))
     psi_r_pred = psi_pred[:, 0:1]
     psi_i_pred = psi_pred[:, 1:2]

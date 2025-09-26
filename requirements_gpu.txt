@@ -1,0 +1,13 @@
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+torchaudio==2.6.0+cu124
+numpy>=1.26,<2.3
+scipy>=1.13
+matplotlib>=3.10
+pandas>=2.2
+pennylane==0.42.3
+pennylane-lightning==0.42.0
+pennylane-lightning-gpu==0.42.0
+cuquantum-cu12>=24.03
+custatevec-cu12
+cutensornet-cu12

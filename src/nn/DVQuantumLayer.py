@@ -1,6 +1,11 @@
+from qiskit.transpiler.passes.analysis import num_qubits
 import torch
 import torch.nn as nn
 import pennylane as qml
+
+# Qiskit models 
+from qiskit_aer.noise import NoiseModel
+from qiskit.providers.fake_provider import GenericBackendV2 
 
 # Additional function to reduce nested list of tensors 
 def nested_list_to_tensor(x, out_shape, out, top_level=True):
@@ -11,6 +16,13 @@ def nested_list_to_tensor(x, out_shape, out, top_level=True):
         out.extend(x)
     if top_level:
         return torch.stack(out).reshape(*out_shape)
+
+# Additional readout errors:
+rmeas_fcond = qml.noise.meas_eq(qml.counts)
+def rmeas_noise(op, **metadata):
+    for wire in op.wires:
+        qml.GeneralizedAmplitudeDamping(prob_ampl_damp[wire], 1 - exc_population, wire)
+
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
@@ -111,10 +123,26 @@ class DVQuantumLayer(nn.Module):
         # Initialize noise models in case of selected
         if self.noise_flag:
 
-            self.dev = qml.device("default.mixed", wires=self.num_qubits) 
+            # Noise model import
+            self.dev = qml.device("default.mixed", wires=self.num_qubits)  
 
+            # Standard seed for reproducible results
+            backend_provider = GenericBackendV2(num_qubits=self.num_qubits, seed=42)
+
+            # generation of noise model 
+            noise_iqm = qml.from_qiskit_noise(NoiseModel.from_backend(backend_provider))
+
+            # Feedback of noise 
+            print(noise_iqm)
+
+            # Measurement errors:
+            noise_iqm += {"meas_map": {rmeas_fcond: rmeas_noise}}
+            print(noise_iqm.meas_map)
+
+            # Integration of backend 
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
-            self.circuit = qml.transforms.insert(self.circuit, qml.ResetError, (0.05, 0.05), position="end")
+            self.circuit = qml.add_noise(self.circuit, noise_model=noise_iqm)
+ 
         else:
             # Default device
             self.dev = qml.device("default.qubit", wires=self.num_qubits)

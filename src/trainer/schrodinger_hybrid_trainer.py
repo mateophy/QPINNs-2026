@@ -79,7 +79,7 @@ args = {
     "class": "CVNeuralNetwork2",  # options CVNeuralNetwork1, CVNeuralNetwork2, CVNeuralNetwork3
     "encoding": "angle",  # options : "ampiltude" , "angle" for DV , none for others
     "eq_params" : eq_params,
-    "noise" : False,
+    "noise" : True,
 }
 
 log_path = args["log_path"]

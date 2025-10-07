@@ -5,7 +5,7 @@ import pennylane as qml
 
 # Qiskit models 
 from qiskit_aer.noise import NoiseModel
-from qiskit.providers.fake_provider import GenericBackendV2, Fake1Q 
+from qiskit.providers.fake_provider import GenericBackendV2 
 
 # Additional function to reduce nested list of tensors 
 def nested_list_to_tensor(x, out_shape, out, top_level=True):
@@ -75,7 +75,7 @@ class DVQuantumLayer(nn.Module):
             self.params = nn.Parameter(
                 torch.empty(
                     self.num_quantum_layers,
-                    self.num_qubits * 3,
+                    self.num_qubits * 2, # ALR: 3 -> 2
                     requires_grad=True,
                     dtype=torch.float32,
                 )
@@ -197,7 +197,7 @@ class DVQuantumLayer(nn.Module):
             )
         elif self.q_ansatz == "sim_circ_19":
             torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, self.num_qubits * 3) 
+                self.params.view(self.num_quantum_layers, self.num_qubits * 2) # ALR: 3 -> 2 
             )
         elif self.q_ansatz == "sim_circ_5":
             torch.nn.init.xavier_normal_(
@@ -312,12 +312,16 @@ class DVQuantumLayer(nn.Module):
             # barrier after entanglement
             qml.Barrier(wires=range(self.num_qubits))
 
+
+        # CRX -> CNOT 
+        # qml.CRX(params[param_counter], ...)
+
         def add_entangling_gates():
             param_counter = 0
-            qml.CRX(params[param_counter], wires=[self.num_qubits - 1, 0])
+            qml.CNOT(wires=[self.num_qubits - 1, 0])
             param_counter += 1
             for i in reversed(range(1, self.num_qubits)):
-                qml.CRX(params[param_counter], wires=[i - 1, i])
+                qml.CNOT(wires=[i - 1, i])
                 param_counter += 1
 
         # add layers of the ansatz

@@ -5,7 +5,7 @@ import pennylane as qml
 
 # Qiskit models 
 from qiskit_aer.noise import NoiseModel
-from qiskit.providers.fake_provider import GenericBackendV2 
+from qiskit.providers.fake_provider import GenericBackendV2, Fake1Q 
 
 # Additional function to reduce nested list of tensors 
 def nested_list_to_tensor(x, out_shape, out, top_level=True):
@@ -128,16 +128,16 @@ class DVQuantumLayer(nn.Module):
 
             # Standard seed for reproducible results
             backend_provider = GenericBackendV2(num_qubits=self.num_qubits, seed=42)
+            # backend_provider = Fake1Q()
 
             # generation of noise model 
-            noise_iqm = qml.from_qiskit_noise(NoiseModel.from_backend(backend_provider))
-
-            # Feedback of noise 
-            print(noise_iqm)
+            noise_iqm = qml.from_qiskit_noise(NoiseModel.from_backend(backend_provider)) 
 
             # Measurement errors:
             noise_iqm += {"meas_map": {rmeas_fcond: rmeas_noise}}
-            print(noise_iqm.meas_map)
+            
+            # Feedback of noise 
+            print(noise_iqm)
 
             # Integration of backend 
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
@@ -197,7 +197,7 @@ class DVQuantumLayer(nn.Module):
             )
         elif self.q_ansatz == "sim_circ_19":
             torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, self.num_qubits * 3)
+                self.params.view(self.num_quantum_layers, self.num_qubits * 3) 
             )
         elif self.q_ansatz == "sim_circ_5":
             torch.nn.init.xavier_normal_(
@@ -370,18 +370,6 @@ class DVQuantumLayer(nn.Module):
             raise ValueError("Insufficient parameters for RXX and RZX gates")
 
         param_index = 0
-
-
-        # ALR: Final modification, gate manipulable with simlators on AWS 
-        # Originals: 
-        # - apply_rotations1 -> RY  
-        # - apply_rotations2 -> RX  
-        # - apply_entangling_block1 -> CNOT 
-        # - apply_entangling_block2 -> CNOT 
-
-        # ALR: Addition of noise at the ends of the circuits.
-        # - Consider amplitud damping and depolirazing
-
 
         # apply rotations
         def apply_rotations1():

@@ -24,7 +24,7 @@ mode = "hybrid"
 num_qubits = 5
 output_dim = 2
 input_dim = 2
-hidden_dim = 30
+hidden_dim = 50
 num_quantum_layers = 1
 cutoff_dim = 20
 classic_network = [input_dim, hidden_dim, output_dim]
@@ -56,7 +56,7 @@ eq_params = {
 
 args = {
     "batch_size": 64,
-    "epochs": 500, 
+    "epochs": 2000, 
     "lr": 1E-3,
     "seed": 42,
     "print_every": 1,

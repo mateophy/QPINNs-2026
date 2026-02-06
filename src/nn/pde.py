@@ -97,36 +97,39 @@ def complex_wave_operator(model, t, x, sigma_t=1.0, sigma_x=1.0):
     return u, residual
 
 # ALR: Additional operator separated -> Schrödinger direct
-def schrodinger_operator(model, t, x, potential_fn=0, mass=1.0, hbar=1.0):
+def schrodinger_operator(model, t, x, potential_fn=None, mass=1.0, hbar=1.0):
     """
     Residuos de: i*hbar*psi_t = -(hbar^2/(2m)) * psi_xx + V * psi
     model(t,x) -> [psi_r, psi_i]
     """
-
     t = t.requires_grad_(True)
     x = x.requires_grad_(True)
 
-    psi = model(torch.concatenate((t, x), dim=1))
+    psi = model(torch.cat((t, x), dim=1))
     psi_r = psi[:, 0:1]
     psi_i = psi[:, 1:2]
 
-    # Derivadas temporales
     psi_t_r = torch.autograd.grad(psi_r, t, torch.ones_like(psi_r), create_graph=True)[0]
     psi_t_i = torch.autograd.grad(psi_i, t, torch.ones_like(psi_i), create_graph=True)[0]
 
-    # Derivadas espaciales segunda
-    psi_x_r  = torch.autograd.grad(psi_r, x, torch.ones_like(psi_r), create_graph=True)[0]
-    psi_x_i  = torch.autograd.grad(psi_i, x, torch.ones_like(psi_i), create_graph=True)[0]
+    psi_x_r = torch.autograd.grad(psi_r, x, torch.ones_like(psi_r), create_graph=True)[0]
+    psi_x_i = torch.autograd.grad(psi_i, x, torch.ones_like(psi_i), create_graph=True)[0]
     psi_xx_r = torch.autograd.grad(psi_x_r, x, torch.ones_like(psi_x_r), create_graph=True)[0]
-    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0] 
+    psi_xx_i = torch.autograd.grad(psi_x_i, x, torch.ones_like(psi_x_i), create_graph=True)[0]
 
-    V = potential_fn(t, x) if potential_fn!=0 else torch.zeros_like(psi_r)
+    if potential_fn is None:
+        V = torch.zeros_like(psi_r)
+    else:
+        V = potential_fn(t, x).to(dtype=psi_r.dtype, device=psi_r.device)
+
     coef = (hbar**2) / (2.0 * mass)
 
     residual_r = -hbar * psi_t_i + coef * psi_xx_r - V * psi_r
     residual_i =  hbar * psi_t_r + coef * psi_xx_i - V * psi_i
 
     return psi_r, psi_i, residual_r, residual_i
+
+
 
 def diffusion_operator(model, t, x, y, sigma_t=1.0, sigma_x=1.0, sigma_y=1.0, D=0.01, v_x=1.0, v_y=1.0):
     """
@@ -195,3 +198,16 @@ def helmholtz_operator(
     residual = u_xx1 + u_xx2 + LAMBDA * u
 
     return [u, residual]
+
+def zero_potential(t, x):
+    return torch.zeros_like(x)
+
+def infinite_square_well_potential(t, x, V0=0.0):
+    # Para el pozo infinito ideal, dentro del pozo V=0.
+    # Esta función sirve simplemente como alias claro.
+    return torch.zeros_like(x)
+
+def finite_square_well_potential(t, x, L=1.0, V0=50.0, x0=0.0):
+    # Pozo en [x0, x0+L] con V=0 adentro y V=V0 afuera
+    inside = (x >= x0) & (x <= x0 + L)
+    return torch.where(inside, torch.zeros_like(x), V0 * torch.ones_like(x))

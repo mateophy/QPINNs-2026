@@ -1,0 +1,24 @@
+checkpoint path: self.log_path='c:\\Users\\mateo garcia\\Documents\\A master\\Tesis\\QPINNs-2025\\qho_outputs\\2025-09-23_15-44-19-362881'
+Using Classical Solver
+The settings used:
+num_qubits : 5
+num_quantum_layers : 1
+output_dim : 2
+input_dim : 2
+hidden_dim : 50
+classic_network : [2, 50, 2]
+q_ansatz : sim_circ_19
+mode : hybrid
+activation : null
+shots : None
+problem : schrodinger
+solver : Classical
+method : None
+class : DVNeuralNetwork
+encoding : angle
+batch_size : 128
+epochs : 1000
+lr : 0.001
+N_f : 2048
+N_b : 256
+N_0 : 256

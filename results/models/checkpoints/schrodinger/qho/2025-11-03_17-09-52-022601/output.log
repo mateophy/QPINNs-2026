@@ -1,0 +1,59 @@
+Using DV Solver
+The settings used:
+batch_size : 64
+epochs : 10
+lr : 0.001
+seed : 42
+print_every : 1
+log_path : ./results/models/checkpoints/schrodinger/qho
+input_dim : 2
+output_dim : 2
+num_qubits : 4
+hidden_dim : 50
+num_quantum_layers : 2
+classic_network : [2, 50, 2]
+q_ansatz : sim_circ_19
+mode : hybrid
+activation : null
+shots : 1
+problem : schrodinger
+solver : DV
+device : cpu
+method : None
+cutoff_dim : 20
+class : CVNeuralNetwork2
+encoding : angle
+eq_params : {'example': 'ho', 'L': 5.0, 'T': 0.1, 'hbar': 1.0, 'mass': 1.0, 'n_level': 0, 'omega': 1.0, 'potential_fn': 'lambda t, x : 0.5 * 1.0 * (1.0**2) * (x**2)'}
+noise : True
+Total number of parameters: 722
+The circuit used in the study:
+It: 1, Loss: 7.150e-02, Loss_res: 2.226e+00,  Loss_bcs: 4.647e-02, Loss_ut_ics: 2.771e-01, L^2_error: 1.523028e+00, lr: 1.000e-03, Time: 2.19e+01
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 2, Loss: 4.780e-02, Loss_res: 1.219e+00,  Loss_bcs: 3.409e-02, Loss_ut_ics: 1.525e-01, L^2_error: 1.450418e+00, lr: 1.000e-03, Time: 4.29e+01
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 3, Loss: 2.995e-02, Loss_res: 5.332e-01,  Loss_bcs: 2.408e-02, Loss_ut_ics: 5.387e-02, L^2_error: 1.384130e+00, lr: 1.000e-03, Time: 6.38e+01
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 4, Loss: 2.169e-02, Loss_res: 4.595e-01,  Loss_bcs: 1.640e-02, Loss_ut_ics: 6.870e-02, L^2_error: 1.323348e+00, lr: 1.000e-03, Time: 8.46e+01
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 5, Loss: 1.547e-02, Loss_res: 3.548e-01,  Loss_bcs: 1.059e-02, Loss_ut_ics: 1.332e-01, L^2_error: 1.267977e+00, lr: 1.000e-03, Time: 1.06e+02
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 6, Loss: 1.056e-02, Loss_res: 3.490e-01,  Loss_bcs: 6.344e-03, Loss_ut_ics: 7.218e-02, L^2_error: 1.217587e+00, lr: 1.000e-03, Time: 1.27e+02
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 7, Loss: 5.644e-03, Loss_res: 1.258e-01,  Loss_bcs: 3.375e-03, Loss_ut_ics: 1.012e-01, L^2_error: 1.172919e+00, lr: 1.000e-03, Time: 1.48e+02
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 8, Loss: 5.054e-03, Loss_res: 4.539e-02,  Loss_bcs: 1.607e-03, Loss_ut_ics: 2.993e-01, L^2_error: 1.133766e+00, lr: 1.000e-03, Time: 1.69e+02
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 9, Loss: 1.731e-03, Loss_res: 2.264e-02,  Loss_bcs: 7.207e-04, Loss_ut_ics: 7.834e-02, L^2_error: 1.100112e+00, lr: 1.000e-03, Time: 1.90e+02
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth
+It: 10, Loss: 2.567e-03, Loss_res: 4.774e-02,  Loss_bcs: 4.792e-04, Loss_ut_ics: 1.610e-01, L^2_error: 1.071746e+00, lr: 1.000e-03, Time: 2.11e+02
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model.pth
+Model state saved to ./results/models/checkpoints/schrodinger/qho\2025-11-03_17-09-52-022601\model_weights.pth

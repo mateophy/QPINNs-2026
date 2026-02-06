@@ -1,0 +1,66 @@
+It: 1, Loss: 8.170e+02, Loss_res: 7.455e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.021e+00, Loss_norm: 9.752e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.013e+00, lr: 1.000e-03, Time: 3.06e+00
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 1, Loss: 7.836e+02, Loss_res: 5.882e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.795e-01, Loss_norm: 9.831e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.023e+00, lr: 1.000e-03, Time: 1.11e+00
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 10, Loss: 7.158e+02, Loss_res: 2.424e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.947e-01, Loss_norm: 9.611e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.074e+00, lr: 1.000e-03, Time: 9.57e+00
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 20, Loss: 6.074e+02, Loss_res: 7.683e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.593e-01, Loss_norm: 9.393e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.148e+00, lr: 1.000e-03, Time: 1.93e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 30, Loss: 4.528e+02, Loss_res: 2.355e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.660e-01, Loss_norm: 8.612e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.268e+00, lr: 1.000e-03, Time: 2.90e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 40, Loss: 2.765e+02, Loss_res: 5.795e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.456e-01, Loss_norm: 6.755e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.433e+00, lr: 1.000e-03, Time: 3.90e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 50, Loss: 1.232e+02, Loss_res: 1.434e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.540e-01, Loss_norm: 3.887e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.628e+00, lr: 1.000e-03, Time: 4.90e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 60, Loss: 3.318e+01, Loss_res: 2.764e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.147e-02, Loss_norm: 1.217e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.819e+00, lr: 1.000e-03, Time: 5.93e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 70, Loss: 6.941e+00, Loss_res: 4.180e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.676e-03, Loss_norm: 6.824e-03, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.962e+00, lr: 1.000e-03, Time: 6.92e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 80, Loss: 7.243e+00, Loss_res: 4.981e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.053e-03, Loss_norm: 3.084e-03, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 2.022e+00, lr: 1.000e-03, Time: 7.89e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 90, Loss: 6.472e+00, Loss_res: 4.392e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.090e-03, Loss_norm: 1.686e-03, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 2.009e+00, lr: 1.000e-03, Time: 8.95e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 100, Loss: 5.320e+00, Loss_res: 4.046e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.650e-03, Loss_norm: 1.465e-03, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.972e+00, lr: 1.000e-03, Time: 1.00e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 110, Loss: 4.494e+00, Loss_res: 4.222e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.618e-03, Loss_norm: 3.287e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.986e+00, lr: 1.000e-03, Time: 1.10e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 120, Loss: 3.992e+00, Loss_res: 4.315e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.990e-03, Loss_norm: 3.492e-05, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.990e+00, lr: 1.000e-03, Time: 1.20e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 130, Loss: 3.534e+00, Loss_res: 3.884e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.418e-03, Loss_norm: 3.073e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.984e+00, lr: 1.000e-03, Time: 1.30e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 140, Loss: 3.183e+00, Loss_res: 4.386e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.979e-03, Loss_norm: 5.142e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.982e+00, lr: 1.000e-03, Time: 1.41e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 150, Loss: 2.868e+00, Loss_res: 3.772e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.585e-03, Loss_norm: 3.726e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.984e+00, lr: 1.000e-03, Time: 1.51e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 160, Loss: 2.587e+00, Loss_res: 4.031e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.234e-03, Loss_norm: 2.417e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.986e+00, lr: 1.000e-03, Time: 1.61e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 170, Loss: 2.334e+00, Loss_res: 3.725e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.917e-03, Loss_norm: 1.997e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.987e+00, lr: 1.000e-03, Time: 1.71e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 180, Loss: 2.107e+00, Loss_res: 3.831e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.633e-03, Loss_norm: 1.808e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.987e+00, lr: 1.000e-03, Time: 1.81e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 190, Loss: 1.903e+00, Loss_res: 3.813e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.378e-03, Loss_norm: 1.482e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.988e+00, lr: 1.000e-03, Time: 1.91e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth
+It: 200, Loss: 1.720e+00, Loss_res: 3.841e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.150e-03, Loss_norm: 1.150e-04, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.989e+00, lr: 1.000e-03, Time: 2.01e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model.pth
+Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-23_12-53-57-450529_barrier_DV\model_weights.pth

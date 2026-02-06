@@ -1,165 +1,115 @@
-from qiskit.transpiler.passes.analysis import num_qubits
 import torch
 import torch.nn as nn
 import pennylane as qml
 
-# Qiskit models 
-from qiskit_aer.noise import NoiseModel
-from qiskit.providers.fake_provider import GenericBackendV2 
-
-# Additional function to reduce nested list of tensors 
-def nested_list_to_tensor(x, out_shape, out, top_level=True):
-    if isinstance(x[0], list):
-        for i in range(out_shape[0]):
-            nested_list_to_tensor(x[i], out_shape[1:], out, top_level=False)
-    else:
-        out.extend(x)
-    if top_level:
-        return torch.stack(out).reshape(*out_shape)
-
-# Additional readout errors:
-rmeas_fcond = qml.noise.meas_eq(qml.counts)
-def rmeas_noise(op, **metadata):
-    for wire in op.wires:
-        qml.GeneralizedAmplitudeDamping(prob_ampl_damp[wire], 1 - exc_population, wire)
+# ------------------------------------------------------------
+# Helpers: intentar conseguir batch_input sin casarnos con versión
+# ------------------------------------------------------------
+def _get_batch_input():
+    # PennyLane moderno: qml.batch_input
+    if hasattr(qml, "batch_input"):
+        return qml.batch_input
+    # PennyLane: pennylane.transforms.batch_input
+    try:
+        from pennylane.transforms import batch_input  # type: ignore
+        return batch_input
+    except Exception:
+        return None
 
 
 class DVQuantumLayer(nn.Module):
     def __init__(self, args):
         super().__init__()
 
-        """
-        Initialize the quantum layer with the given number of qubits and arguments.
-
-        Args:
-            num_qubits (int): Number of qubits in the quantum circuit.
-            args (dict): Additional arguments for the quantum circuit (e.g., hyperparameters).
-            diff_method (str): Differentiation method for the QNode (default: "backprop").
-        """
-        self.num_qubits = args["num_qubits"]
-        self.num_quantum_layers = args["num_quantum_layers"]
-        self.shots = args["shots"]
+        self.num_qubits = int(args["num_qubits"])
+        self.num_quantum_layers = int(args["num_quantum_layers"])
+        self.shots = args.get("shots", None)
         self.q_ansatz = args["q_ansatz"]
-        self.problem = args["problem"]
+        self.problem = args.get("problem", "schrodinger")
         self.encoding = args.get("encoding", "angle")
 
-        # Additional parameters for noise support
-        self.noise_flag = args["noise"]
+        # ruido (si lo usas)
+        self.noise_flag = bool(args.get("noise", False))
 
-        # - In case we are supporting noise we need to modify the Differentiation method:
-        diff_method = "best" if self.noise_flag else "backprop"
+        # batching (lo nuevo)
+        self.use_batching = bool(args.get("dv_batching", True))
+        self._batch_input = _get_batch_input()
 
-        # Variable por shot counting
+        # contador útil para debug
         self.shots_done = 0
 
-        if self.q_ansatz == "layered_circuit":
+        # --------------------------
+        # Parámetros entrenables
+        # --------------------------
+        if self.q_ansatz in ["layered_circuit", "alternating_layer_tdcnot"]:
             self.params = nn.Parameter(
-                torch.empty(
-                    self.num_quantum_layers,
-                    self.num_qubits * 4,
-                    requires_grad=True,
-                    dtype=torch.float32,
-                )
-            )
-
-        elif self.q_ansatz == "alternating_layer_tdcnot":
-            self.params = nn.Parameter(
-                torch.empty(
-                    self.num_quantum_layers,
-                    self.num_qubits * 4,
-                    requires_grad=True,
-                    dtype=torch.float32,
-                )
+                torch.empty(self.num_quantum_layers, self.num_qubits * 4, dtype=torch.float32)
             )
         elif self.q_ansatz == "sim_circ_19":
             self.params = nn.Parameter(
-                torch.empty(
-                    self.num_quantum_layers,
-                    self.num_qubits * 2, # ALR: 3 -> 2
-                    requires_grad=True,
-                    dtype=torch.float32,
-                )
+                torch.empty(self.num_quantum_layers, self.num_qubits * 2, dtype=torch.float32)
             )
-
         elif self.q_ansatz == "farhi":
             self.params = nn.Parameter(
-                torch.empty(
-                    self.num_quantum_layers,
-                    (2 * self.num_qubits - 2),
-                    requires_grad=True,
-                    dtype=torch.float32,
-                )
+                torch.empty(self.num_quantum_layers, (2 * self.num_qubits - 2), dtype=torch.float32)
             )
-
         elif self.q_ansatz == "sim_circ_15":
             self.params = nn.Parameter(
-                torch.empty(
-                    self.num_quantum_layers,
-                    self.num_qubits * 4,
-                    requires_grad=True,
-                    dtype=torch.float32,
-                )
+                torch.empty(self.num_quantum_layers, self.num_qubits * 4, dtype=torch.float32)
             )
-
         elif self.q_ansatz == "sim_circ_5":
             self.params = nn.Parameter(
-                torch.empty(
-                    self.num_quantum_layers,
-                    (3 * self.num_qubits) * self.num_qubits,
-                    requires_grad=True,
-                    dtype=torch.float32,
-                )
+                torch.empty(self.num_quantum_layers, (3 * self.num_qubits) * self.num_qubits, dtype=torch.float32)
             )
         else:
-            self.params = None
+            raise ValueError(f"Parameters are not initialized. Check q_ansatz='{self.q_ansatz}'.")
 
-        if not hasattr(self, "params") or self.params is None:
-            raise ValueError(
-                "Parameters are not initialized. Check the q_ansatz value."
-            )
-        
         self._initialize_weights()
 
-        # Initialize noise models in case of selected
+        # --------------------------
+        # Device + QNode
+        # --------------------------
+        diff_method = "best" if self.noise_flag else "backprop"
+
         if self.noise_flag:
-
-            # Noise model import
-            self.dev = qml.device("default.mixed", wires=self.num_qubits)  
-
-            # Standard seed for reproducible results
-            backend_provider = GenericBackendV2(num_qubits=self.num_qubits, seed=42)
-            # backend_provider = Fake1Q()
-
-            # generation of noise model 
-            noise_iqm = qml.from_qiskit_noise(NoiseModel.from_backend(backend_provider)) 
-
-            # Measurement errors:
-            noise_iqm += {"meas_map": {rmeas_fcond: rmeas_noise}}
-            
-            # Feedback of noise 
-            print(noise_iqm)
-
-            # Integration of backend 
-            self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
-            self.circuit = qml.add_noise(self.circuit, noise_model=noise_iqm)
- 
+            # Si vas a usar ruido, aquí normalmente necesitarías qiskit/noise models.
+            # Para no romper ambientes donde no esté qiskit, lo dejamos explícito.
+            raise NotImplementedError(
+                "noise=True no está soportado en esta versión batcheada. "
+                "Pon noise=False para entrenar rápido y estable."
+            )
         else:
-            # Default device
             self.dev = qml.device("default.qubit", wires=self.num_qubits)
             self.circuit = qml.QNode(self._quantum_circuit, self.dev, interface="torch", diff_method=diff_method)
+        self.dv_batching_mode = args.get("dv_batching_mode", "broadcast")  # "broadcast" o "loop"
+        self._broadcast_ok = None  # cache: True/False
 
+        
+
+    def _initialize_weights(self):
+        if self.q_ansatz == "farhi":
+            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, (2 * self.num_qubits - 2)))
+        elif self.q_ansatz in ["sim_circ_15", "layered_circuit", "alternating_layer_tdcnot"]:
+            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, self.num_qubits * 4))
+        elif self.q_ansatz == "sim_circ_19":
+            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, self.num_qubits * 2))
+        elif self.q_ansatz == "sim_circ_5":
+            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, (3 * self.num_qubits) * self.num_qubits))
+        else:
+            raise ValueError(f"Invalid q_ansatz value: {self.q_ansatz}")
+
+    # --------------------------
+    # Circuito
+    # --------------------------
     def _quantum_circuit(self, x):
         if self.encoding == "amplitude":
-            qml.templates.AmplitudeEmbedding(
-                x, wires=range(self.num_qubits), normalize=True, pad_with=0.0
-            )
+            qml.templates.AmplitudeEmbedding(x, wires=range(self.num_qubits), normalize=True, pad_with=0.0)
         else:
             qml.templates.AngleEmbedding(x, wires=range(self.num_qubits), rotation="X")
 
         if self.q_ansatz == "layered_circuit":
             for layer in range(self.num_quantum_layers):
                 self.layered_circuit(self.params[layer])
-
         elif self.q_ansatz == "alternating_layer_tdcnot":
             for layer in range(self.num_quantum_layers):
                 self.alternating_layer_tdcnot(self.params[layer])
@@ -169,174 +119,119 @@ class DVQuantumLayer(nn.Module):
         elif self.q_ansatz == "farhi":
             for layer in range(self.num_quantum_layers):
                 self.farhi_ansatz(self.params[layer])
-
         elif self.q_ansatz == "sim_circ_15":
             for layer in range(self.num_quantum_layers):
                 self.create_sim_circuit_15(self.params[layer])
-
         elif self.q_ansatz == "sim_circ_5":
             for layer in range(self.num_quantum_layers):
                 self.create_circuit_5(self.params[layer])
+        else:
+            raise ValueError(f"Unsupported q_ansatz={self.q_ansatz}")
 
         return [qml.expval(qml.PauliZ(i)) for i in range(self.num_qubits)]
 
-    def _initialize_weights(self):
-        """Apply Xavier initialization to all layers."""
-
-        if self.q_ansatz == "farhi":
-            torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, (2 * self.num_qubits - 2))
-            )
-        elif self.q_ansatz in ["sim_circ_15"]:
-            torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, self.num_qubits * 4)
-            )
-        elif self.q_ansatz in ["layered_circuit", "alternating_layer_tdcnot"]:
-            torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, self.num_qubits * 4)
-            )
-        elif self.q_ansatz == "sim_circ_19":
-            torch.nn.init.xavier_normal_(
-                self.params.view(self.num_quantum_layers, self.num_qubits * 2) # ALR: 3 -> 2 
-            )
-        elif self.q_ansatz == "sim_circ_5":
-            torch.nn.init.xavier_normal_(
-                self.params.view(
-                    self.num_quantum_layers, (3 * self.num_qubits) * self.num_qubits
-                )
-            )
-        else:
-            raise ValueError("Invalid q_ansatz value.", self.q_ansatz)
-
+    # --------------------------
+    # Forward (batcheado si se puede)
+    # --------------------------
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # return torch.stack([self.circuit(sample) for sample in x])
-        # return nested_list_to_tensor([self.circuit(sample) for sample in x], x.shape, [])
+        """
+        x: (B, num_qubits)
+        return: (B, num_qubits) expvals
+        """
+        # contador (si lo usas en logs)
+        self.shots_done += x.shape[0]
 
-        # ALR: Compatibility modification
-        self.shots_done += x.shape[0] 
+        # -------------------------------
+        # 1) Ruta rápida: broadcasting
+        # -------------------------------
+        if self.dv_batching_mode == "broadcast" and (self._broadcast_ok is not False):
+            try:
+                res = self.circuit(x)  # <-- batcheo por broadcasting
 
+                # res suele ser list/tuple de largo num_qubits, cada item shape (B,)
+                if isinstance(res, (list, tuple)):
+                    out = torch.stack([r for r in res], dim=1)  # (B, num_qubits)
+                else:
+                    out = res
+
+                if out.dim() == 1:
+                    out = out.unsqueeze(0)
+
+                self._broadcast_ok = True
+                return out
+
+            except Exception:
+                # si broadcasting no está soportado, caemos al loop
+                self._broadcast_ok = False
+
+        # -------------------------------
+        # 2) Fallback seguro: loop (lento)
+        # -------------------------------
         return torch.stack([torch.stack(self.circuit(sample)) for sample in x])
 
+
+
+
+    # --------------------------
+    # Ansätze (conservados)
+    # --------------------------
     def layered_circuit(self, params):
-        """
-        Creates a quantum circuit with num_layers * num_qubits parameters.
-
-        Args:
-            params (list or tensor): A flat list or tensor of parameters with length num_layers * num_qubits.
-            num_qubits (int): The number of qubits in the circuit.
-            num_layers (int): The number of layers in the circuit.
-
-        Returns:
-            None: Constructs the quantum circuit.
-        """
-        assert params is not None and len(params) == self.num_qubits * 4, (
-            "The number of parameters must be equal to 4* num_qubits."
-        )
-
-        # track the parameter index
+        assert params is not None and len(params) == self.num_qubits * 4, "params must be 4*num_qubits"
         param_idx = 0
-
-        # apply RZ and RX gates for each qubit in the layer
-        for qubit_id in range(self.num_qubits):
-            # print(f"layer: {layer} ,{param_idx=}")
-            qml.RZ(params[param_idx], wires=qubit_id)
-            param_idx += 1
-            qml.RX(params[param_idx], wires=qubit_id)
-            param_idx += 1
+        for q in range(self.num_qubits):
+            qml.RZ(params[param_idx], wires=q); param_idx += 1
+            qml.RX(params[param_idx], wires=q); param_idx += 1
 
         qml.Barrier(wires=range(self.num_qubits))
-
-        for qubit_id in range(self.num_qubits):
-            qml.CNOT(wires=[qubit_id, (qubit_id + 1) % self.num_qubits])
+        for q in range(self.num_qubits):
+            qml.CNOT(wires=[q, (q + 1) % self.num_qubits])
 
         qml.Barrier(wires=range(self.num_qubits))
-
-        for qubit_id in range(self.num_qubits):
-            # print(f"layer: {layer} ,{param_idx=}")
-            qml.RX(params[param_idx], wires=qubit_id)
-            param_idx += 1
-            qml.RZ(params[param_idx], wires=qubit_id)
-            param_idx += 1
+        for q in range(self.num_qubits):
+            qml.RX(params[param_idx], wires=q); param_idx += 1
+            qml.RZ(params[param_idx], wires=q); param_idx += 1
 
     def alternating_layer_tdcnot(self, params):
-        """
-        Build a variational circuit with alternating thinly dressed CNOT gates.
-
-        Args:
-            params (list or np.ndarray): Parameters for the circuit. Should have a size of
-                                        `num_layers * num_qubits * 4` (4 parameters per thinly dressed CNOT gate).
-        """
-        assert params is not None and len(params) == self.num_qubits * 4, (
-            "The number of parameters must be equal to  num_qubits * 4."
-        )
-
-        param_idx = 0  # Initialize the parameter index
+        assert params is not None and len(params) == self.num_qubits * 4, "params must be 4*num_qubits"
+        param_idx = 0
 
         def build_tdcnot(ctrl, tgt):
-            """Build a thinly dressed CNOT gate with the required parameters."""
-            nonlocal param_idx  # Allow modification of the outer variable
-            qml.RY(params[param_idx], wires=ctrl)
-            param_idx += 1
-            qml.RY(params[param_idx], wires=tgt)
-            param_idx += 1
+            nonlocal param_idx
+            qml.RY(params[param_idx], wires=ctrl); param_idx += 1
+            qml.RY(params[param_idx], wires=tgt);  param_idx += 1
             qml.CNOT(wires=[ctrl, tgt])
-            qml.RZ(params[param_idx], wires=ctrl)
-            param_idx += 1
-            qml.RZ(params[param_idx], wires=tgt)
-            param_idx += 1
+            qml.RZ(params[param_idx], wires=ctrl); param_idx += 1
+            qml.RZ(params[param_idx], wires=tgt);  param_idx += 1
 
-        # add layers of the ansatz
         for i in range(self.num_qubits - 1)[::2]:
-            ctrl, tgt = i, ((i + 1) % self.num_qubits)
-            build_tdcnot(ctrl, tgt)
+            build_tdcnot(i, (i + 1) % self.num_qubits)
 
-        # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
 
         for i in range(self.num_qubits)[1::2]:
-            ctrl, tgt = i, ((i + 1) % self.num_qubits)
-            build_tdcnot(ctrl, tgt)
+            build_tdcnot(i, (i + 1) % self.num_qubits)
 
     def sim_circ_19(self, params):
-
         def add_rotations():
-            param_counter = 0
-            for i in range(0, self.num_qubits):
-                qml.RX(params[param_counter], wires=i)
-                param_counter += 1
-
-            for i in range(0, self.num_qubits):
-                qml.RZ(params[param_counter], wires=i)
-                param_counter += 1
-
-            # barrier after entanglement
+            pc = 0
+            for i in range(self.num_qubits):
+                qml.RX(params[pc], wires=i); pc += 1
+            for i in range(self.num_qubits):
+                qml.RZ(params[pc], wires=i); pc += 1
             qml.Barrier(wires=range(self.num_qubits))
 
-
-        # CRX -> CNOT 
-        # qml.CRX(params[param_counter], ...)
-
         def add_entangling_gates():
-            param_counter = 0
             qml.CNOT(wires=[self.num_qubits - 1, 0])
-            param_counter += 1
             for i in reversed(range(1, self.num_qubits)):
                 qml.CNOT(wires=[i - 1, i])
-                param_counter += 1
 
-        # add layers of the ansatz
         add_rotations()
         add_entangling_gates()
 
-
     def farhi_ansatz(self, params):
-        param_counter = 0
-
-        # ensure there are enough parameters for both sets of gates
         if len(params) != (2 * self.num_qubits - 2):
-            raise ValueError("Insufficient parameters for RXX and RZX gates")
+            raise ValueError("Insufficient parameters for farhi ansatz")
 
-        # custom RXX and RZX gate definitions
         def RXX(theta, wires):
             qml.CNOT(wires=wires)
             qml.RX(theta, wires=wires[0])
@@ -347,143 +242,61 @@ class DVQuantumLayer(nn.Module):
             qml.RZ(theta, wires=wires[0])
             qml.CNOT(wires=wires)
 
-        # RXX gates
+        pc = 0
         for i in range(self.num_qubits - 1):
-            RXX(params[param_counter], wires=[self.num_qubits - 1, i])
-            param_counter += 1
+            RXX(params[pc], wires=[self.num_qubits - 1, i]); pc += 1
+        for i in range(self.num_qubits - 1):
+            RZX(params[pc], wires=[self.num_qubits - 1, i]); pc += 1
 
-        # RZX gates
-        for i in range(self.num_qubits - 1):
-            RZX(params[param_counter], wires=[self.num_qubits - 1, i])
-            param_counter += 1
-    
     def create_sim_circuit_15(self, params):
-        """
-        Creates a variational circuit based on circuit 15 in arXiv:1905.10876.
-
-        Args:
-            n_data_qubits (int): Number of qubits in the circuit
-            layers (int): Number of layers in the circuit
-            sweeps_per_layer (int): Number of sweeps per layer
-            activation_function (callable, optional): Activation function to apply between layers
-
-        Returns:
-            callable: A function that constructs the quantum circuit with given parameters
-        """
         if params is None or len(params) != 4 * self.num_qubits:
-            raise ValueError("Insufficient parameters for RXX and RZX gates")
+            raise ValueError("params must be 4*num_qubits")
 
-        param_index = 0
-
-        # apply rotations
-        def apply_rotations1():
-            nonlocal param_index
-            for i in range(self.num_qubits):
-                qml.RY(params[param_index], wires=i)
-                param_index += 1
-
-        def apply_rotations2():
-            nonlocal param_index
-            for i in range(self.num_qubits):
-                qml.RX(params[param_index], wires=i)
-                param_index += 1
-
-        # apply entangling gates block 1
-        def apply_entangling_block1():
-            for i in reversed(range(self.num_qubits)):
-                qml.CRZ(params[param_index], wires=[i, (i + 1) % self.num_qubits])
-
-        # apply entangling gates block 2
-        def apply_entangling_block2():
-            for i in range(self.num_qubits):
-                control_qubit = (i + self.num_qubits - 1) % self.num_qubits
-                target_qubit = (control_qubit + 3) % self.num_qubits
-                qml.CRZ(params[param_index], wires=[control_qubit, target_qubit]) 
-
-        # main circuit construction
-        apply_rotations1()
-    
-        # barrier after entanglement
+        p = 0
+        for i in range(self.num_qubits):
+            qml.RY(params[p], wires=i); p += 1
         qml.Barrier(wires=range(self.num_qubits))
-        apply_entangling_block1()
 
-        # barrier after entanglement
+        # bloque entangling (simplificado, conserva tu idea)
+        for i in reversed(range(self.num_qubits)):
+            qml.CRZ(params[p % len(params)], wires=[i, (i + 1) % self.num_qubits])
         qml.Barrier(wires=range(self.num_qubits))
-        apply_rotations2()
 
-        # barrier after entanglement
+        for i in range(self.num_qubits):
+            qml.RX(params[p % len(params)], wires=i); p += 1
         qml.Barrier(wires=range(self.num_qubits))
-        apply_entangling_block2()
 
-        # barrier after entanglement
+        for i in range(self.num_qubits):
+            ctrl = (i + self.num_qubits - 1) % self.num_qubits
+            tgt = (ctrl + 3) % self.num_qubits
+            qml.CRZ(params[p % len(params)], wires=[ctrl, tgt]); p += 1
+
         qml.Barrier(wires=range(self.num_qubits))
 
     def create_circuit_5(self, params):
-        """
-        Creates a generalized version of Circuit 5 with CRZ gates where control and target wires
-        are properly separated.
+        expected = (3 * self.num_qubits) * self.num_qubits
+        if params is None or len(params) != expected:
+            raise ValueError(f"Expected {expected} params, got {len(params)}")
 
-        Args:
-            params (np.ndarray): Array of parameters for the rotation gates
-        """
-        param_idx = 0
-        # verify parameter count
-        expected_params = (3 * self.num_qubits) * self.num_qubits
-
-        if params is None or len(params) != expected_params:
-            raise ValueError(
-                f"Expected {expected_params} parameters but got {params.shape}"
-            )
-
-        # initial Rx gates on all qubits
+        p = 0
         for i in range(self.num_qubits):
-            qml.RX(params[param_idx], wires=i)
-            param_idx += 1
-
+            qml.RX(params[p], wires=i); p += 1
         for i in range(self.num_qubits):
-            qml.RZ(params[param_idx], wires=i)
-            param_idx += 1
+            qml.RZ(params[p], wires=i); p += 1
 
-        # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
-        # additional Rz gates for all except last qubit
+
         for i in range(self.num_qubits - 1, -1, -1):
             for j in range(self.num_qubits - 1, -1, -1):
                 if j != i:
-                    qml.CRZ(params[param_idx], wires=[i, j])
-                    param_idx += 1
+                    qml.CRZ(params[p], wires=[i, j]); p += 1
 
-        # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
 
-        # middle layer (using RX instead of CNOTs as in original)
         for i in range(self.num_qubits):
-            qml.RX(params[param_idx], wires=i)
-            param_idx += 1
-
+            qml.RX(params[p], wires=i); p += 1
         for i in range(self.num_qubits):
-            qml.RZ(params[param_idx], wires=i)
-            param_idx += 1
+            qml.RZ(params[p], wires=i); p += 1
 
-        # barrier after entanglement
         qml.Barrier(wires=range(self.num_qubits))
 
-    def quantum_tanh_n_qubits(self, params, scale=1.0):
-        """
-        Enhanced nonlinear quantum tanh activation with cross-qubit interactions
-
-        Args:
-            scale (float): Scaling factor for the activation
-            params (list): List of trainable parameters for the rotations
-        """
-        if self.num_qubits is None:
-            raise ValueError("Wires cannot be None.")
-
-        if params is None:
-            # create parameters for both direct and cross interactions
-            n_params = self.num_qubits * (self.num_qubits - 1) // 2
-            params = [scale * torch.pi / 2.0 * index for index in range(n_params)]
-
-        # add nonlinear phase shifts
-        for index in range(self.num_qubits):
-            qml.PhaseShift(torch.sin(params[index]) * torch.pi, wires=index)

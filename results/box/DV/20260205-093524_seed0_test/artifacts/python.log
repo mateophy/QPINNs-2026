@@ -1,0 +1,33 @@
+2026-02-05 09:35:42,040 INFO:src.utils.logger:It: 1, Loss: 2.730e+02, Loss_res: 6.670e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.072e+00, Loss_norm: 9.938e-01, Loss_gauge: 0.000e+00, w_pde: 6.67e-03, L^2_error: 9.733e-01, lr: 1.000e-03, Time: 7.21e+00
+2026-02-05 09:35:42,050 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:35:42,054 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:35:47,920 INFO:src.utils.logger:It: 2, Loss: 2.590e+02, Loss_res: 4.138e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.016e+00, Loss_norm: 9.972e-01, Loss_gauge: 0.000e+00, w_pde: 1.33e-02, L^2_error: 9.733e-01, lr: 1.000e-03, Time: 1.31e+01
+2026-02-05 09:35:47,920 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:35:47,936 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:35:59,587 INFO:src.utils.logger:It: 4, Loss: 2.326e+02, Loss_res: 1.755e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.106e-01, Loss_norm: 9.952e-01, Loss_gauge: 0.000e+00, w_pde: 2.67e-02, L^2_error: 9.733e-01, lr: 1.000e-03, Time: 2.48e+01
+2026-02-05 09:35:59,588 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:35:59,588 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:36:11,133 INFO:src.utils.logger:It: 6, Loss: 2.083e+02, Loss_res: 2.829e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.137e-01, Loss_norm: 9.816e-01, Loss_gauge: 0.000e+00, w_pde: 4.00e-02, L^2_error: 9.733e-01, lr: 1.000e-03, Time: 3.63e+01
+2026-02-05 09:36:11,138 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:36:11,141 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:36:25,747 INFO:src.utils.logger:It: 8, Loss: 1.859e+02, Loss_res: 6.796e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.242e-01, Loss_norm: 9.571e-01, Loss_gauge: 0.000e+00, w_pde: 5.33e-02, L^2_error: 9.733e-01, lr: 1.000e-03, Time: 5.09e+01
+2026-02-05 09:36:25,747 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:36:25,766 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:36:37,196 INFO:src.utils.logger:It: 10, Loss: 1.648e+02, Loss_res: 1.274e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.405e-01, Loss_norm: 9.225e-01, Loss_gauge: 0.000e+00, w_pde: 6.67e-02, L^2_error: 9.124e-01, lr: 1.000e-03, Time: 6.24e+01
+2026-02-05 09:36:37,207 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:36:37,211 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:36:49,650 INFO:src.utils.logger:It: 12, Loss: 1.449e+02, Loss_res: 1.990e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.614e-01, Loss_norm: 8.789e-01, Loss_gauge: 0.000e+00, w_pde: 8.00e-02, L^2_error: 9.124e-01, lr: 1.000e-03, Time: 7.48e+01
+2026-02-05 09:36:49,650 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:36:49,657 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:37:01,062 INFO:src.utils.logger:It: 14, Loss: 1.261e+02, Loss_res: 2.818e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.869e-01, Loss_norm: 8.269e-01, Loss_gauge: 0.000e+00, w_pde: 9.33e-02, L^2_error: 9.124e-01, lr: 1.000e-03, Time: 8.62e+01
+2026-02-05 09:37:01,078 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:37:01,078 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:37:12,735 INFO:src.utils.logger:It: 16, Loss: 1.087e+02, Loss_res: 3.780e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.177e-01, Loss_norm: 7.674e-01, Loss_gauge: 0.000e+00, w_pde: 1.07e-01, L^2_error: 9.124e-01, lr: 1.000e-03, Time: 9.79e+01
+2026-02-05 09:37:12,735 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:37:12,747 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:37:24,587 INFO:src.utils.logger:It: 18, Loss: 9.263e+01, Loss_res: 4.911e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.541e-01, Loss_norm: 7.013e-01, Loss_gauge: 0.000e+00, w_pde: 1.20e-01, L^2_error: 9.124e-01, lr: 1.000e-03, Time: 1.10e+02
+2026-02-05 09:37:24,587 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:37:24,587 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth
+2026-02-05 09:37:36,577 INFO:src.utils.logger:It: 20, Loss: 7.812e+01, Loss_res: 6.214e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.965e-01, Loss_norm: 6.301e-01, Loss_gauge: 0.000e+00, w_pde: 1.33e-01, L^2_error: 8.311e-01, lr: 1.000e-03, Time: 1.22e+02
+2026-02-05 09:37:36,581 INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model.pth
+2026-02-05 09:37:36,585 INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-05_09-35-25-833654_box_DV\model_weights.pth

@@ -1,0 +1,46 @@
+checkpoint path: self.log_path='./results/models/checkpoints/smoke_schrodinger\\2025-12-16_12-18-35-413882_ho_Classical'
+It: 1, Loss: 2.900e+01, Loss_res: 3.141e+00,  Loss_bcs: 4.532e-02, Loss_ut_ics: 9.584e-02, Loss_norm: 2.071e-01, w_pde: 6.25e-06, L^2_error: 1.118e+00, lr: 1.000e-03, norm0: 0.416, normT: 0.431, Time: 2.80e-01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 100, Loss: 1.614e+01, Loss_res: 2.380e-01,  Loss_bcs: 1.270e-03, Loss_ut_ics: 5.192e-02, Loss_norm: 5.521e-01, w_pde: 6.25e-02, L^2_error: 8.296e-01, lr: 1.000e-03, norm0: 0.270, normT: 0.180, Time: 2.23e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 200, Loss: 1.263e+00, Loss_res: 6.401e-01,  Loss_bcs: 4.082e-03, Loss_ut_ics: 3.650e-03, Loss_norm: 4.083e-03, w_pde: 2.50e-01, L^2_error: 5.029e-01, lr: 1.000e-03, norm0: 0.939, normT: 0.849, Time: 4.46e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 300, Loss: 4.077e-01, Loss_res: 4.171e-01,  Loss_bcs: 2.145e-04, Loss_ut_ics: 5.709e-04, Loss_norm: 1.623e-03, w_pde: 5.62e-01, L^2_error: 4.375e-01, lr: 1.000e-03, norm0: 0.965, normT: 0.800, Time: 6.68e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 400, Loss: 5.135e-01, Loss_res: 3.951e-01,  Loss_bcs: 7.540e-04, Loss_ut_ics: 3.891e-04, Loss_norm: 9.765e-04, w_pde: 1.00e+00, L^2_error: 4.294e-01, lr: 1.000e-03, norm0: 0.964, normT: 0.777, Time: 8.92e+01
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 500, Loss: 4.565e-01, Loss_res: 3.890e-01,  Loss_bcs: 1.765e-04, Loss_ut_ics: 2.208e-04, Loss_norm: 1.118e-03, w_pde: 1.00e+00, L^2_error: 4.235e-01, lr: 1.000e-03, norm0: 0.972, normT: 0.794, Time: 1.13e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 600, Loss: 4.220e-01, Loss_res: 3.704e-01,  Loss_bcs: 1.972e-04, Loss_ut_ics: 1.685e-04, Loss_norm: 8.144e-04, w_pde: 1.00e+00, L^2_error: 4.183e-01, lr: 1.000e-03, norm0: 0.973, normT: 0.799, Time: 1.40e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 700, Loss: 4.146e-01, Loss_res: 3.613e-01,  Loss_bcs: 1.758e-04, Loss_ut_ics: 1.742e-04, Loss_norm: 8.172e-04, w_pde: 1.00e+00, L^2_error: 4.112e-01, lr: 1.000e-03, norm0: 0.974, normT: 0.795, Time: 1.63e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 800, Loss: 3.724e-01, Loss_res: 3.331e-01,  Loss_bcs: 3.493e-04, Loss_ut_ics: 1.277e-04, Loss_norm: 6.822e-04, w_pde: 1.00e+00, L^2_error: 3.958e-01, lr: 1.000e-03, norm0: 0.974, normT: 0.789, Time: 1.85e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 900, Loss: 3.209e-01, Loss_res: 2.923e-01,  Loss_bcs: 1.946e-04, Loss_ut_ics: 9.277e-05, Loss_norm: 6.254e-04, w_pde: 1.00e+00, L^2_error: 3.651e-01, lr: 1.000e-03, norm0: 0.976, normT: 0.787, Time: 2.07e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 1000, Loss: 2.364e-01, Loss_res: 2.103e-01,  Loss_bcs: 1.657e-04, Loss_ut_ics: 8.494e-05, Loss_norm: 4.455e-04, w_pde: 1.00e+00, L^2_error: 3.071e-01, lr: 1.000e-03, norm0: 0.979, normT: 0.805, Time: 2.29e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 1100, Loss: 1.805e-01, Loss_res: 1.558e-01,  Loss_bcs: 1.624e-04, Loss_ut_ics: 8.086e-05, Loss_norm: 2.205e-04, w_pde: 1.00e+00, L^2_error: 2.371e-01, lr: 1.000e-03, norm0: 0.985, normT: 0.852, Time: 2.50e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 1200, Loss: 1.354e-01, Loss_res: 1.142e-01,  Loss_bcs: 1.160e-04, Loss_ut_ics: 6.983e-05, Loss_norm: 1.497e-04, w_pde: 1.00e+00, L^2_error: 1.824e-01, lr: 1.000e-03, norm0: 0.987, normT: 0.892, Time: 2.71e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 1300, Loss: 1.060e-01, Loss_res: 8.743e-02,  Loss_bcs: 9.242e-05, Loss_ut_ics: 6.127e-05, Loss_norm: 9.699e-05, w_pde: 1.00e+00, L^2_error: 1.486e-01, lr: 1.000e-03, norm0: 0.991, normT: 0.922, Time: 2.91e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth
+It: 1400, Loss: 8.745e-02, Loss_res: 7.020e-02,  Loss_bcs: 5.738e-05, Loss_ut_ics: 5.706e-05, Loss_norm: 7.751e-05, w_pde: 1.00e+00, L^2_error: 1.262e-01, lr: 1.000e-03, norm0: 0.993, normT: 0.941, Time: 3.14e+02
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model.pth
+Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-16_12-18-35-413882_ho_Classical\model_weights.pth

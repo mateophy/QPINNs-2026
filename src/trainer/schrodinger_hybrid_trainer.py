@@ -72,7 +72,7 @@ args = {
     "activation": "null",           # options: "null", "partial_measurement_half" , partial_measurement_x, tanh (Classical)
     "shots": 20,                    # Analytical gradients enabled
     "problem": "schrodinger",
-    "solver": "DV",                 # options : "CV", "Classical", "DV"
+    "solver": "Classical",                 # options : "CV", "Classical", "DV"
     "device": DEVICE,
     "method": "None",
     "cutoff_dim": cutoff_dim,  # num_qubits >= cutoff_dim

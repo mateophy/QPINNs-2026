@@ -1,0 +1,6 @@
+{
+  "loss_history_len": 26,
+  "l2_rel_history_len": 26,
+  "loss_history_type": "<class 'list'>",
+  "l2_rel_history_type": "<class 'list'>"
+}

@@ -1,0 +1,22 @@
+INFO:src.utils.logger:The circuit used in the study:
+INFO:src.utils.logger:It: 1, Loss: 1.042e+03, Loss_res: 2.256e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.303e+00, Loss_norm: 7.318e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 8.43e+00
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth
+INFO:src.utils.logger:It: 2, Loss: 9.713e+02, Loss_res: 1.931e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.214e+00, Loss_norm: 7.775e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 1.29e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth
+INFO:src.utils.logger:It: 3, Loss: 9.161e+02, Loss_res: 1.537e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.145e+00, Loss_norm: 8.170e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 1.75e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth
+INFO:src.utils.logger:It: 4, Loss: 8.754e+02, Loss_res: 1.247e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.094e+00, Loss_norm: 8.506e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 2.22e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth
+INFO:src.utils.logger:It: 5, Loss: 8.467e+02, Loss_res: 1.033e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.058e+00, Loss_norm: 8.786e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 2.67e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth
+INFO:src.utils.logger:It: 6, Loss: 8.271e+02, Loss_res: 7.991e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.034e+00, Loss_norm: 9.019e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 3.12e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth
+INFO:src.utils.logger:It: 7, Loss: 8.138e+02, Loss_res: 7.340e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.017e+00, Loss_norm: 9.211e-01, Loss_gauge: 0.000e+00, w_pde: 0.00e+00, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 3.59e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Documents\A master\Tesis\QPINNs-2025\results\2026-02-12_10-31-34-577688\model_weights.pth

@@ -1,0 +1,10 @@
+{
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:39:58) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "git_commit": "fed30b3ace8b9fcf9a64a3158f555d83dfbfe8d8",
+  "git_status": "?? \"notebooks/training/prueba_barrera_dv_pasos_exito2 v05 - copia.ipynb\"",
+  "torch_version": "2.5.1+cpu",
+  "cuda_available": false,
+  "cuda_device": null,
+  "pennylane_version": "0.42.3"
+}

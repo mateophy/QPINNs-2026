@@ -1,0 +1,11 @@
+2026-03-01 15:34:46,200 INFO:src.utils.logger:TEST: ahora deberías ver esto en el notebook y guardado en python.log
+INFO:src.utils.logger:TEST: ahora deberías ver esto en el notebook y guardado en python.log
+INFO:src.utils.logger:It: 1, Loss: 2.522e+02, Loss_res: 1.020e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.871e-01, Loss_norm: 9.927e-01, Loss_gauge: 0.000e+00, w_pde: 5.00e-01, L^2_error: 9.443e-01, lr: 1.000e-03, Time: 7.21e+00
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-153437_seed0_pruebaf_box_DV_b1_farhi_e600_w120_4q_2l\checkpoints\2026-03-01_15-34-37-741716_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-153437_seed0_pruebaf_box_DV_b1_farhi_e600_w120_4q_2l\checkpoints\2026-03-01_15-34-37-741716_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 5, Loss: 1.916e+02, Loss_res: 6.547e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.443e-01, Loss_norm: 9.623e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 9.433e-01, lr: 1.000e-03, Time: 3.06e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-153437_seed0_pruebaf_box_DV_b1_farhi_e600_w120_4q_2l\checkpoints\2026-03-01_15-34-37-741716_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-153437_seed0_pruebaf_box_DV_b1_farhi_e600_w120_4q_2l\checkpoints\2026-03-01_15-34-37-741716_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 10, Loss: 1.343e+02, Loss_res: 2.800e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.092e-01, Loss_norm: 8.380e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 8.918e-01, lr: 1.000e-03, Time: 6.07e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-153437_seed0_pruebaf_box_DV_b1_farhi_e600_w120_4q_2l\checkpoints\2026-03-01_15-34-37-741716_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-153437_seed0_pruebaf_box_DV_b1_farhi_e600_w120_4q_2l\checkpoints\2026-03-01_15-34-37-741716_box_DV_seed\model_weights.pth

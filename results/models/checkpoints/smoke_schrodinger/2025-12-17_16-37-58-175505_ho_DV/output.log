@@ -1,9 +1,0 @@
-It: 1, Loss: 3.616e+01, Loss_res: 6.073e-01,  Loss_bcs: 5.923e-03, Loss_ut_ics: 1.677e-01, Loss_norm: 5.194e-01, w_pde: 5.00e-03, L^2_error: 1.331e+00, lr: 1.000e-03, Time: 3.63e+02
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-17_16-38-22-319715_ho_DV\model.pth
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-17_16-38-22-319715_ho_DV\model_weights.pth
-It: 2, Loss: 3.319e+01, Loss_res: 3.377e-01,  Loss_bcs: 3.128e-03, Loss_ut_ics: 1.491e-01, Loss_norm: 6.731e-01, w_pde: 1.00e-02, L^2_error: 1.261e+00, lr: 1.000e-03, Time: 8.61e+02
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-17_16-38-22-319715_ho_DV\model.pth
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-17_16-38-22-319715_ho_DV\model_weights.pth
-It: 3, Loss: 3.060e+01, Loss_res: 1.977e-01,  Loss_bcs: 2.007e-03, Loss_ut_ics: 1.332e-01, Loss_norm: 7.916e-01, w_pde: 1.50e-02, L^2_error: 1.196e+00, lr: 1.000e-03, Time: 1.42e+03
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-17_16-38-22-319715_ho_DV\model.pth
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2025-12-17_16-38-22-319715_ho_DV\model_weights.pth

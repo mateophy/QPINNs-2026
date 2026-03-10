@@ -1,0 +1,229 @@
+INFO:src.utils.logger:It: 1, Loss: 3.489e+02, Loss_res: 2.426e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.970e-01, Loss_norm: 9.962e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-03, L^2_error: 9.928e-01, lr: 1.000e-03, Time: 1.10e-01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 20, Loss: 3.116e+02, Loss_res: 3.440e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.779e-01, Loss_norm: 9.605e-01, Loss_gauge: 0.000e+00, w_pde: 6.67e-02, L^2_error: 1.047e+00, lr: 1.000e-03, Time: 1.73e+00
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 40, Loss: 2.164e+02, Loss_res: 3.211e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.723e-01, Loss_norm: 8.093e-01, Loss_gauge: 0.000e+00, w_pde: 1.33e-01, L^2_error: 1.197e+00, lr: 1.000e-03, Time: 3.35e+00
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 60, Loss: 9.899e+01, Loss_res: 2.176e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.306e-01, Loss_norm: 3.260e-01, Loss_gauge: 0.000e+00, w_pde: 2.00e-01, L^2_error: 1.504e+00, lr: 1.000e-03, Time: 4.77e+00
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 80, Loss: 1.081e+02, Loss_res: 2.771e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.002e-02, Loss_norm: 2.040e-01, Loss_gauge: 0.000e+00, w_pde: 2.67e-01, L^2_error: 1.557e+00, lr: 1.000e-03, Time: 6.48e+00
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 100, Loss: 1.111e+02, Loss_res: 1.875e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.143e-01, Loss_norm: 2.855e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-01, L^2_error: 1.519e+00, lr: 1.000e-03, Time: 8.28e+00
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 120, Loss: 1.217e+02, Loss_res: 1.866e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.096e-01, Loss_norm: 2.825e-01, Loss_gauge: 0.000e+00, w_pde: 4.00e-01, L^2_error: 1.520e+00, lr: 1.000e-03, Time: 1.02e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 140, Loss: 1.265e+02, Loss_res: 1.592e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.206e-01, Loss_norm: 3.201e-01, Loss_gauge: 0.000e+00, w_pde: 4.67e-01, L^2_error: 1.500e+00, lr: 1.000e-03, Time: 1.22e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 160, Loss: 1.315e+02, Loss_res: 1.425e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.312e-01, Loss_norm: 3.232e-01, Loss_gauge: 0.000e+00, w_pde: 5.33e-01, L^2_error: 1.493e+00, lr: 1.000e-03, Time: 1.40e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 180, Loss: 1.328e+02, Loss_res: 1.292e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.404e-01, Loss_norm: 2.627e-01, Loss_gauge: 0.000e+00, w_pde: 6.00e-01, L^2_error: 1.521e+00, lr: 1.000e-03, Time: 1.55e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 200, Loss: 1.195e+02, Loss_res: 1.055e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.338e-01, Loss_norm: 1.812e-01, Loss_gauge: 0.000e+00, w_pde: 6.67e-01, L^2_error: 1.579e+00, lr: 1.000e-03, Time: 1.71e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 220, Loss: 1.018e+02, Loss_res: 9.382e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.144e-02, Loss_norm: 1.111e-01, Loss_gauge: 0.000e+00, w_pde: 7.33e-01, L^2_error: 1.653e+00, lr: 1.000e-03, Time: 1.88e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 240, Loss: 8.916e+01, Loss_res: 7.966e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.007e-02, Loss_norm: 8.817e-02, Loss_gauge: 0.000e+00, w_pde: 8.00e-01, L^2_error: 1.650e+00, lr: 1.000e-03, Time: 2.03e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 260, Loss: 9.234e+01, Loss_res: 8.268e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.637e-02, Loss_norm: 7.548e-02, Loss_gauge: 0.000e+00, w_pde: 8.67e-01, L^2_error: 1.602e+00, lr: 1.000e-03, Time: 2.16e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 280, Loss: 8.544e+01, Loss_res: 7.298e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.253e-02, Loss_norm: 9.142e-02, Loss_gauge: 0.000e+00, w_pde: 9.33e-01, L^2_error: 1.535e+00, lr: 1.000e-03, Time: 2.34e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 300, Loss: 7.654e+01, Loss_res: 5.814e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.201e-02, Loss_norm: 1.159e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.490e+00, lr: 1.000e-03, Time: 2.50e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 320, Loss: 7.471e+01, Loss_res: 6.025e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.790e-02, Loss_norm: 1.218e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.464e+00, lr: 1.000e-03, Time: 2.63e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 340, Loss: 7.097e+01, Loss_res: 5.501e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.183e-02, Loss_norm: 1.282e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.448e+00, lr: 1.000e-03, Time: 2.75e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 360, Loss: 6.600e+01, Loss_res: 5.043e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.882e-02, Loss_norm: 1.384e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.425e+00, lr: 1.000e-03, Time: 2.91e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 380, Loss: 5.997e+01, Loss_res: 4.602e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.437e-02, Loss_norm: 1.327e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.420e+00, lr: 1.000e-03, Time: 3.06e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 400, Loss: 5.572e+01, Loss_res: 4.223e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.182e-02, Loss_norm: 1.390e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.399e+00, lr: 1.000e-03, Time: 3.38e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 420, Loss: 5.260e+01, Loss_res: 3.941e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.142e-02, Loss_norm: 1.352e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.395e+00, lr: 1.000e-03, Time: 3.74e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 440, Loss: 5.149e+01, Loss_res: 3.974e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.634e-02, Loss_norm: 1.370e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.382e+00, lr: 1.000e-03, Time: 4.06e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 460, Loss: 4.840e+01, Loss_res: 3.718e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.613e-02, Loss_norm: 1.276e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.384e+00, lr: 1.000e-03, Time: 4.34e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 480, Loss: 4.652e+01, Loss_res: 3.612e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.342e-02, Loss_norm: 1.273e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.378e+00, lr: 1.000e-03, Time: 4.57e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 500, Loss: 4.956e+01, Loss_res: 4.030e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.362e-02, Loss_norm: 1.035e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.386e+00, lr: 1.000e-03, Time: 4.76e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 520, Loss: 4.811e+01, Loss_res: 3.996e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.155e-02, Loss_norm: 9.380e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.383e+00, lr: 1.000e-03, Time: 4.96e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 540, Loss: 3.941e+01, Loss_res: 3.240e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.749e-03, Loss_norm: 8.163e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.379e+00, lr: 1.000e-03, Time: 5.14e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 560, Loss: 3.945e+01, Loss_res: 3.070e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.518e-02, Loss_norm: 8.382e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.375e+00, lr: 1.000e-03, Time: 5.27e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 580, Loss: 3.175e+01, Loss_res: 2.494e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.047e-02, Loss_norm: 7.340e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.376e+00, lr: 1.000e-03, Time: 5.42e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 600, Loss: 3.860e+01, Loss_res: 3.226e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.333e-03, Loss_norm: 7.089e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.369e+00, lr: 1.000e-03, Time: 5.54e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 620, Loss: 3.098e+01, Loss_res: 2.460e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.051e-02, Loss_norm: 6.473e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.365e+00, lr: 1.000e-03, Time: 5.67e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 640, Loss: 3.304e+01, Loss_res: 2.732e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.740e-03, Loss_norm: 6.202e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.359e+00, lr: 1.000e-03, Time: 5.78e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 660, Loss: 3.046e+01, Loss_res: 2.518e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.417e-03, Loss_norm: 5.501e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.357e+00, lr: 1.000e-03, Time: 5.88e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 680, Loss: 3.062e+01, Loss_res: 2.555e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.347e-03, Loss_norm: 5.141e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.352e+00, lr: 1.000e-03, Time: 5.99e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 700, Loss: 3.351e+01, Loss_res: 2.876e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.657e-03, Loss_norm: 4.901e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.346e+00, lr: 1.000e-03, Time: 6.10e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 720, Loss: 3.069e+01, Loss_res: 2.661e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.630e-03, Loss_norm: 4.774e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.336e+00, lr: 1.000e-03, Time: 6.22e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 740, Loss: 2.873e+01, Loss_res: 2.473e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.045e-03, Loss_norm: 4.368e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.336e+00, lr: 1.000e-03, Time: 6.34e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 760, Loss: 2.695e+01, Loss_res: 2.310e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.823e-03, Loss_norm: 4.198e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.333e+00, lr: 1.000e-03, Time: 6.46e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 780, Loss: 2.749e+01, Loss_res: 2.386e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.186e-03, Loss_norm: 4.159e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.322e+00, lr: 1.000e-03, Time: 6.61e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 800, Loss: 2.384e+01, Loss_res: 2.040e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.685e-03, Loss_norm: 4.063e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.316e+00, lr: 1.000e-03, Time: 6.77e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 820, Loss: 3.102e+01, Loss_res: 2.720e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.486e-03, Loss_norm: 4.363e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.308e+00, lr: 1.000e-03, Time: 6.89e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 840, Loss: 2.461e+01, Loss_res: 2.084e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.332e-03, Loss_norm: 4.331e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.297e+00, lr: 1.000e-03, Time: 6.99e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 860, Loss: 2.579e+01, Loss_res: 2.237e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.941e-03, Loss_norm: 3.866e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.293e+00, lr: 1.000e-03, Time: 7.12e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 880, Loss: 2.891e+01, Loss_res: 2.584e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.111e-03, Loss_norm: 3.676e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.286e+00, lr: 1.000e-03, Time: 7.24e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 900, Loss: 2.296e+01, Loss_res: 1.964e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.378e-03, Loss_norm: 4.015e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.271e+00, lr: 1.000e-03, Time: 7.36e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 920, Loss: 2.638e+01, Loss_res: 2.235e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.810e-03, Loss_norm: 4.579e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.265e+00, lr: 1.000e-03, Time: 7.50e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 940, Loss: 2.264e+01, Loss_res: 1.904e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.493e-03, Loss_norm: 4.492e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.258e+00, lr: 1.000e-03, Time: 7.64e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 960, Loss: 2.317e+01, Loss_res: 1.982e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.679e-03, Loss_norm: 3.898e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.257e+00, lr: 1.000e-03, Time: 7.79e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 980, Loss: 2.212e+01, Loss_res: 1.924e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.722e-03, Loss_norm: 3.511e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.256e+00, lr: 1.000e-03, Time: 7.92e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1000, Loss: 2.371e+01, Loss_res: 2.076e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.318e-03, Loss_norm: 3.920e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.245e+00, lr: 1.000e-03, Time: 8.08e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1020, Loss: 2.356e+01, Loss_res: 2.071e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.270e-03, Loss_norm: 3.748e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.244e+00, lr: 1.000e-03, Time: 8.21e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1040, Loss: 2.450e+01, Loss_res: 2.161e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.001e-03, Loss_norm: 3.378e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.240e+00, lr: 1.000e-03, Time: 8.37e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1060, Loss: 2.647e+01, Loss_res: 2.368e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.393e-03, Loss_norm: 3.561e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.234e+00, lr: 1.000e-03, Time: 8.48e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1080, Loss: 2.424e+01, Loss_res: 2.119e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.133e-03, Loss_norm: 3.609e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.231e+00, lr: 1.000e-03, Time: 8.58e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1100, Loss: 2.073e+01, Loss_res: 1.771e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.981e-03, Loss_norm: 3.643e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.223e+00, lr: 1.000e-03, Time: 8.69e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1120, Loss: 2.204e+01, Loss_res: 1.942e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.061e-03, Loss_norm: 3.404e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.221e+00, lr: 1.000e-03, Time: 8.82e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1140, Loss: 2.196e+01, Loss_res: 1.916e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.178e-03, Loss_norm: 3.693e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.210e+00, lr: 1.000e-03, Time: 8.93e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1160, Loss: 1.824e+01, Loss_res: 1.580e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.496e-03, Loss_norm: 3.384e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.209e+00, lr: 1.000e-03, Time: 9.04e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1180, Loss: 2.117e+01, Loss_res: 1.836e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.975e-03, Loss_norm: 3.844e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.199e+00, lr: 1.000e-03, Time: 9.17e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1200, Loss: 2.001e+01, Loss_res: 1.717e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.536e-03, Loss_norm: 4.161e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.183e+00, lr: 1.000e-03, Time: 9.27e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1220, Loss: 2.356e+01, Loss_res: 2.129e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.264e-03, Loss_norm: 3.191e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.193e+00, lr: 1.000e-03, Time: 9.38e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1240, Loss: 2.040e+01, Loss_res: 1.782e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.893e-03, Loss_norm: 3.439e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.182e+00, lr: 1.000e-03, Time: 9.50e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1260, Loss: 2.027e+01, Loss_res: 1.776e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.680e-03, Loss_norm: 3.402e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.180e+00, lr: 1.000e-03, Time: 9.62e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1280, Loss: 1.799e+01, Loss_res: 1.561e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.159e-03, Loss_norm: 3.463e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.172e+00, lr: 1.000e-03, Time: 9.76e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1300, Loss: 2.254e+01, Loss_res: 1.985e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.523e-03, Loss_norm: 3.867e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.160e+00, lr: 1.000e-03, Time: 9.91e+01
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1320, Loss: 2.081e+01, Loss_res: 1.797e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.888e-03, Loss_norm: 3.942e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.150e+00, lr: 1.000e-03, Time: 1.01e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1340, Loss: 2.032e+01, Loss_res: 1.782e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.776e-03, Loss_norm: 3.323e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.144e+00, lr: 1.000e-03, Time: 1.02e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1360, Loss: 1.941e+01, Loss_res: 1.698e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.418e-03, Loss_norm: 3.410e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.142e+00, lr: 1.000e-03, Time: 1.03e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1380, Loss: 1.775e+01, Loss_res: 1.522e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.338e-03, Loss_norm: 3.654e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.134e+00, lr: 1.000e-03, Time: 1.04e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1400, Loss: 1.591e+01, Loss_res: 1.350e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.727e-03, Loss_norm: 3.800e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.125e+00, lr: 1.000e-03, Time: 1.05e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1420, Loss: 1.915e+01, Loss_res: 1.672e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.366e-03, Loss_norm: 3.445e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.120e+00, lr: 1.000e-03, Time: 1.07e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1440, Loss: 1.869e+01, Loss_res: 1.617e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.317e-03, Loss_norm: 3.657e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.103e+00, lr: 1.000e-03, Time: 1.08e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1460, Loss: 1.634e+01, Loss_res: 1.388e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.913e-03, Loss_norm: 3.771e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.101e+00, lr: 1.000e-03, Time: 1.09e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1480, Loss: 1.609e+01, Loss_res: 1.364e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.053e-03, Loss_norm: 3.679e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.093e+00, lr: 1.000e-03, Time: 1.10e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:It: 1500, Loss: 1.808e+01, Loss_res: 1.555e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.676e-03, Loss_norm: 3.463e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.092e+00, lr: 1.000e-03, Time: 1.11e+02
+INFO:src.utils.logger:Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model.pth
+INFO:src.utils.logger:Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-24_21-51-35-797355_barrier_Classical\model_weights.pth
+INFO:src.utils.logger:checkpoint path: self.log_path='results\\barrier\\Classical\\20260224-215930_seed0_pinn_2-64-64-2_v3f\\checkpoints\\2026-02-24_21-59-36-493041_barrier_Classical_seed0'

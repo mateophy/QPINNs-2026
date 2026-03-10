@@ -1,0 +1,11 @@
+2026-02-27 08:01:41,098 INFO:src.utils.logger:TEST: ahora deberías ver esto en el notebook y guardado en python.log
+INFO:src.utils.logger:TEST: ahora deberías ver esto en el notebook y guardado en python.log
+INFO:src.utils.logger:It: 1, Loss: 3.414e+02, Loss_res: 9.022e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.311e+00, Loss_norm: 9.290e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.141e+00, lr: 1.000e-03, Time: 1.02e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260227-080122_seed0_testgpt31\checkpoints\2026-02-27_08-01-22-907824_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260227-080122_seed0_testgpt31\checkpoints\2026-02-27_08-01-22-907824_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 2, Loss: 3.051e+02, Loss_res: 5.883e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.178e+00, Loss_norm: 9.578e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.141e+00, lr: 1.000e-03, Time: 1.94e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260227-080122_seed0_testgpt31\checkpoints\2026-02-27_08-01-22-907824_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260227-080122_seed0_testgpt31\checkpoints\2026-02-27_08-01-22-907824_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 3, Loss: 2.726e+02, Loss_res: 3.515e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.057e+00, Loss_norm: 9.764e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.141e+00, lr: 1.000e-03, Time: 2.94e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260227-080122_seed0_testgpt31\checkpoints\2026-02-27_08-01-22-907824_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260227-080122_seed0_testgpt31\checkpoints\2026-02-27_08-01-22-907824_box_DV_seed\model_weights.pth

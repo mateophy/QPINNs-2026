@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-02-24T14:43:02",
+  "potential": "unknown",
+  "solver": "Classical",
+  "seed": 0,
+  "tag": "pinn_2-64-64-2",
+  "run_dir": "C:\\Users\\mateo garcia\\Downloads\\repo\\QPINNs-2026\\results\\ho\\Classical\\20260224-144052_seed0_pinn_2-64-64-2",
+  "art_dir": "C:\\Users\\mateo garcia\\Downloads\\repo\\QPINNs-2026\\results\\ho\\Classical\\20260224-144052_seed0_pinn_2-64-64-2\\artifacts",
+  "dtype": "float64",
+  "device": "cpu",
+  "n_params_total": 12802,
+  "n_params_quantum": "",
+  "n_params_classical": "",
+  "epochs": 1500,
+  "lr": 0.001,
+  "N_f": "",
+  "N_b": "",
+  "N_0": "",
+  "arch_repr": "PINN(classic=[2, 64, 64, 2])",
+  "classic_network": "[2, 64, 64, 2]",
+  "num_qubits": "",
+  "num_quantum_layers": "",
+  "q_ansatz": "",
+  "encoding": "",
+  "has_exact": true,
+  "l2_rel_psi_T": 0.02470112695998262,
+  "l2_rel_prob_T": 0.02519321449504124,
+  "bdry_max_abs_psi_xmin": 0.009275520551806908,
+  "bdry_max_abs_psi_xmax": 0.004112493554161842,
+  "series": [
+    {
+      "t": 0.0,
+      "l2_rel_psi": 0.020872545033135376,
+      "l2_rel_prob": 0.02073502540826962
+    },
+    {
+      "t": 0.05,
+      "l2_rel_psi": 0.021602191258748887,
+      "l2_rel_prob": 0.0224788368713291
+    },
+    {
+      "t": 0.1,
+      "l2_rel_psi": 0.022513226655618425,
+      "l2_rel_prob": 0.023795421445131724
+    },
+    {
+      "t": 0.15000000000000002,
+      "l2_rel_psi": 0.0235383433509632,
+      "l2_rel_prob": 0.024685660135417314
+    },
+    {
+      "t": 0.2,
+      "l2_rel_psi": 0.02470112695998262,
+      "l2_rel_prob": 0.02519321449504124
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import os
 import torch
 import torch.nn as nn
+import copy
 from src.utils.logger import Logging
 
 
@@ -38,7 +39,7 @@ class ClassicalSolver2(nn.Module):
 
     def __init__(self, args, logger: Logging = None, data=None, device=None):
         super().__init__()
-        self.args = args
+        self.args = copy.deepcopy(args)
         self.data = data
 
         # logger (opcional)
@@ -57,26 +58,21 @@ class ClassicalSolver2(nn.Module):
         self.l2_rel_history = []
 
         # arquitectura
-        self.classic_network = self.args["classic_network"]  # e.g. [2,64,64,64,2]
-        h = self.classic_network[-2]
+        # arquitectura (ahora sí respeta classic_network completo)
+        self.classic_network = list(self.args["classic_network"])
+        if len(self.classic_network) < 3:
+            raise ValueError("classic_network debe tener al menos [in, hidden, out].")
 
-        self.preprocessor = nn.Sequential(
-            nn.Linear(self.classic_network[0], h),
-            nn.Tanh(),
-            nn.Linear(h, h),
-        )
+        # MLP: Linear + Tanh entre capas, excepto al final
+        layers = []
+        for i in range(len(self.classic_network) - 1):
+            in_f = self.classic_network[i]
+            out_f = self.classic_network[i + 1]
+            layers.append(nn.Linear(in_f, out_f))
+            if i < len(self.classic_network) - 2:
+                layers.append(nn.Tanh())
 
-        self.hidden = nn.Sequential(
-            nn.Linear(h, h),
-        )
-
-        self.postprocessor = nn.Sequential(
-            nn.Linear(h, h),
-            nn.Tanh(),
-            nn.Linear(h, self.classic_network[-1]),
-        )
-
-        self.activation = nn.Tanh()
+        self.net = nn.Sequential(*layers)
 
         # init + mover a device/dtype
         self._initialize_logging()
@@ -123,9 +119,7 @@ class ClassicalSolver2(nn.Module):
         x = tx[:, 1:2]
 
         # red base
-        z = self.preprocessor(tx)
-        z = self.hidden(self.activation(z))
-        out = self.postprocessor(self.activation(z))
+        out = self.net(tx)
 
         # hard BC opcional para box/barrier
         hard_bc = bool(self.args.get("hard_bc", False))

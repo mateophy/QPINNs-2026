@@ -1,0 +1,208 @@
+INFO:src.utils.logger:The circuit used in the study:
+INFO:src.utils.logger:It: 1, Loss: 8.872e+02, Loss_res: 4.730e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.109e+00, Loss_norm: 9.454e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-03, L^2_error: 1.022e+00, lr: 1.000e-03, Time: 5.84e+00
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 5, Loss: 7.591e+02, Loss_res: 1.840e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.489e-01, Loss_norm: 9.966e-01, Loss_gauge: 0.000e+00, w_pde: 1.67e-02, L^2_error: 1.032e+00, lr: 1.000e-03, Time: 2.07e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 10, Loss: 7.429e+02, Loss_res: 8.018e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.286e-01, Loss_norm: 9.743e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-02, L^2_error: 1.061e+00, lr: 1.000e-03, Time: 3.87e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 15, Loss: 7.016e+02, Loss_res: 1.678e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.769e-01, Loss_norm: 9.634e-01, Loss_gauge: 0.000e+00, w_pde: 5.00e-02, L^2_error: 1.086e+00, lr: 1.000e-03, Time: 5.71e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 20, Loss: 6.561e+02, Loss_res: 2.464e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.199e-01, Loss_norm: 9.572e-01, Loss_gauge: 0.000e+00, w_pde: 6.67e-02, L^2_error: 1.111e+00, lr: 1.000e-03, Time: 7.52e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 25, Loss: 6.194e+02, Loss_res: 4.434e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.738e-01, Loss_norm: 9.449e-01, Loss_gauge: 0.000e+00, w_pde: 8.33e-02, L^2_error: 1.139e+00, lr: 1.000e-03, Time: 9.33e+01
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 30, Loss: 5.749e+02, Loss_res: 6.327e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.179e-01, Loss_norm: 9.318e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e-01, L^2_error: 1.169e+00, lr: 1.000e-03, Time: 1.11e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 35, Loss: 5.269e+02, Loss_res: 8.608e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.574e-01, Loss_norm: 9.146e-01, Loss_gauge: 0.000e+00, w_pde: 1.17e-01, L^2_error: 1.203e+00, lr: 1.000e-03, Time: 1.29e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 40, Loss: 4.778e+02, Loss_res: 1.260e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.951e-01, Loss_norm: 8.880e-01, Loss_gauge: 0.000e+00, w_pde: 1.33e-01, L^2_error: 1.241e+00, lr: 1.000e-03, Time: 1.48e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 45, Loss: 4.248e+02, Loss_res: 1.655e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.279e-01, Loss_norm: 8.490e-01, Loss_gauge: 0.000e+00, w_pde: 1.50e-01, L^2_error: 1.286e+00, lr: 1.000e-03, Time: 1.66e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 50, Loss: 3.706e+02, Loss_res: 2.373e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.583e-01, Loss_norm: 7.955e-01, Loss_gauge: 0.000e+00, w_pde: 1.67e-01, L^2_error: 1.336e+00, lr: 1.000e-03, Time: 1.83e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 55, Loss: 3.172e+02, Loss_res: 3.362e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.888e-01, Loss_norm: 7.290e-01, Loss_gauge: 0.000e+00, w_pde: 1.83e-01, L^2_error: 1.390e+00, lr: 1.000e-03, Time: 2.01e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 60, Loss: 2.664e+02, Loss_res: 4.531e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.217e-01, Loss_norm: 6.535e-01, Loss_gauge: 0.000e+00, w_pde: 2.00e-01, L^2_error: 1.447e+00, lr: 1.000e-03, Time: 2.19e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 65, Loss: 2.218e+02, Loss_res: 6.385e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.600e-01, Loss_norm: 5.715e-01, Loss_gauge: 0.000e+00, w_pde: 2.17e-01, L^2_error: 1.504e+00, lr: 1.000e-03, Time: 2.38e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 70, Loss: 1.847e+02, Loss_res: 8.731e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.055e-01, Loss_norm: 4.843e-01, Loss_gauge: 0.000e+00, w_pde: 2.33e-01, L^2_error: 1.561e+00, lr: 1.000e-03, Time: 2.57e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 75, Loss: 1.555e+02, Loss_res: 1.119e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.594e-01, Loss_norm: 3.975e-01, Loss_gauge: 0.000e+00, w_pde: 2.50e-01, L^2_error: 1.616e+00, lr: 1.000e-03, Time: 2.76e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 80, Loss: 1.334e+02, Loss_res: 1.335e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.222e-01, Loss_norm: 3.181e-01, Loss_gauge: 0.000e+00, w_pde: 2.67e-01, L^2_error: 1.668e+00, lr: 1.000e-03, Time: 3.04e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 85, Loss: 1.198e+02, Loss_res: 1.589e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.347e-02, Loss_norm: 2.494e-01, Loss_gauge: 0.000e+00, w_pde: 2.83e-01, L^2_error: 1.713e+00, lr: 1.000e-03, Time: 3.27e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 90, Loss: 1.148e+02, Loss_res: 1.900e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.223e-02, Loss_norm: 1.930e-01, Loss_gauge: 0.000e+00, w_pde: 3.00e-01, L^2_error: 1.753e+00, lr: 1.000e-03, Time: 3.45e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 95, Loss: 1.059e+02, Loss_res: 1.895e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.734e-02, Loss_norm: 1.506e-01, Loss_gauge: 0.000e+00, w_pde: 3.17e-01, L^2_error: 1.784e+00, lr: 1.000e-03, Time: 3.67e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 100, Loss: 1.066e+02, Loss_res: 2.059e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.738e-02, Loss_norm: 1.214e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-01, L^2_error: 1.808e+00, lr: 1.000e-03, Time: 3.88e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 105, Loss: 1.075e+02, Loss_res: 2.137e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.092e-02, Loss_norm: 1.022e-01, Loss_gauge: 0.000e+00, w_pde: 3.50e-01, L^2_error: 1.824e+00, lr: 1.000e-03, Time: 4.10e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 110, Loss: 1.079e+02, Loss_res: 2.138e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.692e-02, Loss_norm: 9.103e-02, Loss_gauge: 0.000e+00, w_pde: 3.67e-01, L^2_error: 1.833e+00, lr: 1.000e-03, Time: 4.33e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 115, Loss: 1.070e+02, Loss_res: 2.066e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.478e-02, Loss_norm: 8.659e-02, Loss_gauge: 0.000e+00, w_pde: 3.83e-01, L^2_error: 1.837e+00, lr: 1.000e-03, Time: 4.54e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 120, Loss: 1.088e+02, Loss_res: 2.049e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.357e-02, Loss_norm: 8.584e-02, Loss_gauge: 0.000e+00, w_pde: 4.00e-01, L^2_error: 1.838e+00, lr: 1.000e-03, Time: 4.75e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 125, Loss: 1.058e+02, Loss_res: 1.909e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.278e-02, Loss_norm: 8.667e-02, Loss_gauge: 0.000e+00, w_pde: 4.17e-01, L^2_error: 1.837e+00, lr: 1.000e-03, Time: 4.97e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 130, Loss: 1.099e+02, Loss_res: 1.933e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.271e-02, Loss_norm: 8.930e-02, Loss_gauge: 0.000e+00, w_pde: 4.33e-01, L^2_error: 1.834e+00, lr: 1.000e-03, Time: 5.18e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 135, Loss: 1.089e+02, Loss_res: 1.851e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.198e-02, Loss_norm: 9.043e-02, Loss_gauge: 0.000e+00, w_pde: 4.50e-01, L^2_error: 1.833e+00, lr: 1.000e-03, Time: 5.38e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 140, Loss: 1.102e+02, Loss_res: 1.817e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.174e-02, Loss_norm: 9.208e-02, Loss_gauge: 0.000e+00, w_pde: 4.67e-01, L^2_error: 1.832e+00, lr: 1.000e-03, Time: 5.60e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 145, Loss: 1.123e+02, Loss_res: 1.805e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.135e-02, Loss_norm: 9.305e-02, Loss_gauge: 0.000e+00, w_pde: 4.83e-01, L^2_error: 1.831e+00, lr: 1.000e-03, Time: 5.82e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 150, Loss: 1.094e+02, Loss_res: 1.697e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.071e-02, Loss_norm: 9.280e-02, Loss_gauge: 0.000e+00, w_pde: 5.00e-01, L^2_error: 1.831e+00, lr: 1.000e-03, Time: 6.04e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 155, Loss: 1.104e+02, Loss_res: 1.667e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.036e-02, Loss_norm: 9.265e-02, Loss_gauge: 0.000e+00, w_pde: 5.17e-01, L^2_error: 1.832e+00, lr: 1.000e-03, Time: 6.25e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 160, Loss: 1.142e+02, Loss_res: 1.703e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.923e-02, Loss_norm: 9.039e-02, Loss_gauge: 0.000e+00, w_pde: 5.33e-01, L^2_error: 1.834e+00, lr: 1.000e-03, Time: 6.48e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 165, Loss: 1.147e+02, Loss_res: 1.667e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.877e-02, Loss_norm: 8.942e-02, Loss_gauge: 0.000e+00, w_pde: 5.50e-01, L^2_error: 1.835e+00, lr: 1.000e-03, Time: 6.70e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 170, Loss: 1.122e+02, Loss_res: 1.579e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.844e-02, Loss_norm: 8.879e-02, Loss_gauge: 0.000e+00, w_pde: 5.67e-01, L^2_error: 1.836e+00, lr: 1.000e-03, Time: 6.91e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 175, Loss: 1.132e+02, Loss_res: 1.555e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.808e-02, Loss_norm: 8.798e-02, Loss_gauge: 0.000e+00, w_pde: 5.83e-01, L^2_error: 1.837e+00, lr: 1.000e-03, Time: 7.22e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 180, Loss: 1.177e+02, Loss_res: 1.586e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.817e-02, Loss_norm: 8.829e-02, Loss_gauge: 0.000e+00, w_pde: 6.00e-01, L^2_error: 1.836e+00, lr: 1.000e-03, Time: 7.44e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 185, Loss: 1.176e+02, Loss_res: 1.543e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.805e-02, Loss_norm: 8.860e-02, Loss_gauge: 0.000e+00, w_pde: 6.17e-01, L^2_error: 1.835e+00, lr: 1.000e-03, Time: 7.68e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 190, Loss: 1.204e+02, Loss_res: 1.538e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.867e-02, Loss_norm: 9.065e-02, Loss_gauge: 0.000e+00, w_pde: 6.33e-01, L^2_error: 1.833e+00, lr: 1.000e-03, Time: 7.90e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 195, Loss: 1.231e+02, Loss_res: 1.529e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.969e-02, Loss_norm: 9.336e-02, Loss_gauge: 0.000e+00, w_pde: 6.50e-01, L^2_error: 1.831e+00, lr: 1.000e-03, Time: 8.15e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 200, Loss: 1.239e+02, Loss_res: 1.501e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.978e-02, Loss_norm: 9.446e-02, Loss_gauge: 0.000e+00, w_pde: 6.67e-01, L^2_error: 1.829e+00, lr: 1.000e-03, Time: 8.40e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 205, Loss: 1.257e+02, Loss_res: 1.483e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.048e-02, Loss_norm: 9.662e-02, Loss_gauge: 0.000e+00, w_pde: 6.83e-01, L^2_error: 1.827e+00, lr: 1.000e-03, Time: 8.60e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 210, Loss: 1.219e+02, Loss_res: 1.391e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.076e-02, Loss_norm: 9.786e-02, Loss_gauge: 0.000e+00, w_pde: 7.00e-01, L^2_error: 1.826e+00, lr: 1.000e-03, Time: 8.82e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 215, Loss: 1.288e+02, Loss_res: 1.449e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.118e-02, Loss_norm: 9.897e-02, Loss_gauge: 0.000e+00, w_pde: 7.17e-01, L^2_error: 1.825e+00, lr: 1.000e-03, Time: 9.01e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 220, Loss: 1.254e+02, Loss_res: 1.367e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.145e-02, Loss_norm: 9.987e-02, Loss_gauge: 0.000e+00, w_pde: 7.33e-01, L^2_error: 1.824e+00, lr: 1.000e-03, Time: 9.23e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 225, Loss: 1.310e+02, Loss_res: 1.410e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.156e-02, Loss_norm: 1.003e-01, Loss_gauge: 0.000e+00, w_pde: 7.50e-01, L^2_error: 1.823e+00, lr: 1.000e-03, Time: 9.42e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 230, Loss: 1.325e+02, Loss_res: 1.391e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.230e-02, Loss_norm: 1.024e-01, Loss_gauge: 0.000e+00, w_pde: 7.67e-01, L^2_error: 1.821e+00, lr: 1.000e-03, Time: 9.62e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 235, Loss: 1.340e+02, Loss_res: 1.366e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.382e-02, Loss_norm: 1.063e-01, Loss_gauge: 0.000e+00, w_pde: 7.83e-01, L^2_error: 1.818e+00, lr: 1.000e-03, Time: 9.82e+02
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 240, Loss: 1.275e+02, Loss_res: 1.241e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.529e-02, Loss_norm: 1.094e-01, Loss_gauge: 0.000e+00, w_pde: 8.00e-01, L^2_error: 1.815e+00, lr: 1.000e-03, Time: 1.00e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 245, Loss: 1.391e+02, Loss_res: 1.367e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.430e-02, Loss_norm: 1.076e-01, Loss_gauge: 0.000e+00, w_pde: 8.17e-01, L^2_error: 1.816e+00, lr: 1.000e-03, Time: 1.02e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 250, Loss: 1.499e+02, Loss_res: 1.468e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.447e-02, Loss_norm: 1.082e-01, Loss_gauge: 0.000e+00, w_pde: 8.33e-01, L^2_error: 1.816e+00, lr: 1.000e-03, Time: 1.04e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 255, Loss: 1.448e+02, Loss_res: 1.373e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.516e-02, Loss_norm: 1.103e-01, Loss_gauge: 0.000e+00, w_pde: 8.50e-01, L^2_error: 1.814e+00, lr: 1.000e-03, Time: 1.06e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 260, Loss: 1.461e+02, Loss_res: 1.339e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.755e-02, Loss_norm: 1.151e-01, Loss_gauge: 0.000e+00, w_pde: 8.67e-01, L^2_error: 1.809e+00, lr: 1.000e-03, Time: 1.08e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 265, Loss: 1.535e+02, Loss_res: 1.400e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.731e-02, Loss_norm: 1.163e-01, Loss_gauge: 0.000e+00, w_pde: 8.83e-01, L^2_error: 1.806e+00, lr: 1.000e-03, Time: 1.11e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 270, Loss: 1.491e+02, Loss_res: 1.322e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.771e-02, Loss_norm: 1.181e-01, Loss_gauge: 0.000e+00, w_pde: 9.00e-01, L^2_error: 1.805e+00, lr: 1.000e-03, Time: 1.13e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 275, Loss: 1.445e+02, Loss_res: 1.236e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.896e-02, Loss_norm: 1.211e-01, Loss_gauge: 0.000e+00, w_pde: 9.17e-01, L^2_error: 1.805e+00, lr: 1.000e-03, Time: 1.15e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 280, Loss: 1.523e+02, Loss_res: 1.280e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.103e-02, Loss_norm: 1.258e-01, Loss_gauge: 0.000e+00, w_pde: 9.33e-01, L^2_error: 1.800e+00, lr: 1.000e-03, Time: 1.17e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 285, Loss: 1.581e+02, Loss_res: 1.318e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.120e-02, Loss_norm: 1.268e-01, Loss_gauge: 0.000e+00, w_pde: 9.50e-01, L^2_error: 1.798e+00, lr: 1.000e-03, Time: 1.19e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 290, Loss: 1.567e+02, Loss_res: 1.275e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.181e-02, Loss_norm: 1.288e-01, Loss_gauge: 0.000e+00, w_pde: 9.67e-01, L^2_error: 1.796e+00, lr: 1.000e-03, Time: 1.21e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 295, Loss: 1.602e+02, Loss_res: 1.285e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.226e-02, Loss_norm: 1.305e-01, Loss_gauge: 0.000e+00, w_pde: 9.83e-01, L^2_error: 1.794e+00, lr: 1.000e-03, Time: 1.23e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 300, Loss: 1.612e+02, Loss_res: 1.260e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.409e-02, Loss_norm: 1.352e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.791e+00, lr: 1.000e-03, Time: 1.25e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 305, Loss: 1.570e+02, Loss_res: 1.208e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.524e-02, Loss_norm: 1.382e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.788e+00, lr: 1.000e-03, Time: 1.27e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 310, Loss: 1.675e+02, Loss_res: 1.313e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.526e-02, Loss_norm: 1.378e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.788e+00, lr: 1.000e-03, Time: 1.29e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 315, Loss: 1.661e+02, Loss_res: 1.310e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.388e-02, Loss_norm: 1.350e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.788e+00, lr: 1.000e-03, Time: 1.31e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 320, Loss: 1.586e+02, Loss_res: 1.237e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.363e-02, Loss_norm: 1.343e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.788e+00, lr: 1.000e-03, Time: 1.33e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 325, Loss: 1.558e+02, Loss_res: 1.220e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.229e-02, Loss_norm: 1.304e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.794e+00, lr: 1.000e-03, Time: 1.35e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 330, Loss: 1.613e+02, Loss_res: 1.275e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.225e-02, Loss_norm: 1.300e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.799e+00, lr: 1.000e-03, Time: 1.38e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 335, Loss: 1.655e+02, Loss_res: 1.301e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.427e-02, Loss_norm: 1.332e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.795e+00, lr: 1.000e-03, Time: 1.39e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth
+INFO:src.utils.logger:It: 340, Loss: 1.618e+02, Loss_res: 1.265e+02,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.409e-02, Loss_norm: 1.330e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.791e+00, lr: 1.000e-03, Time: 1.42e+03
+INFO:src.utils.logger:Model state saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model.pth
+INFO:src.utils.logger:Model weights saved to C:\Users\mateo garcia\Downloads\repo\QPINNs-2026\results\2026-03-02_17-56-47-563187\model_weights.pth

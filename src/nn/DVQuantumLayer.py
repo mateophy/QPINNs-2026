@@ -39,30 +39,40 @@ class DVQuantumLayer(nn.Module):
         self.shots_done = 0
 
         # --------------------------
-        # Parámetros entrenables
+        # Parámetros entrenables (CONSISTENTES)
         # --------------------------
-        if self.q_ansatz in ["layered_circuit", "alternating_layer_tdcnot"]:
-            self.params = nn.Parameter(
-                torch.empty(self.num_quantum_layers, self.num_qubits * 4, dtype=torch.float32)
-            )
-        elif self.q_ansatz == "sim_circ_19":
-            self.params = nn.Parameter(
-                torch.empty(self.num_quantum_layers, self.num_qubits * 2, dtype=torch.float32)
-            )
+        n = self.num_qubits
+        if n < 1:
+            raise ValueError("num_qubits debe ser >= 1")
+
+        if self.q_ansatz == "sim_circ_19":
+            self.params_per_layer = 2 * n
+
         elif self.q_ansatz == "farhi":
-            self.params = nn.Parameter(
-                torch.empty(self.num_quantum_layers, (2 * self.num_qubits - 2), dtype=torch.float32)
-            )
-        elif self.q_ansatz == "sim_circ_15":
-            self.params = nn.Parameter(
-                torch.empty(self.num_quantum_layers, self.num_qubits * 4, dtype=torch.float32)
-            )
+            if n < 2:
+                raise ValueError("farhi requiere num_qubits >= 2")
+            self.params_per_layer = 2 * n - 2
+
+        elif self.q_ansatz in ["layered_circuit", "sim_circ_15"]:
+            self.params_per_layer = 4 * n
+
+        elif self.q_ansatz == "alternating_layer_tdcnot":
+            if n < 2:
+                raise ValueError("alternating_layer_tdcnot requiere num_qubits >= 2")
+            # Con n impar, tu patrón genera (n-1) bloques por capa; con n par genera n bloques.
+            blocks = n - (n % 2)   # n par -> n; n impar -> n-1
+            self.params_per_layer = 4 * blocks  # 4 params por bloque (RY,RY,RZ,RZ)
+
         elif self.q_ansatz == "sim_circ_5":
-            self.params = nn.Parameter(
-                torch.empty(self.num_quantum_layers, (3 * self.num_qubits) * self.num_qubits, dtype=torch.float32)
-            )
+            # Tu circuito usa: 2n (RX/RZ) + n(n-1) (CRZ i!=j) + 2n (RX/RZ)
+            self.params_per_layer = n * (n - 1) + 4 * n  # = n^2 + 3n
+
         else:
             raise ValueError(f"Parameters are not initialized. Check q_ansatz='{self.q_ansatz}'.")
+
+        self.params = nn.Parameter(
+            torch.empty(self.num_quantum_layers, self.params_per_layer, dtype=torch.float32)
+        )
 
         self._initialize_weights()
 
@@ -87,16 +97,9 @@ class DVQuantumLayer(nn.Module):
         
 
     def _initialize_weights(self):
-        if self.q_ansatz == "farhi":
-            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, (2 * self.num_qubits - 2)))
-        elif self.q_ansatz in ["sim_circ_15", "layered_circuit", "alternating_layer_tdcnot"]:
-            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, self.num_qubits * 4))
-        elif self.q_ansatz == "sim_circ_19":
-            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, self.num_qubits * 2))
-        elif self.q_ansatz == "sim_circ_5":
-            torch.nn.init.xavier_normal_(self.params.view(self.num_quantum_layers, (3 * self.num_qubits) * self.num_qubits))
-        else:
-            raise ValueError(f"Invalid q_ansatz value: {self.q_ansatz}")
+        torch.nn.init.xavier_normal_(
+            self.params.view(self.num_quantum_layers, self.params.shape[1])
+        )
 
     # --------------------------
     # Circuito
@@ -173,10 +176,16 @@ class DVQuantumLayer(nn.Module):
 
 
     # --------------------------
-    # Ansätze (conservados)
+    # Ansätze (consistentes)
     # --------------------------
     def layered_circuit(self, params):
-        assert params is not None and len(params) == self.num_qubits * 4, "params must be 4*num_qubits"
+        expected = getattr(self, "params_per_layer", 4 * self.num_qubits)
+        if params is None or len(params) != expected:
+            raise ValueError(
+                f"[layered_circuit] Expected {expected} params per layer, got {0 if params is None else len(params)}. "
+                "Ajusta self.params_per_layer en __init__."
+            )
+
         param_idx = 0
         for q in range(self.num_qubits):
             qml.RZ(params[param_idx], wires=q); param_idx += 1
@@ -191,8 +200,20 @@ class DVQuantumLayer(nn.Module):
             qml.RX(params[param_idx], wires=q); param_idx += 1
             qml.RZ(params[param_idx], wires=q); param_idx += 1
 
+        # Fail-fast: no params desperdiciados
+        if param_idx != expected:
+            raise ValueError(f"[layered_circuit] Used {param_idx} params but expected {expected}.")
+
     def alternating_layer_tdcnot(self, params):
-        assert params is not None and len(params) == self.num_qubits * 4, "params must be 4*num_qubits"
+        # Con n impar, tu patrón actual genera (n-1) bloques por capa, no n.
+        n = self.num_qubits
+        expected = getattr(self, "params_per_layer", 4 * (n - (n % 2)))
+        if params is None or len(params) != expected:
+            raise ValueError(
+                f"[alternating_layer_tdcnot] Expected {expected} params per layer, got {0 if params is None else len(params)}. "
+                "Ajusta self.params_per_layer en __init__ (para n impar debe ser 4*(n-1))."
+            )
+
         param_idx = 0
 
         def build_tdcnot(ctrl, tgt):
@@ -203,15 +224,28 @@ class DVQuantumLayer(nn.Module):
             qml.RZ(params[param_idx], wires=ctrl); param_idx += 1
             qml.RZ(params[param_idx], wires=tgt);  param_idx += 1
 
+        # Pares (0,1), (2,3), ...
         for i in range(self.num_qubits - 1)[::2]:
             build_tdcnot(i, (i + 1) % self.num_qubits)
 
         qml.Barrier(wires=range(self.num_qubits))
 
+        # Pares (1,2), (3,4), ...
         for i in range(self.num_qubits)[1::2]:
             build_tdcnot(i, (i + 1) % self.num_qubits)
 
+        # Fail-fast
+        if param_idx != expected:
+            raise ValueError(f"[alternating_layer_tdcnot] Used {param_idx} params but expected {expected}.")
+
     def sim_circ_19(self, params):
+        expected = getattr(self, "params_per_layer", 2 * self.num_qubits)
+        if params is None or len(params) != expected:
+            raise ValueError(
+                f"[sim_circ_19] Expected {expected} params per layer, got {0 if params is None else len(params)}. "
+                "Ajusta self.params_per_layer en __init__."
+            )
+
         def add_rotations():
             pc = 0
             for i in range(self.num_qubits):
@@ -219,6 +253,9 @@ class DVQuantumLayer(nn.Module):
             for i in range(self.num_qubits):
                 qml.RZ(params[pc], wires=i); pc += 1
             qml.Barrier(wires=range(self.num_qubits))
+
+            if pc != expected:
+                raise ValueError(f"[sim_circ_19] Used {pc} params but expected {expected}.")
 
         def add_entangling_gates():
             qml.CNOT(wires=[self.num_qubits - 1, 0])
@@ -229,8 +266,12 @@ class DVQuantumLayer(nn.Module):
         add_entangling_gates()
 
     def farhi_ansatz(self, params):
-        if len(params) != (2 * self.num_qubits - 2):
-            raise ValueError("Insufficient parameters for farhi ansatz")
+        expected = getattr(self, "params_per_layer", (2 * self.num_qubits - 2))
+        if params is None or len(params) != expected:
+            raise ValueError(
+                f"[farhi] Expected {expected} params per layer, got {0 if params is None else len(params)}. "
+                "Ajusta self.params_per_layer en __init__."
+            )
 
         def RXX(theta, wires):
             qml.CNOT(wires=wires)
@@ -248,35 +289,56 @@ class DVQuantumLayer(nn.Module):
         for i in range(self.num_qubits - 1):
             RZX(params[pc], wires=[self.num_qubits - 1, i]); pc += 1
 
-    def create_sim_circuit_15(self, params):
-        if params is None or len(params) != 4 * self.num_qubits:
-            raise ValueError("params must be 4*num_qubits")
+        if pc != expected:
+            raise ValueError(f"[farhi] Used {pc} params but expected {expected}.")
 
+    def create_sim_circuit_15(self, params):
+        expected = getattr(self, "params_per_layer", 4 * self.num_qubits)
+        if params is None or len(params) != expected:
+            raise ValueError(
+                f"[sim_circ_15] Expected {expected} params per layer, got {0 if params is None else len(params)}. "
+                "Ajusta self.params_per_layer en __init__."
+            )
+
+        # Importante: consumo SECUENCIAL (sin %), para que el conteo sea 1:1
         p = 0
         for i in range(self.num_qubits):
             qml.RY(params[p], wires=i); p += 1
         qml.Barrier(wires=range(self.num_qubits))
 
-        # bloque entangling (simplificado, conserva tu idea)
+        # bloque entangling CRZ con parámetros secuenciales
         for i in reversed(range(self.num_qubits)):
-            qml.CRZ(params[p % len(params)], wires=[i, (i + 1) % self.num_qubits])
+            qml.CRZ(params[p], wires=[i, (i + 1) % self.num_qubits]); p += 1
         qml.Barrier(wires=range(self.num_qubits))
 
         for i in range(self.num_qubits):
-            qml.RX(params[p % len(params)], wires=i); p += 1
+            qml.RX(params[p], wires=i); p += 1
         qml.Barrier(wires=range(self.num_qubits))
+
+        # evita ctrl==tgt cuando num_qubits divide 3 (ej. 3)
+        shift = 3 % self.num_qubits
+        if shift == 0:
+            shift = 1
 
         for i in range(self.num_qubits):
             ctrl = (i + self.num_qubits - 1) % self.num_qubits
-            tgt = (ctrl + 3) % self.num_qubits
-            qml.CRZ(params[p % len(params)], wires=[ctrl, tgt]); p += 1
+            tgt = (ctrl + shift) % self.num_qubits
+            qml.CRZ(params[p], wires=[ctrl, tgt]); p += 1
 
         qml.Barrier(wires=range(self.num_qubits))
 
+        if p != expected:
+            raise ValueError(f"[sim_circ_15] Used {p} params but expected {expected}.")
+
     def create_circuit_5(self, params):
-        expected = (3 * self.num_qubits) * self.num_qubits
+        # El circuito realmente usa: 2n + n(n-1) + 2n = n(n-1) + 4n
+        n = self.num_qubits
+        expected = getattr(self, "params_per_layer", (n * (n - 1) + 4 * n))
         if params is None or len(params) != expected:
-            raise ValueError(f"Expected {expected} params, got {len(params)}")
+            raise ValueError(
+                f"[sim_circ_5] Expected {expected} params per layer, got {0 if params is None else len(params)}. "
+                "Ajusta self.params_per_layer en __init__ (NO uses 3*n*n)."
+            )
 
         p = 0
         for i in range(self.num_qubits):
@@ -299,4 +361,7 @@ class DVQuantumLayer(nn.Module):
             qml.RZ(params[p], wires=i); p += 1
 
         qml.Barrier(wires=range(self.num_qubits))
+
+        if p != expected:
+            raise ValueError(f"[sim_circ_5] Used {p} params but expected {expected}.")
 

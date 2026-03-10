@@ -1,0 +1,42 @@
+{
+  "eq_params": {
+    "example": "barrier",
+    "L": 1.0,
+    "T": 0.2,
+    "mass": 1.0,
+    "hbar": 1.0,
+    "n_level": 1,
+    "x_min": 0.0,
+    "x_max": 1.0,
+    "omega": 1.0,
+    "V0": 3.0,
+    "barrier_width": 0.2,
+    "x_center": 0.6,
+    "num_grid": 800
+  },
+  "device": "cpu",
+  "dtype": "float64",
+  "epochs": 1500,
+  "lr": 0.001,
+  "batch_size": 64,
+  "classic_network": [
+    2,
+    64,
+    64,
+    64,
+    2
+  ],
+  "print_every": 20,
+  "hard_bc": true,
+  "w_bc": 0.0,
+  "w_pde": 1.0,
+  "w_ic": 300.0,
+  "w_norm": 50.0,
+  "ic_grid": true,
+  "warmup_epochs": 300,
+  "focus_frac": 0.45,
+  "focus_margin_frac": 0.3,
+  "use_lbfgs": false,
+  "lbfgs_max_iter": 500,
+  "lbfgs_lr": 1.0
+}

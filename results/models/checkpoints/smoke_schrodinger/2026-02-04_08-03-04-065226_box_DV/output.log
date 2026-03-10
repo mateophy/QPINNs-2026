@@ -1,3 +1,0 @@
-It: 1, Loss: 3.089e+02, Loss_res: 3.039e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.216e+00, Loss_norm: 9.674e-01, Loss_gauge: 0.000e+00, w_pde: 6.67e-03, L^2_error: 1.087e+00, lr: 1.000e-03, Time: 7.41e+00
-Model state saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-04_11-10-45-258816_box_DV\model.pth
-Model weights saved to ./results/models/checkpoints/smoke_schrodinger\2026-02-04_11-10-45-258816_box_DV\model_weights.pth

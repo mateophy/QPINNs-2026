@@ -1,0 +1,10 @@
+{
+  "python": "3.11.14 | packaged by conda-forge | (main, Jan 26 2026, 23:39:55) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "git_commit": "7199eff8c4e103919045675f26397fbc054a37b1",
+  "git_status": "M \"notebooks/training/prueba_box_dv - copia.ipynb\"\n?? \"notebooks/operators_modifications/prueba_box copy.ipynb\"\n?? \"notebooks/operators_modifications/prueba_ho copy.ipynb\"\n?? results/box/Classical/20260222-155928_seed0_figtest/\n?? results/box/Classical/20260222-160524_seed0_figtest/\n?? results/box/DV/20260213-170259_seed0_test/\n?? results/figures/\n?? results/models/checkpoints/smoke_schrodinger/2026-02-13_17-03-00-445555_box_DV/\n?? results/models/checkpoints/smoke_schrodinger/2026-02-22_15-59-53-991051_box_Classical/\n?? results/models/checkpoints/smoke_schrodinger/2026-02-22_16-05-24-599606_box_Classical/",
+  "torch_version": "2.5.1+cpu",
+  "cuda_available": false,
+  "cuda_device": null,
+  "pennylane_version": "0.42.3"
+}

@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-03-01T18:15:38",
+  "potential": "unknown",
+  "solver": "DV",
+  "seed": 0,
+  "tag": "ho_DV_b1_layered_e600_w120_4q_2l",
+  "run_dir": "C:\\Users\\mateo garcia\\Downloads\\repo\\QPINNs-2026\\results\\ho\\DV\\20260301-174503_seed0_ho_DV_b1_layered_e600_w120_4q_2l",
+  "art_dir": "C:\\Users\\mateo garcia\\Downloads\\repo\\QPINNs-2026\\results\\ho\\DV\\20260301-174503_seed0_ho_DV_b1_layered_e600_w120_4q_2l\\artifacts",
+  "dtype": "float32",
+  "device": "cpu",
+  "n_params_total": 934,
+  "n_params_quantum": "",
+  "n_params_classical": "",
+  "epochs": 600,
+  "lr": 0.001,
+  "N_f": "",
+  "N_b": "",
+  "N_0": "",
+  "arch_repr": "DV(q=4, L=2, ansatz=layered_circuit, enc=angle, classic=[2, 64, 2])",
+  "classic_network": "[2, 64, 2]",
+  "num_qubits": "4",
+  "num_quantum_layers": "2",
+  "q_ansatz": "layered_circuit",
+  "encoding": "angle",
+  "has_exact": true,
+  "l2_rel_psi_T": 0.01670026406645775,
+  "l2_rel_prob_T": 0.008696907199919224,
+  "bdry_max_abs_psi_xmin": 0.021536588668823242,
+  "bdry_max_abs_psi_xmax": 0.020585836842656136,
+  "series": [
+    {
+      "t": 0.0,
+      "l2_rel_psi": 0.008319634944200516,
+      "l2_rel_prob": 0.010225633159279823
+    },
+    {
+      "t": 0.05000000074505806,
+      "l2_rel_psi": 0.009077171795070171,
+      "l2_rel_prob": 0.00908107589930296
+    },
+    {
+      "t": 0.10000000149011612,
+      "l2_rel_psi": 0.011179654859006405,
+      "l2_rel_prob": 0.00846007652580738
+    },
+    {
+      "t": 0.15000000596046448,
+      "l2_rel_psi": 0.01377274002879858,
+      "l2_rel_prob": 0.008253544569015503
+    },
+    {
+      "t": 0.20000000298023224,
+      "l2_rel_psi": 0.01670026406645775,
+      "l2_rel_prob": 0.008696907199919224
+    }
+  ]
+}

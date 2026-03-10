@@ -1,0 +1,365 @@
+2026-03-01 10:59:12,813 INFO:src.utils.logger:TEST: ahora deberías ver esto en el notebook y guardado en python.log
+INFO:src.utils.logger:TEST: ahora deberías ver esto en el notebook y guardado en python.log
+INFO:src.utils.logger:It: 1, Loss: 2.093e+02, Loss_res: 3.524e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.176e-01, Loss_norm: 9.796e-01, Loss_gauge: 0.000e+00, w_pde: 8.33e-03, L^2_error: 9.394e-01, lr: 1.000e-03, Time: 6.45e+00
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 5, Loss: 1.457e+02, Loss_res: 1.974e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.648e-01, Loss_norm: 8.779e-01, Loss_gauge: 0.000e+00, w_pde: 4.17e-02, L^2_error: 8.676e-01, lr: 1.000e-03, Time: 2.96e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 10, Loss: 8.452e+01, Loss_res: 5.628e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.230e-01, Loss_norm: 6.608e-01, Loss_gauge: 0.000e+00, w_pde: 8.33e-02, L^2_error: 8.463e-01, lr: 1.000e-03, Time: 5.76e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 15, Loss: 4.251e+01, Loss_res: 1.089e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.565e-01, Loss_norm: 4.047e-01, Loss_gauge: 0.000e+00, w_pde: 1.25e-01, L^2_error: 8.362e-01, lr: 1.000e-03, Time: 8.48e+01
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 20, Loss: 1.788e+01, Loss_res: 1.736e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.636e-02, Loss_norm: 1.783e-01, Loss_gauge: 0.000e+00, w_pde: 1.67e-01, L^2_error: 8.664e-01, lr: 1.000e-03, Time: 1.12e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 25, Loss: 7.922e+00, Loss_res: 2.414e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.078e-02, Loss_norm: 3.922e-02, Loss_gauge: 0.000e+00, w_pde: 2.08e-01, L^2_error: 9.090e-01, lr: 1.000e-03, Time: 1.40e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 30, Loss: 7.855e+00, Loss_res: 2.986e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.549e-03, Loss_norm: 3.721e-04, Loss_gauge: 0.000e+00, w_pde: 2.50e-01, L^2_error: 9.459e-01, lr: 1.000e-03, Time: 1.69e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 35, Loss: 1.111e+01, Loss_res: 3.318e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.503e-03, Loss_norm: 1.180e-02, Loss_gauge: 0.000e+00, w_pde: 2.92e-01, L^2_error: 9.681e-01, lr: 1.000e-03, Time: 1.98e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 40, Loss: 1.294e+01, Loss_res: 3.349e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.794e-03, Loss_norm: 1.543e-02, Loss_gauge: 0.000e+00, w_pde: 3.33e-01, L^2_error: 9.640e-01, lr: 1.000e-03, Time: 2.28e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 45, Loss: 1.285e+01, Loss_res: 3.175e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.691e-03, Loss_norm: 4.927e-03, Loss_gauge: 0.000e+00, w_pde: 3.75e-01, L^2_error: 9.465e-01, lr: 1.000e-03, Time: 2.58e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 50, Loss: 1.251e+01, Loss_res: 2.905e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.596e-03, Loss_norm: 1.986e-03, Loss_gauge: 0.000e+00, w_pde: 4.17e-01, L^2_error: 9.225e-01, lr: 1.000e-03, Time: 2.86e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 55, Loss: 1.311e+01, Loss_res: 2.688e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.881e-03, Loss_norm: 1.356e-02, Loss_gauge: 0.000e+00, w_pde: 4.58e-01, L^2_error: 9.027e-01, lr: 1.000e-03, Time: 3.14e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 60, Loss: 1.394e+01, Loss_res: 2.467e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.820e-03, Loss_norm: 2.935e-02, Loss_gauge: 0.000e+00, w_pde: 5.00e-01, L^2_error: 8.890e-01, lr: 1.000e-03, Time: 3.42e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 65, Loss: 1.514e+01, Loss_res: 2.409e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.593e-03, Loss_norm: 3.848e-02, Loss_gauge: 0.000e+00, w_pde: 5.42e-01, L^2_error: 8.819e-01, lr: 1.000e-03, Time: 3.70e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 70, Loss: 1.600e+01, Loss_res: 2.388e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.494e-03, Loss_norm: 3.876e-02, Loss_gauge: 0.000e+00, w_pde: 5.83e-01, L^2_error: 8.795e-01, lr: 1.000e-03, Time: 3.97e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 75, Loss: 1.727e+01, Loss_res: 2.477e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.456e-03, Loss_norm: 3.467e-02, Loss_gauge: 0.000e+00, w_pde: 6.25e-01, L^2_error: 8.778e-01, lr: 1.000e-03, Time: 4.25e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 80, Loss: 1.787e+01, Loss_res: 2.449e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.529e-03, Loss_norm: 3.090e-02, Loss_gauge: 0.000e+00, w_pde: 6.67e-01, L^2_error: 8.757e-01, lr: 1.000e-03, Time: 4.52e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 85, Loss: 1.883e+01, Loss_res: 2.454e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.192e-03, Loss_norm: 3.013e-02, Loss_gauge: 0.000e+00, w_pde: 7.08e-01, L^2_error: 8.698e-01, lr: 1.000e-03, Time: 4.81e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 90, Loss: 1.940e+01, Loss_res: 2.382e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.488e-03, Loss_norm: 3.286e-02, Loss_gauge: 0.000e+00, w_pde: 7.50e-01, L^2_error: 8.608e-01, lr: 1.000e-03, Time: 5.09e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 95, Loss: 2.017e+01, Loss_res: 2.324e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.304e-03, Loss_norm: 3.843e-02, Loss_gauge: 0.000e+00, w_pde: 7.92e-01, L^2_error: 8.480e-01, lr: 1.000e-03, Time: 5.39e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 100, Loss: 2.064e+01, Loss_res: 2.231e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.312e-03, Loss_norm: 4.534e-02, Loss_gauge: 0.000e+00, w_pde: 8.33e-01, L^2_error: 8.331e-01, lr: 1.000e-03, Time: 5.71e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 105, Loss: 2.092e+01, Loss_res: 2.126e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.228e-03, Loss_norm: 5.157e-02, Loss_gauge: 0.000e+00, w_pde: 8.75e-01, L^2_error: 8.160e-01, lr: 1.000e-03, Time: 6.02e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 110, Loss: 2.086e+01, Loss_res: 2.006e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.785e-03, Loss_norm: 5.635e-02, Loss_gauge: 0.000e+00, w_pde: 9.17e-01, L^2_error: 7.948e-01, lr: 1.000e-03, Time: 6.32e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 115, Loss: 2.036e+01, Loss_res: 1.859e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.990e-03, Loss_norm: 5.952e-02, Loss_gauge: 0.000e+00, w_pde: 9.58e-01, L^2_error: 7.705e-01, lr: 1.000e-03, Time: 6.60e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 120, Loss: 1.981e+01, Loss_res: 1.721e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.163e-03, Loss_norm: 6.153e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 7.351e-01, lr: 1.000e-03, Time: 6.89e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 125, Loss: 1.802e+01, Loss_res: 1.548e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.921e-03, Loss_norm: 6.142e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 6.906e-01, lr: 1.000e-03, Time: 7.21e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 130, Loss: 1.614e+01, Loss_res: 1.383e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 8.084e-03, Loss_norm: 5.804e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 6.383e-01, lr: 1.000e-03, Time: 7.52e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 135, Loss: 1.423e+01, Loss_res: 1.224e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.897e-03, Loss_norm: 5.231e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 5.793e-01, lr: 1.000e-03, Time: 7.79e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 140, Loss: 1.256e+01, Loss_res: 1.094e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.562e-03, Loss_norm: 4.510e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 5.212e-01, lr: 1.000e-03, Time: 8.07e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 145, Loss: 1.129e+01, Loss_res: 1.003e+01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.249e-03, Loss_norm: 3.811e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.681e-01, lr: 1.000e-03, Time: 8.34e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 150, Loss: 1.018e+01, Loss_res: 9.226e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.146e-03, Loss_norm: 3.350e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.189e-01, lr: 1.000e-03, Time: 8.62e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 155, Loss: 8.974e+00, Loss_res: 8.191e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.485e-03, Loss_norm: 3.228e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.833e-01, lr: 1.000e-03, Time: 8.89e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 160, Loss: 9.032e+00, Loss_res: 8.258e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.439e-03, Loss_norm: 3.295e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.516e-01, lr: 1.000e-03, Time: 9.16e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 165, Loss: 8.766e+00, Loss_res: 8.024e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.257e-03, Loss_norm: 3.546e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.307e-01, lr: 1.000e-03, Time: 9.43e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 170, Loss: 8.657e+00, Loss_res: 7.841e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.556e-03, Loss_norm: 3.541e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.142e-01, lr: 1.000e-03, Time: 9.70e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 175, Loss: 8.202e+00, Loss_res: 7.431e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.396e-03, Loss_norm: 3.435e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.072e-01, lr: 1.000e-03, Time: 9.96e+02
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 180, Loss: 7.732e+00, Loss_res: 7.010e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.252e-03, Loss_norm: 3.166e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.088e-01, lr: 1.000e-03, Time: 1.02e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 185, Loss: 7.630e+00, Loss_res: 6.935e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.187e-03, Loss_norm: 2.971e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.174e-01, lr: 1.000e-03, Time: 1.05e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 190, Loss: 7.070e+00, Loss_res: 6.352e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.292e-03, Loss_norm: 2.899e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.237e-01, lr: 1.000e-03, Time: 1.08e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 195, Loss: 6.665e+00, Loss_res: 5.993e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.105e-03, Loss_norm: 2.931e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.256e-01, lr: 1.000e-03, Time: 1.10e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 200, Loss: 6.278e+00, Loss_res: 5.568e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.299e-03, Loss_norm: 2.699e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.158e-01, lr: 1.000e-03, Time: 1.13e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 205, Loss: 5.646e+00, Loss_res: 5.011e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.047e-03, Loss_norm: 2.457e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.012e-01, lr: 1.000e-03, Time: 1.16e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 210, Loss: 5.082e+00, Loss_res: 4.478e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.001e-03, Loss_norm: 2.084e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.845e-01, lr: 1.000e-03, Time: 1.19e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 215, Loss: 4.800e+00, Loss_res: 4.249e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.855e-03, Loss_norm: 1.746e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.647e-01, lr: 1.000e-03, Time: 1.21e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 220, Loss: 4.102e+00, Loss_res: 3.596e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.743e-03, Loss_norm: 1.404e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.397e-01, lr: 1.000e-03, Time: 1.24e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 225, Loss: 4.047e+00, Loss_res: 3.535e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.839e-03, Loss_norm: 1.036e-02, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.161e-01, lr: 1.000e-03, Time: 1.27e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 230, Loss: 3.443e+00, Loss_res: 2.913e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.960e-03, Loss_norm: 7.956e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.965e-01, lr: 1.000e-03, Time: 1.29e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 235, Loss: 3.373e+00, Loss_res: 2.848e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.969e-03, Loss_norm: 6.654e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.800e-01, lr: 1.000e-03, Time: 1.32e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 240, Loss: 2.878e+00, Loss_res: 2.355e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.984e-03, Loss_norm: 5.520e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.649e-01, lr: 1.000e-03, Time: 1.35e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 245, Loss: 2.629e+00, Loss_res: 2.090e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.052e-03, Loss_norm: 5.014e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.518e-01, lr: 1.000e-03, Time: 1.38e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 250, Loss: 2.365e+00, Loss_res: 1.840e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.002e-03, Loss_norm: 4.917e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.412e-01, lr: 1.000e-03, Time: 1.40e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 255, Loss: 2.234e+00, Loss_res: 1.752e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.831e-03, Loss_norm: 4.733e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.316e-01, lr: 1.000e-03, Time: 1.43e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 260, Loss: 1.988e+00, Loss_res: 1.529e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.762e-03, Loss_norm: 3.822e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.222e-01, lr: 1.000e-03, Time: 1.46e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 265, Loss: 1.774e+00, Loss_res: 1.412e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.378e-03, Loss_norm: 3.588e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.136e-01, lr: 1.000e-03, Time: 1.48e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 270, Loss: 1.605e+00, Loss_res: 1.308e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.124e-03, Loss_norm: 3.255e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.061e-01, lr: 1.000e-03, Time: 1.51e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 275, Loss: 1.378e+00, Loss_res: 1.126e+00,  Loss_bcs: 0.000e+00, Loss_ut_ics: 9.471e-04, Loss_norm: 3.081e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 9.737e-02, lr: 1.000e-03, Time: 1.54e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 280, Loss: 1.144e+00, Loss_res: 9.467e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.268e-04, Loss_norm: 3.043e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 8.809e-02, lr: 1.000e-03, Time: 1.57e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 285, Loss: 1.048e+00, Loss_res: 8.923e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 5.756e-04, Loss_norm: 2.373e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 7.928e-02, lr: 1.000e-03, Time: 1.59e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 290, Loss: 9.114e-01, Loss_res: 7.974e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.083e-04, Loss_norm: 2.400e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 7.155e-02, lr: 1.000e-03, Time: 1.62e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 295, Loss: 8.281e-01, Loss_res: 7.417e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.026e-04, Loss_norm: 2.150e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 6.587e-02, lr: 1.000e-03, Time: 1.65e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 300, Loss: 6.898e-01, Loss_res: 6.210e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.367e-04, Loss_norm: 1.928e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 5.987e-02, lr: 1.000e-03, Time: 1.67e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 305, Loss: 6.434e-01, Loss_res: 5.895e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.853e-04, Loss_norm: 1.507e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 5.313e-02, lr: 1.000e-03, Time: 1.70e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 310, Loss: 6.338e-01, Loss_res: 5.927e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.315e-04, Loss_norm: 1.644e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.820e-02, lr: 1.000e-03, Time: 1.73e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 315, Loss: 5.432e-01, Loss_res: 5.100e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.118e-04, Loss_norm: 1.034e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.216e-02, lr: 1.000e-03, Time: 1.75e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 320, Loss: 5.310e-01, Loss_res: 5.075e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.177e-05, Loss_norm: 1.106e-03, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.072e-02, lr: 1.000e-03, Time: 1.78e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 325, Loss: 4.858e-01, Loss_res: 4.629e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 7.235e-05, Loss_norm: 9.584e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.817e-02, lr: 1.000e-03, Time: 1.81e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 330, Loss: 4.769e-01, Loss_res: 4.575e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 6.098e-05, Loss_norm: 8.254e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.402e-02, lr: 1.000e-03, Time: 1.83e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 335, Loss: 4.129e-01, Loss_res: 3.963e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.900e-05, Loss_norm: 8.659e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.105e-02, lr: 1.000e-03, Time: 1.86e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 340, Loss: 4.098e-01, Loss_res: 3.945e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.914e-05, Loss_norm: 5.969e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.955e-02, lr: 1.000e-03, Time: 1.89e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 345, Loss: 3.686e-01, Loss_res: 3.541e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.519e-05, Loss_norm: 6.335e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.985e-02, lr: 1.000e-03, Time: 1.91e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 350, Loss: 3.779e-01, Loss_res: 3.649e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.164e-05, Loss_norm: 5.104e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.929e-02, lr: 1.000e-03, Time: 1.94e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 355, Loss: 3.680e-01, Loss_res: 3.536e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 4.661e-05, Loss_norm: 5.623e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.832e-02, lr: 1.000e-03, Time: 1.97e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 360, Loss: 3.278e-01, Loss_res: 3.160e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.826e-05, Loss_norm: 4.461e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.646e-02, lr: 1.000e-03, Time: 1.99e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 365, Loss: 3.189e-01, Loss_res: 3.081e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.406e-05, Loss_norm: 4.579e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.643e-02, lr: 1.000e-03, Time: 2.02e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 370, Loss: 3.389e-01, Loss_res: 3.283e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.437e-05, Loss_norm: 3.981e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.452e-02, lr: 1.000e-03, Time: 2.05e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 375, Loss: 3.033e-01, Loss_res: 2.936e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.096e-05, Loss_norm: 3.920e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.333e-02, lr: 1.000e-03, Time: 2.08e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 380, Loss: 2.803e-01, Loss_res: 2.696e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.699e-05, Loss_norm: 3.068e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.312e-02, lr: 1.000e-03, Time: 2.10e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 385, Loss: 2.917e-01, Loss_res: 2.811e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.521e-05, Loss_norm: 3.635e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.257e-02, lr: 1.000e-03, Time: 2.13e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 390, Loss: 2.982e-01, Loss_res: 2.884e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.286e-05, Loss_norm: 3.121e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.209e-02, lr: 1.000e-03, Time: 2.16e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 395, Loss: 2.721e-01, Loss_res: 2.625e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.279e-05, Loss_norm: 2.789e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.187e-02, lr: 1.000e-03, Time: 2.18e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 400, Loss: 2.783e-01, Loss_res: 2.694e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.105e-05, Loss_norm: 2.371e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.097e-02, lr: 1.000e-03, Time: 2.21e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 405, Loss: 2.719e-01, Loss_res: 2.618e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.425e-05, Loss_norm: 3.140e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.086e-02, lr: 1.000e-03, Time: 2.24e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 410, Loss: 2.928e-01, Loss_res: 2.843e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.925e-05, Loss_norm: 2.314e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.914e-02, lr: 1.000e-03, Time: 2.27e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 415, Loss: 2.668e-01, Loss_res: 2.571e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.470e-05, Loss_norm: 2.052e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.925e-02, lr: 1.000e-03, Time: 2.29e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 420, Loss: 2.752e-01, Loss_res: 2.663e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 3.051e-05, Loss_norm: 2.440e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.926e-02, lr: 1.000e-03, Time: 2.32e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 425, Loss: 2.425e-01, Loss_res: 2.342e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.981e-05, Loss_norm: 1.659e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.739e-02, lr: 1.000e-03, Time: 2.35e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 430, Loss: 2.430e-01, Loss_res: 2.358e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.543e-05, Loss_norm: 1.569e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.724e-02, lr: 1.000e-03, Time: 2.38e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 435, Loss: 2.179e-01, Loss_res: 2.108e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.522e-05, Loss_norm: 1.739e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.736e-02, lr: 1.000e-03, Time: 2.40e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 440, Loss: 2.290e-01, Loss_res: 2.216e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.714e-05, Loss_norm: 1.338e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.772e-02, lr: 1.000e-03, Time: 2.43e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 445, Loss: 2.075e-01, Loss_res: 2.005e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.418e-05, Loss_norm: 1.807e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.704e-02, lr: 1.000e-03, Time: 2.46e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 450, Loss: 2.333e-01, Loss_res: 2.260e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.700e-05, Loss_norm: 1.162e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.603e-02, lr: 1.000e-03, Time: 2.48e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 455, Loss: 2.390e-01, Loss_res: 2.319e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.559e-05, Loss_norm: 1.300e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.548e-02, lr: 1.000e-03, Time: 2.51e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 460, Loss: 2.065e-01, Loss_res: 1.999e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.365e-05, Loss_norm: 1.415e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.576e-02, lr: 1.000e-03, Time: 2.54e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 465, Loss: 2.159e-01, Loss_res: 2.097e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.219e-05, Loss_norm: 1.333e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.632e-02, lr: 1.000e-03, Time: 2.56e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 470, Loss: 2.189e-01, Loss_res: 2.122e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.353e-05, Loss_norm: 1.478e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.588e-02, lr: 1.000e-03, Time: 2.59e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 475, Loss: 2.021e-01, Loss_res: 1.955e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.383e-05, Loss_norm: 1.207e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.520e-02, lr: 1.000e-03, Time: 2.62e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 480, Loss: 2.327e-01, Loss_res: 2.269e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.118e-05, Loss_norm: 1.122e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.579e-02, lr: 1.000e-03, Time: 2.65e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 485, Loss: 1.959e-01, Loss_res: 1.901e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.172e-05, Loss_norm: 7.441e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.447e-02, lr: 1.000e-03, Time: 2.67e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 490, Loss: 1.707e-01, Loss_res: 1.636e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.585e-05, Loss_norm: 1.197e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.365e-02, lr: 1.000e-03, Time: 2.70e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 495, Loss: 2.107e-01, Loss_res: 2.043e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.433e-05, Loss_norm: 6.284e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.466e-02, lr: 1.000e-03, Time: 2.73e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 500, Loss: 2.130e-01, Loss_res: 2.060e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.531e-05, Loss_norm: 1.344e-04, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.465e-02, lr: 1.000e-03, Time: 2.75e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 505, Loss: 1.782e-01, Loss_res: 1.717e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.437e-05, Loss_norm: 8.148e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.329e-02, lr: 1.000e-03, Time: 2.78e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 510, Loss: 1.820e-01, Loss_res: 1.742e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.919e-05, Loss_norm: 9.771e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.394e-02, lr: 1.000e-03, Time: 2.81e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 515, Loss: 1.798e-01, Loss_res: 1.742e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.066e-05, Loss_norm: 8.584e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.453e-02, lr: 1.000e-03, Time: 2.84e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 520, Loss: 1.820e-01, Loss_res: 1.763e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.124e-05, Loss_norm: 8.623e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.445e-02, lr: 1.000e-03, Time: 2.86e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 525, Loss: 1.942e-01, Loss_res: 1.888e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.042e-05, Loss_norm: 7.019e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.373e-02, lr: 1.000e-03, Time: 2.89e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 530, Loss: 1.891e-01, Loss_res: 1.827e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.416e-05, Loss_norm: 8.254e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.239e-02, lr: 1.000e-03, Time: 2.92e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 535, Loss: 1.862e-01, Loss_res: 1.796e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.501e-05, Loss_norm: 8.148e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.312e-02, lr: 1.000e-03, Time: 2.94e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 540, Loss: 1.775e-01, Loss_res: 1.702e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.785e-05, Loss_norm: 5.377e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.204e-02, lr: 1.000e-03, Time: 2.97e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 545, Loss: 1.710e-01, Loss_res: 1.645e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.453e-05, Loss_norm: 6.941e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.299e-02, lr: 1.000e-03, Time: 3.00e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 550, Loss: 1.591e-01, Loss_res: 1.524e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.566e-05, Loss_norm: 6.011e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.164e-02, lr: 1.000e-03, Time: 3.03e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 555, Loss: 1.483e-01, Loss_res: 1.421e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.364e-05, Loss_norm: 4.440e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.166e-02, lr: 1.000e-03, Time: 3.05e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 560, Loss: 1.632e-01, Loss_res: 1.577e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.100e-05, Loss_norm: 5.193e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.094e-02, lr: 1.000e-03, Time: 3.08e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 565, Loss: 1.598e-01, Loss_res: 1.545e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.021e-05, Loss_norm: 4.810e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.306e-02, lr: 1.000e-03, Time: 3.11e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 570, Loss: 1.594e-01, Loss_res: 1.545e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.769e-05, Loss_norm: 9.636e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.344e-02, lr: 1.000e-03, Time: 3.13e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 575, Loss: 1.596e-01, Loss_res: 1.531e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.513e-05, Loss_norm: 5.723e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.240e-02, lr: 1.000e-03, Time: 3.16e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 580, Loss: 1.436e-01, Loss_res: 1.382e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.975e-05, Loss_norm: 9.225e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.306e-02, lr: 1.000e-03, Time: 3.19e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 585, Loss: 1.401e-01, Loss_res: 1.352e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 1.871e-05, Loss_norm: 4.490e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.035e-02, lr: 1.000e-03, Time: 3.21e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 590, Loss: 1.648e-01, Loss_res: 1.590e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.186e-05, Loss_norm: 5.296e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.143e-02, lr: 1.000e-03, Time: 3.24e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 595, Loss: 1.541e-01, Loss_res: 1.470e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.762e-05, Loss_norm: 4.381e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.176e-02, lr: 1.000e-03, Time: 3.27e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth
+INFO:src.utils.logger:It: 600, Loss: 1.466e-01, Loss_res: 1.389e-01,  Loss_bcs: 0.000e+00, Loss_ut_ics: 2.932e-05, Loss_norm: 7.182e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.124e-02, lr: 1.000e-03, Time: 3.30e+03
+INFO:src.utils.logger:Model state saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model.pth
+INFO:src.utils.logger:Model weights saved to results\box\DV\20260301-105910_seed0_box_DV_b1_layered_e600_w120_4q_2l\checkpoints\2026-03-01_10-59-10-377536_box_DV_seed\model_weights.pth

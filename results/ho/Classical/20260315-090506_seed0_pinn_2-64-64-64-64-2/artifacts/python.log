@@ -1,0 +1,453 @@
+INFO:src.utils.logger:It: 1, Loss: 8.401e+01, Loss_res: 1.090e+00,  Loss_bcs: 2.976e-01, Loss_ut_ics: 2.787e-01, Loss_norm: 1.071e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-03, L^2_error: 1.040e+00, lr: 1.000e-03, Time: 6.29e-02
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 10, Loss: 2.644e+01, Loss_res: 4.668e-01,  Loss_bcs: 1.038e-01, Loss_ut_ics: 8.663e-02, Loss_norm: 3.328e-01, Loss_gauge: 0.000e+00, w_pde: 3.33e-02, L^2_error: 7.054e-01, lr: 1.000e-03, Time: 6.87e-01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 20, Loss: 1.797e+01, Loss_res: 5.839e-01,  Loss_bcs: 1.150e-01, Loss_ut_ics: 5.936e-02, Loss_norm: 4.691e-03, Loss_gauge: 0.000e+00, w_pde: 6.67e-02, L^2_error: 5.987e-01, lr: 1.000e-03, Time: 1.29e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 30, Loss: 1.385e+01, Loss_res: 2.496e-01,  Loss_bcs: 5.692e-02, Loss_ut_ics: 4.543e-02, Loss_norm: 1.374e-01, Loss_gauge: 0.000e+00, w_pde: 1.00e-01, L^2_error: 5.243e-01, lr: 1.000e-03, Time: 1.87e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 40, Loss: 9.585e+00, Loss_res: 1.784e-01,  Loss_bcs: 4.162e-02, Loss_ut_ics: 3.140e-02, Loss_norm: 9.932e-02, Loss_gauge: 0.000e+00, w_pde: 1.33e-01, L^2_error: 4.231e-01, lr: 1.000e-03, Time: 2.41e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 50, Loss: 5.343e+00, Loss_res: 1.794e-01,  Loss_bcs: 3.707e-02, Loss_ut_ics: 1.756e-02, Loss_norm: 6.642e-03, Loss_gauge: 0.000e+00, w_pde: 1.67e-01, L^2_error: 3.358e-01, lr: 1.000e-03, Time: 2.93e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 60, Loss: 2.091e+00, Loss_res: 9.213e-02,  Loss_bcs: 1.416e-02, Loss_ut_ics: 6.828e-03, Loss_norm: 1.041e-02, Loss_gauge: 0.000e+00, w_pde: 2.00e-01, L^2_error: 1.888e-01, lr: 1.000e-03, Time: 3.63e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 70, Loss: 8.567e-01, Loss_res: 7.057e-02,  Loss_bcs: 5.745e-03, Loss_ut_ics: 2.761e-03, Loss_norm: 6.050e-03, Loss_gauge: 0.000e+00, w_pde: 2.33e-01, L^2_error: 1.400e-01, lr: 1.000e-03, Time: 4.17e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 80, Loss: 6.375e-01, Loss_res: 5.890e-02,  Loss_bcs: 1.639e-03, Loss_ut_ics: 2.065e-03, Loss_norm: 7.209e-04, Loss_gauge: 0.000e+00, w_pde: 2.67e-01, L^2_error: 1.059e-01, lr: 1.000e-03, Time: 4.65e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 90, Loss: 3.802e-01, Loss_res: 3.663e-02,  Loss_bcs: 1.148e-03, Loss_ut_ics: 1.227e-03, Loss_norm: 1.012e-04, Loss_gauge: 0.000e+00, w_pde: 3.00e-01, L^2_error: 9.773e-02, lr: 1.000e-03, Time: 5.31e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 100, Loss: 2.370e-01, Loss_res: 3.134e-02,  Loss_bcs: 1.312e-03, Loss_ut_ics: 7.480e-04, Loss_norm: 8.258e-04, Loss_gauge: 0.000e+00, w_pde: 3.33e-01, L^2_error: 9.290e-02, lr: 1.000e-03, Time: 5.88e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 110, Loss: 1.741e-01, Loss_res: 2.197e-02,  Loss_bcs: 1.159e-03, Loss_ut_ics: 5.485e-04, Loss_norm: 3.229e-04, Loss_gauge: 0.000e+00, w_pde: 3.67e-01, L^2_error: 8.834e-02, lr: 1.000e-03, Time: 6.42e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 120, Loss: 1.216e-01, Loss_res: 2.003e-02,  Loss_bcs: 7.533e-04, Loss_ut_ics: 3.761e-04, Loss_norm: 5.721e-05, Loss_gauge: 0.000e+00, w_pde: 4.00e-01, L^2_error: 7.800e-02, lr: 1.000e-03, Time: 6.87e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 130, Loss: 9.012e-02, Loss_res: 1.931e-02,  Loss_bcs: 4.224e-04, Loss_ut_ics: 2.711e-04, Loss_norm: 5.497e-06, Loss_gauge: 0.000e+00, w_pde: 4.33e-01, L^2_error: 6.952e-02, lr: 1.000e-03, Time: 7.33e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 140, Loss: 7.066e-02, Loss_res: 1.617e-02,  Loss_bcs: 2.976e-04, Loss_ut_ics: 2.093e-04, Loss_norm: 2.212e-05, Loss_gauge: 0.000e+00, w_pde: 4.67e-01, L^2_error: 6.492e-02, lr: 1.000e-03, Time: 7.79e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 150, Loss: 5.971e-02, Loss_res: 1.565e-02,  Loss_bcs: 3.262e-04, Loss_ut_ics: 1.716e-04, Loss_norm: 6.213e-05, Loss_gauge: 0.000e+00, w_pde: 5.00e-01, L^2_error: 6.273e-02, lr: 1.000e-03, Time: 8.41e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 160, Loss: 5.418e-02, Loss_res: 1.700e-02,  Loss_bcs: 3.650e-04, Loss_ut_ics: 1.490e-04, Loss_norm: 4.141e-05, Loss_gauge: 0.000e+00, w_pde: 5.33e-01, L^2_error: 6.125e-02, lr: 1.000e-03, Time: 9.02e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 170, Loss: 4.923e-02, Loss_res: 1.499e-02,  Loss_bcs: 3.504e-04, Loss_ut_ics: 1.346e-04, Loss_norm: 1.773e-05, Loss_gauge: 0.000e+00, w_pde: 5.67e-01, L^2_error: 6.000e-02, lr: 1.000e-03, Time: 9.47e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 180, Loss: 4.645e-02, Loss_res: 1.388e-02,  Loss_bcs: 3.961e-04, Loss_ut_ics: 1.257e-04, Loss_norm: 1.971e-05, Loss_gauge: 0.000e+00, w_pde: 6.00e-01, L^2_error: 5.890e-02, lr: 1.000e-03, Time: 9.92e+00
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 190, Loss: 4.508e-02, Loss_res: 1.369e-02,  Loss_bcs: 3.865e-04, Loss_ut_ics: 1.200e-04, Loss_norm: 2.598e-05, Loss_gauge: 0.000e+00, w_pde: 6.33e-01, L^2_error: 5.795e-02, lr: 1.000e-03, Time: 1.04e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 200, Loss: 4.346e-02, Loss_res: 1.242e-02,  Loss_bcs: 3.535e-04, Loss_ut_ics: 1.160e-04, Loss_norm: 2.278e-05, Loss_gauge: 0.000e+00, w_pde: 6.67e-01, L^2_error: 5.681e-02, lr: 1.000e-03, Time: 1.08e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 210, Loss: 4.313e-02, Loss_res: 1.261e-02,  Loss_bcs: 3.728e-04, Loss_ut_ics: 1.130e-04, Loss_norm: 1.534e-05, Loss_gauge: 0.000e+00, w_pde: 7.00e-01, L^2_error: 5.561e-02, lr: 1.000e-03, Time: 1.13e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 220, Loss: 4.265e-02, Loss_res: 1.232e-02,  Loss_bcs: 3.876e-04, Loss_ut_ics: 1.107e-04, Loss_norm: 1.455e-05, Loss_gauge: 0.000e+00, w_pde: 7.33e-01, L^2_error: 5.454e-02, lr: 1.000e-03, Time: 1.17e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 230, Loss: 4.138e-02, Loss_res: 1.089e-02,  Loss_bcs: 3.960e-04, Loss_ut_ics: 1.087e-04, Loss_norm: 1.603e-05, Loss_gauge: 0.000e+00, w_pde: 7.67e-01, L^2_error: 5.340e-02, lr: 1.000e-03, Time: 1.22e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 240, Loss: 4.184e-02, Loss_res: 1.171e-02,  Loss_bcs: 3.760e-04, Loss_ut_ics: 1.069e-04, Loss_norm: 1.615e-05, Loss_gauge: 0.000e+00, w_pde: 8.00e-01, L^2_error: 5.224e-02, lr: 1.000e-03, Time: 1.26e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 250, Loss: 4.045e-02, Loss_res: 1.018e-02,  Loss_bcs: 3.586e-04, Loss_ut_ics: 1.053e-04, Loss_norm: 8.806e-06, Loss_gauge: 0.000e+00, w_pde: 8.33e-01, L^2_error: 5.107e-02, lr: 1.000e-03, Time: 1.31e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 260, Loss: 3.988e-02, Loss_res: 9.594e-03,  Loss_bcs: 3.923e-04, Loss_ut_ics: 1.039e-04, Loss_norm: 1.178e-05, Loss_gauge: 0.000e+00, w_pde: 8.67e-01, L^2_error: 5.007e-02, lr: 1.000e-03, Time: 1.37e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 270, Loss: 3.962e-02, Loss_res: 9.431e-03,  Loss_bcs: 3.600e-04, Loss_ut_ics: 1.026e-04, Loss_norm: 1.016e-05, Loss_gauge: 0.000e+00, w_pde: 9.00e-01, L^2_error: 4.895e-02, lr: 1.000e-03, Time: 1.42e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 280, Loss: 3.947e-02, Loss_res: 9.352e-03,  Loss_bcs: 3.538e-04, Loss_ut_ics: 1.013e-04, Loss_norm: 4.586e-06, Loss_gauge: 0.000e+00, w_pde: 9.33e-01, L^2_error: 4.771e-02, lr: 1.000e-03, Time: 1.48e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 290, Loss: 3.905e-02, Loss_res: 8.939e-03,  Loss_bcs: 3.535e-04, Loss_ut_ics: 1.001e-04, Loss_norm: 7.592e-06, Loss_gauge: 0.000e+00, w_pde: 9.67e-01, L^2_error: 4.672e-02, lr: 1.000e-03, Time: 1.56e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 300, Loss: 3.903e-02, Loss_res: 8.969e-03,  Loss_bcs: 3.479e-04, Loss_ut_ics: 9.903e-05, Loss_norm: 6.668e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.567e-02, lr: 1.000e-03, Time: 1.61e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 310, Loss: 3.801e-02, Loss_res: 8.276e-03,  Loss_bcs: 3.100e-04, Loss_ut_ics: 9.805e-05, Loss_norm: 4.508e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.451e-02, lr: 1.000e-03, Time: 1.66e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 320, Loss: 3.644e-02, Loss_res: 7.031e-03,  Loss_bcs: 3.135e-04, Loss_ut_ics: 9.697e-05, Loss_norm: 4.429e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.341e-02, lr: 1.000e-03, Time: 1.70e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 330, Loss: 3.617e-02, Loss_res: 7.062e-03,  Loss_bcs: 3.012e-04, Loss_ut_ics: 9.600e-05, Loss_norm: 5.109e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.245e-02, lr: 1.000e-03, Time: 1.75e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 340, Loss: 3.589e-02, Loss_res: 7.070e-03,  Loss_bcs: 2.889e-04, Loss_ut_ics: 9.509e-05, Loss_norm: 4.212e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.145e-02, lr: 1.000e-03, Time: 1.79e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 350, Loss: 3.573e-02, Loss_res: 7.170e-03,  Loss_bcs: 2.704e-04, Loss_ut_ics: 9.428e-05, Loss_norm: 4.530e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.050e-02, lr: 1.000e-03, Time: 1.84e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 360, Loss: 3.439e-02, Loss_res: 6.046e-03,  Loss_bcs: 2.868e-04, Loss_ut_ics: 9.351e-05, Loss_norm: 4.094e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.963e-02, lr: 1.000e-03, Time: 1.88e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 370, Loss: 3.330e-02, Loss_res: 5.226e-03,  Loss_bcs: 2.677e-04, Loss_ut_ics: 9.269e-05, Loss_norm: 2.777e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.879e-02, lr: 1.000e-03, Time: 1.93e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 380, Loss: 3.326e-02, Loss_res: 5.395e-03,  Loss_bcs: 2.702e-04, Loss_ut_ics: 9.197e-05, Loss_norm: 3.113e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.806e-02, lr: 1.000e-03, Time: 1.97e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 390, Loss: 3.289e-02, Loss_res: 5.242e-03,  Loss_bcs: 2.586e-04, Loss_ut_ics: 9.129e-05, Loss_norm: 3.111e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.733e-02, lr: 1.000e-03, Time: 2.02e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 400, Loss: 3.246e-02, Loss_res: 5.004e-03,  Loss_bcs: 2.563e-04, Loss_ut_ics: 9.064e-05, Loss_norm: 2.863e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.661e-02, lr: 1.000e-03, Time: 2.06e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 410, Loss: 3.228e-02, Loss_res: 5.047e-03,  Loss_bcs: 2.490e-04, Loss_ut_ics: 8.995e-05, Loss_norm: 2.501e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.586e-02, lr: 1.000e-03, Time: 2.11e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 420, Loss: 3.158e-02, Loss_res: 4.518e-03,  Loss_bcs: 2.509e-04, Loss_ut_ics: 8.936e-05, Loss_norm: 2.803e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.534e-02, lr: 1.000e-03, Time: 2.15e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 430, Loss: 3.191e-02, Loss_res: 5.050e-03,  Loss_bcs: 2.381e-04, Loss_ut_ics: 8.872e-05, Loss_norm: 2.074e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.467e-02, lr: 1.000e-03, Time: 2.20e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 440, Loss: 3.143e-02, Loss_res: 4.769e-03,  Loss_bcs: 2.357e-04, Loss_ut_ics: 8.809e-05, Loss_norm: 1.737e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.413e-02, lr: 1.000e-03, Time: 2.24e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 450, Loss: 3.107e-02, Loss_res: 4.568e-03,  Loss_bcs: 2.325e-04, Loss_ut_ics: 8.755e-05, Loss_norm: 3.972e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.348e-02, lr: 1.000e-03, Time: 2.29e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 460, Loss: 3.058e-02, Loss_res: 4.243e-03,  Loss_bcs: 2.274e-04, Loss_ut_ics: 8.701e-05, Loss_norm: 2.231e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.300e-02, lr: 1.000e-03, Time: 2.34e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 470, Loss: 3.050e-02, Loss_res: 4.370e-03,  Loss_bcs: 2.278e-04, Loss_ut_ics: 8.632e-05, Loss_norm: 1.605e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.256e-02, lr: 1.000e-03, Time: 2.40e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 480, Loss: 2.955e-02, Loss_res: 3.603e-03,  Loss_bcs: 2.216e-04, Loss_ut_ics: 8.574e-05, Loss_norm: 2.937e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.204e-02, lr: 1.000e-03, Time: 2.45e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 490, Loss: 2.958e-02, Loss_res: 3.769e-03,  Loss_bcs: 2.261e-04, Loss_ut_ics: 8.527e-05, Loss_norm: 2.381e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.152e-02, lr: 1.000e-03, Time: 2.50e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 500, Loss: 2.947e-02, Loss_res: 3.868e-03,  Loss_bcs: 2.149e-04, Loss_ut_ics: 8.462e-05, Loss_norm: 1.982e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.120e-02, lr: 1.000e-03, Time: 2.55e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 510, Loss: 2.913e-02, Loss_res: 3.696e-03,  Loss_bcs: 2.140e-04, Loss_ut_ics: 8.405e-05, Loss_norm: 1.964e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.069e-02, lr: 1.000e-03, Time: 2.59e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 520, Loss: 2.938e-02, Loss_res: 4.120e-03,  Loss_bcs: 2.110e-04, Loss_ut_ics: 8.350e-05, Loss_norm: 1.027e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.036e-02, lr: 1.000e-03, Time: 2.64e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 530, Loss: 2.878e-02, Loss_res: 3.681e-03,  Loss_bcs: 2.037e-04, Loss_ut_ics: 8.297e-05, Loss_norm: 1.364e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.999e-02, lr: 1.000e-03, Time: 2.68e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 540, Loss: 2.854e-02, Loss_res: 3.624e-03,  Loss_bcs: 2.002e-04, Loss_ut_ics: 8.239e-05, Loss_norm: 1.628e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.963e-02, lr: 1.000e-03, Time: 2.73e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 550, Loss: 2.813e-02, Loss_res: 3.375e-03,  Loss_bcs: 1.957e-04, Loss_ut_ics: 8.186e-05, Loss_norm: 1.705e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.924e-02, lr: 1.000e-03, Time: 2.78e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 560, Loss: 2.800e-02, Loss_res: 3.412e-03,  Loss_bcs: 1.961e-04, Loss_ut_ics: 8.129e-05, Loss_norm: 1.971e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.884e-02, lr: 1.000e-03, Time: 2.82e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 570, Loss: 2.759e-02, Loss_res: 3.165e-03,  Loss_bcs: 1.944e-04, Loss_ut_ics: 8.075e-05, Loss_norm: 1.126e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.851e-02, lr: 1.000e-03, Time: 2.87e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 580, Loss: 2.736e-02, Loss_res: 3.079e-03,  Loss_bcs: 1.914e-04, Loss_ut_ics: 8.029e-05, Loss_norm: 1.882e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.835e-02, lr: 1.000e-03, Time: 2.92e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 590, Loss: 2.705e-02, Loss_res: 2.966e-03,  Loss_bcs: 1.898e-04, Loss_ut_ics: 7.964e-05, Loss_norm: 1.299e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.801e-02, lr: 1.000e-03, Time: 2.96e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 600, Loss: 2.719e-02, Loss_res: 3.278e-03,  Loss_bcs: 1.835e-04, Loss_ut_ics: 7.909e-05, Loss_norm: 2.019e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.779e-02, lr: 1.000e-03, Time: 3.01e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 610, Loss: 2.693e-02, Loss_res: 3.141e-03,  Loss_bcs: 1.936e-04, Loss_ut_ics: 7.865e-05, Loss_norm: 2.623e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.737e-02, lr: 1.000e-03, Time: 3.05e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 620, Loss: 2.675e-02, Loss_res: 3.166e-03,  Loss_bcs: 1.859e-04, Loss_ut_ics: 7.799e-05, Loss_norm: 1.718e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.723e-02, lr: 1.000e-03, Time: 3.10e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 630, Loss: 2.665e-02, Loss_res: 3.080e-03,  Loss_bcs: 1.774e-04, Loss_ut_ics: 7.795e-05, Loss_norm: 1.614e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.716e-02, lr: 1.000e-03, Time: 3.14e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 640, Loss: 2.652e-02, Loss_res: 2.941e-03,  Loss_bcs: 1.834e-04, Loss_ut_ics: 7.797e-05, Loss_norm: 1.934e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.658e-02, lr: 1.000e-03, Time: 3.19e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 650, Loss: 2.671e-02, Loss_res: 2.947e-03,  Loss_bcs: 1.865e-04, Loss_ut_ics: 7.856e-05, Loss_norm: 3.090e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.632e-02, lr: 1.000e-03, Time: 3.23e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 660, Loss: 3.443e-02, Loss_res: 2.892e-03,  Loss_bcs: 2.511e-04, Loss_ut_ics: 1.043e-04, Loss_norm: 8.693e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.869e-02, lr: 1.000e-03, Time: 3.28e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 670, Loss: 2.921e-02, Loss_res: 2.689e-03,  Loss_bcs: 2.067e-04, Loss_ut_ics: 8.771e-05, Loss_norm: 5.431e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.593e-02, lr: 1.000e-03, Time: 3.32e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 680, Loss: 2.650e-02, Loss_res: 2.792e-03,  Loss_bcs: 1.667e-04, Loss_ut_ics: 7.846e-05, Loss_norm: 2.893e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.624e-02, lr: 1.000e-03, Time: 3.36e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 690, Loss: 2.578e-02, Loss_res: 2.529e-03,  Loss_bcs: 1.777e-04, Loss_ut_ics: 7.692e-05, Loss_norm: 2.743e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.548e-02, lr: 1.000e-03, Time: 3.41e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 700, Loss: 2.565e-02, Loss_res: 2.730e-03,  Loss_bcs: 1.642e-04, Loss_ut_ics: 7.586e-05, Loss_norm: 7.609e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.609e-02, lr: 1.000e-03, Time: 3.45e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 710, Loss: 2.455e-02, Loss_res: 2.455e-03,  Loss_bcs: 1.643e-04, Loss_ut_ics: 7.309e-05, Loss_norm: 1.680e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.532e-02, lr: 1.000e-03, Time: 3.50e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 720, Loss: 2.492e-02, Loss_res: 2.588e-03,  Loss_bcs: 1.657e-04, Loss_ut_ics: 7.389e-05, Loss_norm: 9.230e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.500e-02, lr: 1.000e-03, Time: 3.54e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 730, Loss: 4.184e-02, Loss_res: 2.635e-03,  Loss_bcs: 2.947e-04, Loss_ut_ics: 1.297e-04, Loss_norm: 1.459e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.179e-02, lr: 1.000e-03, Time: 3.59e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 740, Loss: 2.928e-02, Loss_res: 2.684e-03,  Loss_bcs: 1.718e-04, Loss_ut_ics: 8.806e-05, Loss_norm: 5.341e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.227e-02, lr: 1.000e-03, Time: 3.63e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 750, Loss: 3.428e-02, Loss_res: 2.660e-03,  Loss_bcs: 2.403e-04, Loss_ut_ics: 1.046e-04, Loss_norm: 9.389e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.525e-02, lr: 1.000e-03, Time: 3.68e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 760, Loss: 2.543e-02, Loss_res: 2.271e-03,  Loss_bcs: 1.771e-04, Loss_ut_ics: 7.660e-05, Loss_norm: 3.190e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.498e-02, lr: 1.000e-03, Time: 3.72e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 770, Loss: 2.443e-02, Loss_res: 2.351e-03,  Loss_bcs: 1.525e-04, Loss_ut_ics: 7.308e-05, Loss_norm: 6.883e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.453e-02, lr: 1.000e-03, Time: 3.77e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 780, Loss: 2.338e-02, Loss_res: 2.405e-03,  Loss_bcs: 1.489e-04, Loss_ut_ics: 6.941e-05, Loss_norm: 7.225e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.433e-02, lr: 1.000e-03, Time: 3.81e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 790, Loss: 2.295e-02, Loss_res: 2.130e-03,  Loss_bcs: 1.464e-04, Loss_ut_ics: 6.890e-05, Loss_norm: 1.595e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.384e-02, lr: 1.000e-03, Time: 3.86e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 800, Loss: 2.292e-02, Loss_res: 2.301e-03,  Loss_bcs: 1.420e-04, Loss_ut_ics: 6.827e-05, Loss_norm: 9.659e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.389e-02, lr: 1.000e-03, Time: 3.90e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 810, Loss: 2.278e-02, Loss_res: 2.316e-03,  Loss_bcs: 1.446e-04, Loss_ut_ics: 6.773e-05, Loss_norm: 1.267e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.347e-02, lr: 1.000e-03, Time: 3.95e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 820, Loss: 2.246e-02, Loss_res: 2.226e-03,  Loss_bcs: 1.434e-04, Loss_ut_ics: 6.695e-05, Loss_norm: 1.903e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.333e-02, lr: 1.000e-03, Time: 3.99e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 830, Loss: 2.209e-02, Loss_res: 2.027e-03,  Loss_bcs: 1.429e-04, Loss_ut_ics: 6.639e-05, Loss_norm: 7.701e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.320e-02, lr: 1.000e-03, Time: 4.04e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 840, Loss: 2.298e-02, Loss_res: 2.272e-03,  Loss_bcs: 1.499e-04, Loss_ut_ics: 6.852e-05, Loss_norm: 4.218e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.309e-02, lr: 1.000e-03, Time: 4.08e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 850, Loss: 4.274e-02, Loss_res: 2.527e-03,  Loss_bcs: 2.754e-04, Loss_ut_ics: 1.331e-04, Loss_norm: 1.040e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.174e-02, lr: 1.000e-03, Time: 4.13e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 860, Loss: 2.190e-02, Loss_res: 2.268e-03,  Loss_bcs: 1.332e-04, Loss_ut_ics: 6.500e-05, Loss_norm: 2.398e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.676e-02, lr: 1.000e-03, Time: 4.17e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 870, Loss: 3.337e-02, Loss_res: 2.360e-03,  Loss_bcs: 2.239e-04, Loss_ut_ics: 1.026e-04, Loss_norm: 6.380e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.583e-02, lr: 1.000e-03, Time: 4.22e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 880, Loss: 2.181e-02, Loss_res: 2.024e-03,  Loss_bcs: 1.321e-04, Loss_ut_ics: 6.550e-05, Loss_norm: 6.379e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.250e-02, lr: 1.000e-03, Time: 4.26e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 890, Loss: 2.209e-02, Loss_res: 2.247e-03,  Loss_bcs: 1.305e-04, Loss_ut_ics: 6.571e-05, Loss_norm: 8.689e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.331e-02, lr: 1.000e-03, Time: 4.31e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 900, Loss: 2.144e-02, Loss_res: 2.097e-03,  Loss_bcs: 1.331e-04, Loss_ut_ics: 6.402e-05, Loss_norm: 1.086e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.222e-02, lr: 1.000e-03, Time: 4.36e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 910, Loss: 2.078e-02, Loss_res: 2.067e-03,  Loss_bcs: 1.228e-04, Loss_ut_ics: 6.196e-05, Loss_norm: 1.546e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.207e-02, lr: 1.000e-03, Time: 4.40e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 920, Loss: 2.082e-02, Loss_res: 2.130e-03,  Loss_bcs: 1.227e-04, Loss_ut_ics: 6.189e-05, Loss_norm: 8.469e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.222e-02, lr: 1.000e-03, Time: 4.45e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 930, Loss: 2.047e-02, Loss_res: 2.060e-03,  Loss_bcs: 1.209e-04, Loss_ut_ics: 6.096e-05, Loss_norm: 6.309e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.201e-02, lr: 1.000e-03, Time: 4.49e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 940, Loss: 2.062e-02, Loss_res: 2.021e-03,  Loss_bcs: 1.206e-04, Loss_ut_ics: 6.160e-05, Loss_norm: 2.300e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.171e-02, lr: 1.000e-03, Time: 4.54e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 950, Loss: 2.063e-02, Loss_res: 2.025e-03,  Loss_bcs: 1.234e-04, Loss_ut_ics: 6.159e-05, Loss_norm: 1.639e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.158e-02, lr: 1.000e-03, Time: 4.58e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 960, Loss: 2.112e-02, Loss_res: 1.935e-03,  Loss_bcs: 1.258e-04, Loss_ut_ics: 6.352e-05, Loss_norm: 2.488e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.179e-02, lr: 1.000e-03, Time: 4.63e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 970, Loss: 7.009e-02, Loss_res: 3.171e-03,  Loss_bcs: 4.213e-04, Loss_ut_ics: 2.216e-04, Loss_norm: 2.045e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.950e-02, lr: 1.000e-03, Time: 4.67e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 980, Loss: 4.008e-02, Loss_res: 2.524e-03,  Loss_bcs: 2.110e-04, Loss_ut_ics: 1.245e-04, Loss_norm: 4.114e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 3.307e-02, lr: 1.000e-03, Time: 4.72e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 990, Loss: 2.774e-02, Loss_res: 2.068e-03,  Loss_bcs: 1.720e-04, Loss_ut_ics: 8.498e-05, Loss_norm: 5.561e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.185e-02, lr: 1.000e-03, Time: 4.76e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1000, Loss: 1.937e-02, Loss_res: 1.966e-03,  Loss_bcs: 1.105e-04, Loss_ut_ics: 5.765e-05, Loss_norm: 1.793e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.118e-02, lr: 1.000e-03, Time: 4.81e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1010, Loss: 2.029e-02, Loss_res: 1.864e-03,  Loss_bcs: 1.087e-04, Loss_ut_ics: 6.107e-05, Loss_norm: 2.393e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.181e-02, lr: 1.000e-03, Time: 4.85e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1020, Loss: 1.890e-02, Loss_res: 1.734e-03,  Loss_bcs: 1.084e-04, Loss_ut_ics: 5.685e-05, Loss_norm: 1.601e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.076e-02, lr: 1.000e-03, Time: 4.90e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1030, Loss: 1.874e-02, Loss_res: 1.929e-03,  Loss_bcs: 1.015e-04, Loss_ut_ics: 5.569e-05, Loss_norm: 5.695e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.078e-02, lr: 1.000e-03, Time: 4.95e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1040, Loss: 1.838e-02, Loss_res: 1.718e-03,  Loss_bcs: 1.015e-04, Loss_ut_ics: 5.521e-05, Loss_norm: 5.536e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.048e-02, lr: 1.000e-03, Time: 5.00e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1050, Loss: 1.812e-02, Loss_res: 1.764e-03,  Loss_bcs: 9.806e-05, Loss_ut_ics: 5.419e-05, Loss_norm: 9.929e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.038e-02, lr: 1.000e-03, Time: 5.05e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1060, Loss: 1.794e-02, Loss_res: 1.778e-03,  Loss_bcs: 9.675e-05, Loss_ut_ics: 5.355e-05, Loss_norm: 9.644e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.024e-02, lr: 1.000e-03, Time: 5.10e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1070, Loss: 1.811e-02, Loss_res: 1.626e-03,  Loss_bcs: 9.884e-05, Loss_ut_ics: 5.460e-05, Loss_norm: 1.894e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.023e-02, lr: 1.000e-03, Time: 5.14e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1080, Loss: 2.765e-02, Loss_res: 2.034e-03,  Loss_bcs: 1.590e-04, Loss_ut_ics: 8.482e-05, Loss_norm: 5.414e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.522e-02, lr: 1.000e-03, Time: 5.20e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1090, Loss: 6.975e-02, Loss_res: 2.912e-03,  Loss_bcs: 4.083e-04, Loss_ut_ics: 2.214e-04, Loss_norm: 2.286e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.942e-02, lr: 1.000e-03, Time: 5.25e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1100, Loss: 1.963e-02, Loss_res: 1.729e-03,  Loss_bcs: 9.967e-05, Loss_ut_ics: 5.934e-05, Loss_norm: 2.318e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.980e-02, lr: 1.000e-03, Time: 5.30e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1110, Loss: 2.068e-02, Loss_res: 1.687e-03,  Loss_bcs: 1.058e-04, Loss_ut_ics: 6.296e-05, Loss_norm: 4.993e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.296e-02, lr: 1.000e-03, Time: 5.35e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1120, Loss: 1.924e-02, Loss_res: 1.615e-03,  Loss_bcs: 1.028e-04, Loss_ut_ics: 5.840e-05, Loss_norm: 2.246e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.992e-02, lr: 1.000e-03, Time: 5.40e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1130, Loss: 1.654e-02, Loss_res: 1.433e-03,  Loss_bcs: 8.254e-05, Loss_ut_ics: 5.009e-05, Loss_norm: 5.758e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.943e-02, lr: 1.000e-03, Time: 5.45e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1140, Loss: 1.641e-02, Loss_res: 1.529e-03,  Loss_bcs: 8.250e-05, Loss_ut_ics: 4.932e-05, Loss_norm: 7.172e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.951e-02, lr: 1.000e-03, Time: 5.49e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1150, Loss: 1.609e-02, Loss_res: 1.413e-03,  Loss_bcs: 8.091e-05, Loss_ut_ics: 4.865e-05, Loss_norm: 4.662e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.918e-02, lr: 1.000e-03, Time: 5.54e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1160, Loss: 1.605e-02, Loss_res: 1.565e-03,  Loss_bcs: 7.949e-05, Loss_ut_ics: 4.803e-05, Loss_norm: 4.287e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.916e-02, lr: 1.000e-03, Time: 5.59e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1170, Loss: 1.635e-02, Loss_res: 1.444e-03,  Loss_bcs: 7.952e-05, Loss_ut_ics: 4.943e-05, Loss_norm: 6.538e-08, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.945e-02, lr: 1.000e-03, Time: 5.65e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1180, Loss: 1.576e-02, Loss_res: 1.451e-03,  Loss_bcs: 7.516e-05, Loss_ut_ics: 4.743e-05, Loss_norm: 1.009e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.901e-02, lr: 1.000e-03, Time: 5.69e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1190, Loss: 1.544e-02, Loss_res: 1.487e-03,  Loss_bcs: 7.055e-05, Loss_ut_ics: 4.629e-05, Loss_norm: 3.077e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.874e-02, lr: 1.000e-03, Time: 5.74e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1200, Loss: 1.591e-02, Loss_res: 1.503e-03,  Loss_bcs: 7.520e-05, Loss_ut_ics: 4.777e-05, Loss_norm: 9.871e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.890e-02, lr: 1.000e-03, Time: 5.78e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1210, Loss: 7.242e-02, Loss_res: 2.647e-03,  Loss_bcs: 4.090e-04, Loss_ut_ics: 2.312e-04, Loss_norm: 1.776e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.432e-02, lr: 1.000e-03, Time: 5.83e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1220, Loss: 7.795e-02, Loss_res: 2.658e-03,  Loss_bcs: 4.196e-04, Loss_ut_ics: 2.495e-04, Loss_norm: 1.786e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.500e-02, lr: 1.000e-03, Time: 5.87e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1230, Loss: 2.162e-02, Loss_res: 1.711e-03,  Loss_bcs: 1.041e-04, Loss_ut_ics: 6.601e-05, Loss_norm: 2.090e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.827e-02, lr: 1.000e-03, Time: 5.92e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1240, Loss: 1.649e-02, Loss_res: 1.387e-03,  Loss_bcs: 7.623e-05, Loss_ut_ics: 5.008e-05, Loss_norm: 3.332e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.267e-02, lr: 1.000e-03, Time: 5.96e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1250, Loss: 1.467e-02, Loss_res: 1.300e-03,  Loss_bcs: 6.408e-05, Loss_ut_ics: 4.436e-05, Loss_norm: 1.834e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.952e-02, lr: 1.000e-03, Time: 6.01e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1260, Loss: 1.425e-02, Loss_res: 1.357e-03,  Loss_bcs: 5.860e-05, Loss_ut_ics: 4.279e-05, Loss_norm: 5.088e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.840e-02, lr: 1.000e-03, Time: 6.06e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1270, Loss: 1.402e-02, Loss_res: 1.317e-03,  Loss_bcs: 5.753e-05, Loss_ut_ics: 4.214e-05, Loss_norm: 3.777e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.787e-02, lr: 1.000e-03, Time: 6.10e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1280, Loss: 1.397e-02, Loss_res: 1.375e-03,  Loss_bcs: 5.746e-05, Loss_ut_ics: 4.178e-05, Loss_norm: 1.557e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.764e-02, lr: 1.000e-03, Time: 6.15e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1290, Loss: 1.373e-02, Loss_res: 1.370e-03,  Loss_bcs: 5.521e-05, Loss_ut_ics: 4.102e-05, Loss_norm: 5.360e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.757e-02, lr: 1.000e-03, Time: 6.19e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1300, Loss: 1.353e-02, Loss_res: 1.356e-03,  Loss_bcs: 5.384e-05, Loss_ut_ics: 4.038e-05, Loss_norm: 4.081e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.750e-02, lr: 1.000e-03, Time: 6.24e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1310, Loss: 1.333e-02, Loss_res: 1.336e-03,  Loss_bcs: 5.226e-05, Loss_ut_ics: 3.982e-05, Loss_norm: 9.058e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.732e-02, lr: 1.000e-03, Time: 6.28e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1320, Loss: 1.321e-02, Loss_res: 1.357e-03,  Loss_bcs: 5.167e-05, Loss_ut_ics: 3.932e-05, Loss_norm: 2.102e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.728e-02, lr: 1.000e-03, Time: 6.33e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1330, Loss: 1.298e-02, Loss_res: 1.290e-03,  Loss_bcs: 4.998e-05, Loss_ut_ics: 3.878e-05, Loss_norm: 1.742e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.707e-02, lr: 1.000e-03, Time: 6.37e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1340, Loss: 1.268e-02, Loss_res: 1.170e-03,  Loss_bcs: 4.938e-05, Loss_ut_ics: 3.820e-05, Loss_norm: 3.414e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.697e-02, lr: 1.000e-03, Time: 6.42e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1350, Loss: 1.253e-02, Loss_res: 1.213e-03,  Loss_bcs: 4.503e-05, Loss_ut_ics: 3.758e-05, Loss_norm: 1.205e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.689e-02, lr: 1.000e-03, Time: 6.47e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1360, Loss: 1.234e-02, Loss_res: 1.209e-03,  Loss_bcs: 4.555e-05, Loss_ut_ics: 3.697e-05, Loss_norm: 7.129e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.672e-02, lr: 1.000e-03, Time: 6.51e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1370, Loss: 1.216e-02, Loss_res: 1.194e-03,  Loss_bcs: 4.484e-05, Loss_ut_ics: 3.641e-05, Loss_norm: 9.869e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.660e-02, lr: 1.000e-03, Time: 6.56e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1380, Loss: 1.200e-02, Loss_res: 1.189e-03,  Loss_bcs: 4.264e-05, Loss_ut_ics: 3.591e-05, Loss_norm: 5.349e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.654e-02, lr: 1.000e-03, Time: 6.60e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1390, Loss: 1.192e-02, Loss_res: 1.138e-03,  Loss_bcs: 4.168e-05, Loss_ut_ics: 3.581e-05, Loss_norm: 9.103e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.647e-02, lr: 1.000e-03, Time: 6.65e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1400, Loss: 1.701e-02, Loss_res: 1.293e-03,  Loss_bcs: 6.875e-05, Loss_ut_ics: 5.214e-05, Loss_norm: 4.264e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.987e-02, lr: 1.000e-03, Time: 6.69e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1410, Loss: 1.133e-01, Loss_res: 3.615e-03,  Loss_bcs: 6.215e-04, Loss_ut_ics: 3.633e-04, Loss_norm: 2.603e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 4.671e-02, lr: 1.000e-03, Time: 6.74e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1420, Loss: 4.420e-02, Loss_res: 1.779e-03,  Loss_bcs: 2.293e-04, Loss_ut_ics: 1.406e-04, Loss_norm: 1.190e-05, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 2.747e-02, lr: 1.000e-03, Time: 6.79e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1430, Loss: 1.285e-02, Loss_res: 1.123e-03,  Loss_bcs: 4.921e-05, Loss_ut_ics: 3.893e-05, Loss_norm: 2.577e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.598e-02, lr: 1.000e-03, Time: 6.83e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1440, Loss: 1.249e-02, Loss_res: 1.184e-03,  Loss_bcs: 4.226e-05, Loss_ut_ics: 3.756e-05, Loss_norm: 1.079e-06, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.702e-02, lr: 1.000e-03, Time: 6.88e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1450, Loss: 1.193e-02, Loss_res: 1.052e-03,  Loss_bcs: 3.869e-05, Loss_ut_ics: 3.613e-05, Loss_norm: 1.037e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.631e-02, lr: 1.000e-03, Time: 6.92e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1460, Loss: 1.073e-02, Loss_res: 1.002e-03,  Loss_bcs: 3.123e-05, Loss_ut_ics: 3.233e-05, Loss_norm: 7.355e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.551e-02, lr: 1.000e-03, Time: 6.97e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1470, Loss: 1.042e-02, Loss_res: 1.086e-03,  Loss_bcs: 2.963e-05, Loss_ut_ics: 3.102e-05, Loss_norm: 2.421e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.537e-02, lr: 1.000e-03, Time: 7.01e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1480, Loss: 1.014e-02, Loss_res: 9.600e-04,  Loss_bcs: 2.857e-05, Loss_ut_ics: 3.049e-05, Loss_norm: 1.796e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.527e-02, lr: 1.000e-03, Time: 7.06e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1490, Loss: 1.001e-02, Loss_res: 9.955e-04,  Loss_bcs: 2.681e-05, Loss_ut_ics: 2.995e-05, Loss_norm: 6.201e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.511e-02, lr: 1.000e-03, Time: 7.10e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
+INFO:src.utils.logger:It: 1500, Loss: 9.923e-03, Loss_res: 9.933e-04,  Loss_bcs: 2.653e-05, Loss_ut_ics: 2.968e-05, Loss_norm: 6.303e-07, Loss_gauge: 0.000e+00, w_pde: 1.00e+00, L^2_error: 1.499e-02, lr: 1.000e-03, Time: 7.15e+01
+INFO:src.utils.logger:Model state saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model.pth
+INFO:src.utils.logger:Model weights saved to results\ho\Classical\20260315-090506_seed0_pinn_2-64-64-64-64-2\checkpoints\2026-03-15_09-05-14-989584_ho_Classical_seed0\model_weights.pth
